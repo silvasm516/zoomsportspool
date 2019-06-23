@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html  lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>{{title}}</title>
+
+<link rel="stylesheet" href="../static/chosen.css"/> 
+<link rel="shortcut icon" href= "../static/Zfav.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+{% if somevar == "" %}
+<div class= "modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+         <!--  Modal content  -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">POOL TERMS</h4>
+        </div>
+        <div class="modal-body"><strong><ul id = "termm">
+          <li><p>Sponser-Manager Name :</p></li>
+          <li><p>Home Team :{{}}</p></li>
+          <li><p>Visiting Team :{{}}</p></li>
+          <li><p>Game Date :{{}}</p></li>
+          <li><p>Pool Closing Deadline :{{}}</p></li>
+          <li><p>Price Per Square : {{}}</p></li>
+          <li><p>Minimum Squres Purchase : {{}} </p></li>
+          <li><p>Maximum Squares Purchase : {{}}</p></li>
+          <li><p>First Quarter Payout : {{}}</p></li>
+          <li><p>Second Quarter Payout :{{}}</p></li>
+          <li><p>Third Quarter Payout :{{}}</p></li>
+          <li><p>Final Payout :{{}}</p></li>
+          <li><p>Final Payout At :{{}}</p></li></p>
+          <li><p>somvar<p><li>
+          </ul></strong>
+         
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>	
+
+
+  {% endif %}

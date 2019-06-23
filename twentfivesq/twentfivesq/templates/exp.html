@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+
+ <head>
+ {% extends "__base2.html" %}
+
+
+
+ <title id = "tit">{{title}}</title>
+{% block form %}
+
+
+<style type="text/css">
+
+#box2  {
+	height: 20vh;
+	background-color: black;
+
+}
+
+#dash {
+	color: red;
+}
+button {
+	padding-left: 0%;
+}
+
+br {
+	height: 1vh;
+}
+
+.ngt {
+	margin-top: .75vh;
+	margin-bottom: .75vh;
+	width: 6vw;
+}
+
+
+.payouts {
+	width: 2vw;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.hid {
+	display:none;
+}
+.control-label {
+	margin-top: .75vh;
+	margin-bottom: .75vh;
+}
+.lft  {
+
+	padding:0%;
+	margin-left: 0%
+	margin-right:0%;
+	margin-top: 0%;
+	margin-bottom: 0%;
+	height: 530px;
+	width: 50%;
+
+}
+
+
+
+
+
+
+
+
+
+<div class="panel-group">
+	<span class="lft">
+		<div class="panel panel-primary" style= "background-color:green">
+		<div class="panel-body">{{data.result0.home}} vs {{data.result0.visit}}<br><button type="button" id = "ZO" name = "Z0" class="btn btn-primary btn-xs">View</button></div>
+		</div>
+	</span>
+
+		<div class="panel panel-primary" style= "background-color:green">
+		<div class="panel-body">{{data.result1.home}} vs {{data.result1.visit}}<br><button type="button" id = "Z1" name = "Z1" class="btn btn-primary btn-xs">View</button></div>
+		</div>	
+
+	<span class="lft">
+		<div class= "panel panel-primary" style= "background-color:green">
+		<div class="panel-body">{{data.result2.home}} vs {{data.result2.visit}}<br><button type="button" id = "Z2" name = "Z2" class="btn btn-primary btn-xs">View</button></div>
+		</div>
+	</span>
+
+		<div class="panel panel-primary" style= "background-color:green">
+		<div class="panel-body">{{data.result3.home}} vs {{data.result3.visit}}<br><button type="button" id = "Z3" name = "Z3" class="btn btn-primary btn-xs">View</button></div>
+		</div>
+
+	<span class="lft">
+		<div class="panel panel-primary" style= "background-color:green">
+		<div class="panel-body">{{data.result4.home}} vs {{data.result4.visit}}<br><button type="button" id = "Z4" name = "Z4" class="btn btn-primary btn-xs">View</button></div>
+		</div>
+	</span>
+
+		<div class="panel panel-primary" style= "background-color:green">
+		<div class="panel-body">{{data.result5.home}} vs {{data.result5.visit}}<br><button type="button" id = "Z5" name = "Z5" class="btn btn-primary btn-xs">View</button></div>
+		</div>	
+
+	<span class="lft">
+		<div class="panel panel-primary" style= "background-color:green">
+		<div class="panel-body">{{data.result6.home}} vs {{data.result6.visit}}<br><button type="button" id = "Z6" name = "Z6" class="btn btn-primary btn-xs">View</button></div>
+		</div>
+	</span>
+
+		<div class="panel panel-primary" style= "background-color:green">
+		<div class="panel-body">{{data.result7.home}} vs {{data.result7.visit}}<br><button type="button" id = "Z7" name = "Z7" class="btn btn-primary btn-xs">View</button></div>
+		</div>
+
+	<span class="lft">
+		<div class="panel panel-primary" style= "background-color:green">
+		<div class="panel-body" >{{data.result8.home}} vs {{data.result8.visit}}<br><button type="button" id = "Z8" name = "Z8" class="btn btn-primary btn-xs">View</button></div>
+		</div>
+	</span>
+
+		<div class="panel panel-primary" style= "background-color:green">
+		<div class="panel-body">{{data.result9.home}} vs {{data.result9.visit}}<br><button type="button" id = "Z9" name = "Z9" class="btn btn-primary btn-xs">View</button></div>
+	</div>
+{%endblock %}

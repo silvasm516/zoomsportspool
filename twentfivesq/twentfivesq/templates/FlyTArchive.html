@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>FlyT</title>
+<!-- <link rel="shortcut icon" href= "../static/Zfav.ico" /> -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script> -->
+
+
+
+<style>
+
+{% block 'FlyT.html' %}
+
+
+
+#menuwrapper2 {
+
+    font-family:Arial;
+    font-size:12px;
+	font-style: bold;
+
+}
+
+
+#menuwrapper2 ul, #menuwrapper2 ul li
+{
+    margin:0;
+    padding:0;
+    list-style:none;
+   /**/
+}
+
+
+#menuwrapper2 ul li 
+{
+    background-color: #cfcfd1;
+    border-bottom:solid 1px white;
+    width:6vw;
+    cursor:pointer;
+    display: block;
+  float: left;
+  position: relative;
+	
+}
+#menuwrapper2 ul li a{
+
+color:#190707;
+display: block;
+}
+
+#menuwrapper2 ul li:hover 
+{
+   <!--  background-color:#6679e9; -->
+    position:relative;
+	color:#190707;
+	display: block;
+}
+ 
+#menuwrapper2 ul li ul
+{
+    position:absolute;
+    display:none;
+}
+
+#menuwrapper2 ul li:hover ul{
+    left:0px;
+	center:0px;
+    display:block;
+	position:absolute;
+	text-align: center;
+	color:#190707;
+}
+ 
+#menuwrapper2 ul li ul li{
+    background-color:#d1a934;
+	color:#190707;
+}
+ 
+#menuwrapper2 ul li:hover ul li:hover{
+    background-color:red;
+}
+
+#menuwrapper2 ul li:hover ul li ul{
+    position:absolute;
+    display:none;
+}
+
+#menuwrapper2 ul li:hover ul li:hover ul{
+    position:absolute;
+    display: block;
+    width: 8.5vw;
+     font-size:14px;
+}
+
+
+
+
+
+
+</style>
+</head>
+
+
+<body>
+<container id="ikea">
+<div id="menuwrapper2" class= "nomobil">
+    <ul>
+        <li><strong>Submit</a></strong>
+			<ul>
+				<strong><li><a nohref onclick= 'setName()' id = "subselect">Submit Selections<a/></li></strong>
+			</ul>
+		</li>
+        <li><strong>Save</a></strong>
+			<ul>
+			    <strong><li><a nohref onclick= 'remote5()' id = "saveselect">Save Selections</a></li></strong>
+			</ul>
+		</li>
+		 <li><strong>Nav / Instructions</a></strong>
+		<ul>
+			<strong><li><a href="/e" id = "zebra">Games Available Page</a></li></strong>
+			<strong><li><a href="/V">Archive</a></li></strong>
+			<strong><li><a href="/J">Home</a></li></strong>
+			<strong><li><a href="/L">Player Login</a></li></strong>
+			<strong><li><a href= "#" id = "popover" data-toggle="popover" data-html = "true"  title="TERMS" data-placement="left" data-content= "{% for key, value in popovr.items %}<span><p><h3>{{key}}  {{value}}</h3></p></span>{% endfor %}">Terms</a></a></li></strong>
+			<strong><li><a href="/i">Instructions</a>
+
+			<ul>
+				<li><p>--------------------------------
+
+				1). Point and Click to Select Your Squares.
+
+				2). Select All Your Squares Before Submitting.
+
+				3). Hover Over The 'Submit' Link Until It Becomes Red Then Click the Red 'Submit' link.
+
+				4). Hover Over The 'Save' Link Until It Becomes Red Then Click the Red 'Save' link.
+
+				5). Navigate to Your Desired Page. Or, Logout.</p></li>
+			</ul>
+			</li></strong>
+
+			</ul>
+			</li>
+    	
+    </ul>
+<container/>
+
+</body>
+{% endblock %}
+</html>	

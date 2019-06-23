@@ -1,0 +1,1520 @@
+<!DOCTYPE HTML>
+<html lang="en">
+ <head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width= device-width, initial-scale=1"/>
+<link rel="shortcut icon" href="../static/Zfav.ico" />
+<!-- <link rel="stylesheet" href="../static/stylesGrid.css"/> -->
+<!-- <link href="/twitter-bootstrap/twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet"> -->
+<!-- <link rel="stylesheet" href="../static/chosen.css"/>
+<link rel="stylesheet" href="../static/chosen.min.css"/>  -->
+<!-- <link rel="stylesheet" type="text/css" href="C:\Users\Steve\Desktop\TwentyFiveSq\pool\SSgrid.css"> -->
+
+<!-- <link rel="stylesheet" href = "../static/narrowscreen.css" /> -->
+
+<title>testGrid</title>
+
+
+
+
+
+
+ <!-- <link rel="stylesheet" href="stylesGrid.css"/> 
+ -->
+
+ 
+<!-- <link rel="stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+  -->
+  <!-- <script type="text/javascript" link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" -->
+
+  <!--  <link rel="stylesheet" href="modalsonly/css/bootstrap-3.2.0.min.css"/> -->
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script> --> 
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css -->
+<!--  --> 
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  
+  <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"> -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script> -->
+ 
+
+
+
+
+
+<style>
+
+<link href="css/bootstrap.min.css" rel="stylesheet"/> 
+<link rel="stylesheet" href="stylesGrid.css"/>
+    html {
+	      background-color: #5F4C0B;
+	     /* background-color: #FFFFFF;*/
+
+        }
+table td { 
+		    font-family: Calibri;
+	        border: solid 1.5pt black;
+	        height: 5vw; 
+			font-weight: Bold; 
+			font-size: 5vw;
+		    text-align:center;
+			padding-top: 0px;
+			padding-bottom: 0px; 
+			background-color:  #088A68;
+			}	 
+
+		
+	#box2			{
+		border: solid 1pt black;
+		width: 60%;
+		margin-left: 20%;
+		margin-top: 0%;
+		/*background-color:#0B614B;*/
+		/*background: #243B0B;*/
+		/*background-color:#010A08;*/
+		background: white;
+		padding-bottom: 7%;
+	 /*padding-bottom: 25%;*/ 
+              }		
+			  
+    #data-t { 
+		          width: 12%;
+				  height: 85%;
+				  float:left; 
+				  background: black;
+		 }
+	
+		
+	aside   {
+	    transform:rotate(270deg); 
+	    position: relative; 
+		float: left;
+		width: 12%;
+		margin-top: 35%;
+		margin-left:5%;
+		font-family: Cambria; 
+		} 
+		
+		
+    #hTeam {
+		    font-family: arial;
+	        font-size:2.5vw;
+			padding-left: 1.2vw;
+			padding-right:1.5vw;
+			padding-top:0pt;
+			padding-bottom:0pt;
+			font-weight:bold;
+			color: #FFFFFF;
+			background:blue; 
+			margin-bottom: 1%;
+		}
+		 /*#hTeam {
+		    font-family: arial;
+	        font-size: 3vw;
+			padding-left: 1vw;
+			padding-right:12vw;
+			padding-top:0pt;
+			padding-bottom:0pt;
+			font-weight:bold;
+			color: #FFFFFF;
+			background:blue; 
+			margin-bottom: 1%;
+		}*/
+		
+	/*#vTeam {
+            font-family: arial;
+	        font-size: 32px;
+			color: #FFFFFF;
+			background: blue;
+		    padding-left:30pt;
+			padding-right:20pt;
+			padding-top:0pt;
+			padding-bottom:0pt;
+			font-weight: bold;
+			line-break: strict;
+		}	*/
+		#vTeam {
+            font-family: arial;
+	        font-size: 2.5vw;
+			color: #FFFFFF;
+			background: blue;
+		    padding-left:2vw;
+			padding-right:2vw;
+			padding-top:0pt;
+			padding-bottom:0pt;
+			font-weight: bold;
+			line-break: strict;
+		}	
+
+	#teamLog, #teamLog2	{
+		background: white;
+
+	}	
+			
+			
+		
+	
+	#s  {
+		padding-top: 0px;
+		border: solid 1pt white; 
+        border-collapse:collapse;
+		border-spacing: 10pt;
+		margin-left: 42%;
+       }
+	   /*#s  {
+		padding-top: 0px;
+		border: solid 1pt white; 
+        border-collapse:collapse;
+		border-spacing: 1vw;
+		margin-left: 8%;
+       }*/
+
+	 #t {
+         border: solid 1pt white; 
+         border-collapse:collapse;
+		 border-spacing: 10pt;
+	     margin-left: 4%;
+		 overflow-wrap: normal;
+		 
+	   } 
+	 /*  #t {
+         border: solid 1pt white; 
+         border-collapse:collapse;
+		 border-spacing: 1vw;
+	     margin-left: 4%;
+		 overflow-wrap: normal;
+		 
+	   } */
+/*.modal.fade {
+
+  top:25%;
+  -webkit-transition:opacity .3s linear, top .3s ease-out;
+  -moz-transition:opacity .3s linear, top .3s ease-out;
+  -ms-transition:opacity .3s linear, top .3s ease-out;
+  -o-transition:opacity .3s linear, top .3s ease-out;
+  transition:opacity .3s linear, top .3s ease-out;
+}*/
+	   
+    #m {
+           border: solid 1pt  black;  
+           margin-top: 1%;
+		   margin-left: 15%;
+		   }
+	
+	#kook    {
+          margin-top: 1%;
+		  margin-left:  32%;
+		  margin-bottom: 2%;
+          }	
+   
+     body{
+     	background: #243B0B;
+     }
+	
+		#b1,#b2,#b3,#b4,#b5,#b6,#b7,#b8,#b9,#b10,#b000,#b999,#b888,#b777,#b666,#b555,#b444,#b333,#b222,#b111, #b101010, #b111111, #b121212, #b131313, #b141414, #b151515, #b161616, #b171717, #b181818, #b191919 {
+		color: 	#7880A3;
+		font-weight: bold;
+		font-size: 5vw;
+		background-color: #BDBDBD;
+
+		}
+		
+		#a1,#a2,#a3,#a4,#a5,#a6,#a7,#a8,#a9,#a10,#a11,#a12,#a13,#a14,#a15,#a16,#a17,#a18,#a19,#a20,#a21,#a22,#a23,#a24,#a25
+		 {
+		
+		color: #489581;
+		background-color:  #9FCBC5;
+		font-family: Arial;
+		font-weight: bold;
+		font-size: 5vw;
+		white-space: normal;
+		word-wrap: break-word;
+		}
+		
+		#b0,#b1,#b2,b3,b4,b5,b6,b7,b8,b9,b10
+		{
+		background-color: #BDBDBD;
+		color: #7880A3;
+		font-weight: bold;
+		font-size: 5vw;
+		}
+		 
+		#bb, #buty {
+		background-color: white;
+		color: white;
+		font-weight: bold;
+		font-size: 5vw; 
+		}
+		
+		#teams {
+		float: right:
+		}
+		
+#data-t fieldset form input .textbox1   {
+		background-color: "#088A68";
+			}
+			
+.label-primary {
+	border: solid 1pt black; 
+	font-family: arial;
+	/*background-color: #58D3F7;*/
+	background-color: white;
+	color: black;
+	margin-left: 3%;
+	margin-top: 1%;
+	padding-bottom: 0%;
+}
+			
+#save1 {
+	background-color: orange;
+	/*width: 250px;
+	height: 200px;*/
+}
+
+#gameNumber {
+	
+}
+
+/*
+.chicken {
+	display: none;
+}*/
+
+/*#theterms {
+width: 20%;
+height: 30%;
+
+.modal-content{
+	display: none;
+}
+
+}
+
+.modal-backdrop{
+  opacity:0; transition:opacity .1s;
+}
+.modal-backdrop.in{
+  opacity:.60;
+}
+.modal-body {
+background-color:#27AE60;
+
+}
+*/
+.popover-title {
+    background-color: #E44C4C; 
+    color: #190707; 
+    font-size: 9px;
+    text-align:center;
+    
+}
+
+.popover-content {
+    background-color: coral;
+    color: #190707;
+    padding: 9px;
+    width: 110%;
+}
+
+#logout {
+	color: red;
+	font-weight: bold;
+	float: right;
+	margin-right: 25%;
+	
+}
+
+#gameNumber  {
+	float: right;
+	display: none;
+	width: 3%;
+}
+
+#levits {
+	display: none;
+}
+
+.mainNav {
+	visibility: visible;
+} 
+ 	
+
+.hidd {
+	visibility: hidden;
+}
+
+
+
+@media only screen and (max-width:70em) {
+
+.hidd {
+	visibility: hidden;
+}	
+
+.nomobil {
+	display: none;
+}
+
+#box2  {
+width: 100%;
+padding:0px;
+margin-top: 10%;
+margin-left: 10%;
+background-color:white;
+float: left;
+
+}
+
+
+
+#t, #s, #teamlog, #teamlog2, aside {
+	height:.5vh;
+	width:.5vw;
+	font-size: 10%;
+}
+
+#t {
+	float: bottom;
+	margin-right: 50px;
+}
+
+
+
+#teamlog2 {
+	margin-right: 50px;
+	width: 50%;
+	height: 50%;
+}
+
+
+#t th {
+	font-family: arial
+	font-size: .5em;
+	
+}
+
+#m {
+	width: 40%;
+	float: center;
+}
+
+#t{
+	
+	margin-left: 0%;
+}
+
+
+#levits {
+visibility: visible;
+display: inline-block;
+margin-left: 30%;
+margin-top: 10%;
+font-family: arial;
+font-size: 1vw;
+}
+
+/*#kook {
+	margin-left: 28%;
+}*/
+
+#s {
+	
+	margin-left: 28%;
+}
+
+
+
+
+
+#logout  {
+	
+	float: right;
+
+
+	}
+
+ 
+
+
+.hidform {
+	display: none;
+}
+
+.hidform2, #hidform9, #Lemur, fieldset  {
+	display: none;
+}
+ 
+ #a1,#a2,#a3,#a4,#a5,#a6,#a7,#a8,#a9,#a10,#a11,#a12,#a13,#a14,#a15,#a16,#a17,#a18,#a19,#a20,#a21,#a22,#a23,#a24,#a25
+		  { 
+ 	font-size: 30%;
+}
+
+html body {
+background-color: white;
+
+}
+
+#rat {
+	font-size: 30%;
+}
+
+#inst {
+	width: 40%;
+}
+
+}
+
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</style>
+<title>Grid F</title>
+<!--<script type="text/javascript" link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+// <! <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>"https:maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"</script>
+<!  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> --> 
+
+</head>
+
+
+ <body>
+
+
+
+<!--- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+<!-- <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script> -->
+
+<!-- <body id= "cheese"> -->
+<!-- <script src = "../static/squares.js"></script> -->
+<script src = "../static/testaroo99.js"></script>
+<script src = "../static/dealTeems.js"></script>
+<script src = "../static/newList.js"></script>
+<script src = "../static/ListGenerator.js"></script>
+<!-- <script src="../static/jquery-migrate-3.0.0.js"></script> -->
+
+
+
+
+<div class="mainNav">
+		{{rt}} 
+		
+	  {% if rt == 'm' %}
+	  	
+	  	{% include 'flyT2.html' %}
+
+	  {% elif rt == 'a' %}
+
+	  	{% include 'FlyTArchive.html' %}
+
+	  {% else %}
+
+	
+		{% include 'flyT.html' %}
+	
+		{% include 'tooltipImportant.html' %}
+
+	 {% endif %}
+
+</div> 
+
+
+
+
+
+
+
+
+
+
+  
+
+<div id = "box2" class="table-responsive"> 
+<div style = "display: inline;" >
+<form id = "gate" name ="gate" method="post" action= "/g"></form>
+<h3><span class="label label-primary"  >Game     {{gameNumP}} {% if 'UsrName' in request.session %}<a href="/o" id = "logout">logout</a>{% endif %}<input type= 'text' name = "gameNumber" id = "gameNumber" value = "{{gameNumP}}"/></span></h3>
+</div>
+
+<!-- <div id = "kook" class="table-responsive"> --> 
+
+<table class = "table" id="s"> 
+<tr>
+  <th id = "hTeam">HOME</th>
+  <th id= "teamLog"></th>
+</tr>
+</table>
+<!-- </div> --> 
+
+<aside class="table-responsive"> 
+<table id="t" class = "table">
+<tr>
+  <th id = "vTeam">VISITORS</th>
+  <th id = "teamLog2"></th>
+</tr>
+</table>
+</aside> 
+ 
+
+
+<form role="form">
+
+<table id = "m" class="table">
+    <tr>
+	    <td id = "buty" colspan= "2"><button type="button" id= "bb">00</button></td>
+        <td id = "b111"><label id="b1">0</label></td>	
+		<td id = "b222"><label id="b2">0</label></td>	
+		<td id = "b333"><label id="b3">0</label></td>	
+		<td id = "b444"><label id="b4">0</label></td>	
+        <td id = "b555"><label id="b5">0</label></td>
+		<td id = "b666"><label id="b6">0</label></td>	
+		<td id = "b777"><label id="b7">0</label></td>	
+		<td id = "b888"><label id="b8">0</label></td>	
+		<td id = "b999"><label id="b9">0</label></td>	
+        <td id = "b000"><label id="b0">0</label></td>
+    </tr>
+    <tr>
+	    <td id= "b101010"><label id="b11">0</label></td>
+		<td id= "b151515"><label id="b12">0</label></td>
+	    <td id= "a101" colspan= "2"><button type="button" id= "a1">01</button></td>	
+		<td id= "a102" colspan= "2"><button type="button" id= "a2">02</button></td>	
+		<td id= "a103" colspan= "2"><button type="button" id= "a3">03</button></td>	
+		<td id= "a104" colspan= "2"><button type="button" id= "a4">04</button></td>	
+        <td id= "a105" colspan= "2"><button type="button" id= "a5">05</button></td>
+	</tr>
+	<tr>
+	    <td id= "b111111"><label id="b16">0</label></td>
+		<td id= "b161616"><label id="b15">0</label></td>
+	    <td id= "a106" colspan= "2"><button type="button" id="a6" >06</button></td>		
+		<td id= "a107" colspan= "2"><button type="button" id="a7" >07</button></td>		
+		<td id= "a108" colspan= "2"><button type="button" id="a8" >08</button></td>		
+		<td id= "a109" colspan= "2"><button type="button" id="a9" >09</button></td>		
+        <td id= "a110" colspan= "2"><button type="button" id="a10">10</button></td>
+	</tr>
+	<tr>
+	    <td id= "b121212"><label id="b13">0</label></td>
+		<td id= "b171717"><label id="b14">0</label></td>
+	    <td id= "111" colspan= "2"><button type="button" id="a11" >11</button></td>		
+		<td id= "112" colspan= "2"><button type="button" id="a12" >12</button></td>		
+		<td id= "113" colspan= "2"><button type="button" id="a13" >13</button></td>		
+		<td id= "114" colspan= "2"><button type="button" id="a14" >14</button></td>		
+        <td id= "115" colspan= "2"><button type="button" id="a15" >15</button></td>
+	</tr>
+    <tr>
+	    <td id = "b131313"><label id="b18">0</label></td>
+		<td id = "b181818"><label id="b17">0</label></td>
+        <td id = "a116" colspan= "2"><button type="button" id="a16" >16</button></td>		
+		<td id = "a117" colspan= "2"><button type="button" id="a17" >17</button></td>		
+		<td id = "a118" colspan= "2"><button type="button" id="a18" >18</button></td>		
+		<td id = "a119" colspan= "2"><button type="button" id="a19" >19</button></td>		
+	    <td id = "a120" colspan= "2"><button type="button" id="a20" >20</button></td>
+	</tr>
+	<tr>
+	    <td id = "b141414"><label id="b19">0</label></td>
+		<td id = "b191919"><label id="b10">0</label></td>
+        <td id = "a121" colspan= "2"><button type="button" id="a21" >21</button></td>		
+		<td id = "a122" colspan= "2"><button type="button" id="a22" >22</button></td>		 
+		<td id = "a123" colspan= "2"><button type="button" id="a23" >23</button></td>		
+		<td id = "a124" colspan= "2"><button type="button" id="a24" >24</button></td>		
+	    <td id = "a125" colspan= "2"><button type="button" id="a25" >25</button></td>
+	</tr>
+	</table>
+	
+	
+	{% csrf_token %}
+	</form>
+	
+  <div id="levits">
+		 {% if rt == 'm' %}
+	  	
+	  	{% include 'ResponsiveGridM.html' %}
+	  	 
+	  {% else %}
+
+	
+		{% include 'Responsive_Grid.html' %}
+	
+		{% include 'tooltipImportant.html' %}
+
+	 {% endif %}
+ </div>	
+
+</div>
+</div>
+    
+
+	<br>
+	
+	</br>
+	
+<form id="hidform9" class ="hidform9" name="hidform" method="post" action="/K">
+	{% csrf_token %}
+   <input type="text" id="d0" name="d0" class= "hidd">
+   <input type="text" id="d1" name="d1" class= "hidd">  
+   <input type="text" id="d2" name="d2" class= "hidd">
+   <input type="text" id="d3" name="d3" class= "hidd"> 
+   <input type="text" id="d4" name="d4" class= "hidd"> 
+   <input type="text" id="d5" name="d5" class= "hidd">
+   <input type="text" id="d6" name="d6" class= "hidd">
+   <input type="text" id="d7" name="d7" class= "hidd">
+   <input type="text" id="d8" name="d8" class= "hidd">
+   <input type="text" id="d9" name="d9" class= "hidd"> 
+   <input type="text" id="d10" name="d10" class= "hidd"> 
+   <input type="text" id="d11" name="d11" class= "hidd">  
+   <input type="text" id="d12" name="d12" class= "hidd">
+   <input type="text" id="d13" name="d13" class= "hidd">
+   <input type="text" id="d14" name="d14" class= "hidd">	
+   <input type="text" id="d15" name="d15" class= "hidd">
+   <input type="text" id="d16" name="d16" class= "hidd"> 
+   <input type="text" id="d17" name="d17" class= "hidd">
+   <input type="text" id="d18" name="d18" class= "hidd">
+   <input type="text" id="d19" name="d19" class= "hidd">
+   <input type="text" id="d20" name="d20" class= "hidd">
+   <input type="text" id="d21" name="d21" class= "hidd">
+   <input type="text" id="d22" name="d22" class= "hidd"> 
+   <input type="text" id="d23" name="d23" class= "hidd">
+   <input type="text" id="d24" name="d24" class= "hidd">  
+   <input type="text" class= "hidd" placeholder= "Name"  name="player" id="player" value= "{{playet}}">
+   <input type="text" class = "hidd" placeholder= "home" name="homT" id = "homT" value= "{{homT}}">
+  <input type="text" class = "hidd" placeholder= "visitor" name="visT" id = "visT" value= "{{visT}}">
+  <input type="text" class = "hidd" placeholder= "type" name="gType" id = "gType" value= "{{gType}}">
+  <input type="text" class = "hidd" placeholder="gameNum" name="gameNum" id="gameNum" value= "{{gameNumP}}">
+  <fieldset> 
+		 <input type="submit" name="save5" class= "hidd" id="save5" style= "background-color:orange"/>
+	</fieldset> 
+</form>
+<p>{{playet}}</p>
+<form id = "Lemur" name= "LemurForm" method="post" action="/a">
+	{% csrf_token %}
+	<input type = "text" class= 'hidd' name = "gameNum1" id = "gameNum1" value="{{gameNumP}}">
+	<input type="text" class= "hidd" placeholder= "Player2"  name="player2" id="player2" value="{{playet}}">
+	<input type="submit" name="save99" id="save99" class="hidd" style= "background-color:green"> 	
+</form>
+
+
+<form id="hidform2" class ="hidform2" name="hidform2" method="post" action="/K">
+	{% csrf_token %}
+   <input type="text" id="e0" name="e0" class= "hidd" value= "{{e1}}">
+   <input type="text" id="e1" name="e1" class= "hidd" value= "{{e2}}">  
+   <input type="text" id="e2" name="e2" class= "hidd" value= "{{e3}}">
+   <input type="text" id="e3" name="e3" class= "hidd" value= "{{e4}}"> 
+   <input type="text" id="e4" name="e4" class= "hidd" value= "{{e5}}"> 
+   <input type="text" id="e5" name="e5" class= "hidd" value= "{{e6}}">
+   <input type="text" id="e6" name="e6" class= "hidd" value= "{{e7}}">
+   <input type="text" id="e7" name="e7" class= "hidd" value= "{{e8}}">
+   <input type="text" id="e8" name="e8" class= "hidd" value= "{{e9}}">
+   <input type="text" id="e9" name="e9" class= "hidd" value= "{{e10}}"> 
+   <input type="text" id="e10" name="e10" class= "hidd" value= "{{e11}}"> 
+   <input type="text" id="e11" name="e11" class= "hidd" value= "{{e12}}">  
+   <input type="text" id="e12" name="e12" class= "hidd" value= "{{e13}}">
+   <input type="text" id="e13" name="e13" class= "hidd" value= "{{e14}}">
+   <input type="text" id="e14" name="e14" class= "hidd" value= "{{e15}}">	
+   <input type="text" id="e15" name="e15" class= "hidd" value= "{{e16}}">
+   <input type="text" id="e16" name="e16" class= "hidd" value= "{{e17}}"> 
+   <input type="text" id="e17" name="e17" class= "hidd" value= "{{e18}}">
+   <input type="text" id="e18" name="e18" class= "hidd" value= "{{e19}}">
+   <input type="text" id="e19" name="e19" class= "hidd" value= "{{e20}}">
+   <input type="text" id="e20" name="e20" class= "hidd" value= "{{e21}}">
+   <input type="text" id="e21" name="e21" class= "hidd" value= "{{e22}}">
+   <input type="text" id="e22" name="e22" class= "hidd" value= "{{e23}}"> 
+   <input type="text" id="e23" name="e23" class= "hidd" value= "{{e24}}">
+   <input type="text" id="e24" name="e24" class= "hidd" value= "{{e25}}">
+   <input type="text" id="m0" name="m0" class= "hidd" value= "{{dig}}"> 
+   <input type="text" id="j0" name="j0" class= "hidd" value= "{{co1}}">
+   <input type="text" id="j1" name="j1" class= "hidd" value= "{{co2}}">  
+   <input type="text" id="j2" name="j2" class= "hidd" value= "{{co3}}">
+   <input type="text" id="j3" name="j3" class= "hidd" value= "{{co4}}"> 
+   <input type="text" id="j4" name="j4" class= "hidd" value= "{{co5}}"> 
+   <input type="text" id="j5" name="j5" class= "hidd" value= "{{co6}}">
+   <input type="text" id="j6" name="j6" class= "hidd" value= "{{co7}}">
+   <input type="text" id="j7" name="j7" class= "hidd" value= "{{co8}}">
+   <input type="text" id="j8" name="j8" class= "hidd" value= "{{co9}}">
+   <input type="text" id="j9" name="j9" class= "hidd" value= "{{co10}}">
+   <input type="text" id="j10" name="j10" class= "hidd" value= "{{r1}}">
+   <input type="text" id="j11" name="j11" class= "hidd" value= "{{r2}}">  
+   <input type="text" id="j12" name="j12" class= "hidd" value= "{{r3}}">
+   <input type="text" id="j13" name="j13" class= "hidd" value= "{{r4}}"> 
+   <input type="text" id="j14" name="j14" class= "hidd" value= "{{r5}}"> 
+   <input type="text" id="j15" name="j55" class= "hidd" value= "{{r6}}">
+   <input type="text" id="j16" name="j16" class= "hidd" value= "{{r7}}">
+   <input type="text" id="j17" name="j17" class= "hidd" value= "{{r8}}">
+   <input type="text" id="j18" name="j18" class= "hidd" value= "{{r9}}">
+   <input type="text" id="j19" name="j19" class= "hidd" value= "{{r10}}">
+
+
+   <input type="text" id="player3" name="player3" placeholder= "player3" class= "hidd" value= "{{playet}}">
+   <input type="text" class = "hidd" placeholder= "home" name="homT1" id = "ehomT1" value= "{{homT}}">
+  <input type="text" class = "hidd" placeholder= "visitor" name="visT1" id = "evisT1" value ="{{visT}}">
+  <input type="text" class = "hidd" placeholder= "type" name="gType1" id = "egType1" value= "{{gType}}">
+  <input type="text" class = "hidd" placeholder="gameNum" name="gameNum2" id="gameNum2" value= "{{gameNumP}}">
+  <input type="text" id="flagg" name="flagg" class= "hidd" value= "{{flagg}}"/>
+  <p id = "clientype" name = "clientype" class= "hidd">{{rt}}</p>
+  </form>
+  <fieldset> 
+</fieldset>
+<p id = "keyed" class= "hidd">{{dog}}</p>
+
+<!-- <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a> -->
+
+
+
+
+
+
+<!--  <div id="responsive" class="modal hide fade" tabindex="-1" data-width="760">
+    <div class="modal-dialog">
+    
+         
+      <div class="modal-content">
+        <div class="modal-header">
+        <div data-toggle="modal" data-target="#theTerms">
+        	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>	
+          <! <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+          <!-- <span><h4 class="modal-title">POOL TERMS   -  {{homeT}} VS {{visitT}}</h4></span>
+        </div>
+        <div class="modal-body"><strong>
+        <span><p>Sponser-Manager: {{name}}</p></span>
+        <span><p>Game Number :{{gamnum}}</p></span>
+        <span><p>Home Team :{{homeT}}</p></span>
+        <span><p>Visiting Team :{{visitT}}</p></span>
+        <span><p>Game Date :{{gameDat}}</p></span>
+        <span><p>Pool Closing Deadline :{{closes}}</p></span>
+        <span><p>Price Per Square : {{price}}</p></span>
+        <span><p> Minimum Squres Purchase :{{min}}</p></span>
+        <span><p>Maximum Squares Purchase : {{max}}</p></span>
+        <span><p>First Quarter Payout :{{firstQtr}}</p></span>
+        <span><p>Second Quarter Payout :{{secQtr}}</p></span>
+        <span><p>Third Quarter Payout :{{thirdQtr}}</p></span>
+        <span><p>Final Payout :{{final}}</p></span>
+        <span><p>Final Payout At :{{eog}}</p></span>
+        <span><p>Notes: {{notes}}</p></span>
+          </strong>
+           
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="window.history.back()">Close</button>
+        </div>  
+        </div>
+        
+      </div>
+      
+    </div> -->
+ <!--  </div> -->	  
+
+<!-- <div id="theTerms" class="modal fade" tabindex="-1" data-width="760";">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title"><span>POOL TERMS   -  {{homeT}} VS {{visitT}}</h4></span></h4>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-md-6">
+        <h4><span><p>Sponser-Manager: {{name}}</p></span>
+        <span><p>Game Number :{{gamnum}}</p></span>
+        <span><p>Home Team :{{homeT}}</p></span>
+        <span><p>Visiting Team :{{visitT}}</p></span>
+        <span><p>Game Date :{{gameDat}}</p></span>
+        <span><p>Pool Closing Deadline :{{closes}}</p></span>
+        <span><p>Price Per Square : {{price}}</p></span>
+        <span><p> Minimum Squres Purchase :{{min}}</p></span>
+        <span><p>Maximum Squares Purchase : {{max}}</p></span>
+        <span><p>First Quarter Payout :{{firstQtr}}</p></span>
+        <span><p>Second Quarter Payout :{{secQtr}}</p></span>
+        <span><p>Third Quarter Payout :{{thirdQtr}}</p></span>
+        <span><p>Final Payout :{{final}}</p></span>
+        <span><p>Final Payout At :{{eog}}</p></span>
+        <span><p>Notes: {{notes}}</p></span>
+          </strong></p></h4>
+        
+      </div>
+      <div class="col-md-6">
+        <h4>Some More Input</h4>
+        <p><input class="form-control" type="text"></p>
+        <p><input class="form-control" type="text"></p>
+        <p><input class="form-control" type="text"></p>
+        <p><input class="form-control" type="text"></p>
+        <p><input class="form-control" type="text"></p>
+        <p><input class="form-control" type="text"></p>
+        <p><input class="form-control" type="text"></p>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+    <button type="button" class="btn btn-primary">Save changes</button>
+  </div>
+</div> -->
+
+<!-- <div id="theterms" class="modal hide fade in">
+    <div class="modal-dialog">
+    
+          Modal content  -->
+      <!-- <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <span><h4 class="modal-title">POOL TERMS   -  {{homeT}} VS {{visitT}}</h4></span>
+        </div>
+        <div class="modal-body"><strong>
+        <span><p>Sponser-Manager: {{name}}</p></span>
+        <span><p>Game Number :{{gamnum}}</p></span>
+        <span><p>Home Team :{{homeT}}</p></span>
+        <span><p>Visiting Team :{{visitT}}</p></span>
+        <span><p>Game Date :{{gameDat}}</p></span>
+        <span><p>Pool Closing Deadline :{{closes}}</p></span>
+        <span><p>Price Per Square : {{price}}</p></span>
+        <span><p> Minimum Squres Purchase :{{min}}</p></span>
+        <span><p>Maximum Squares Purchase : {{max}}</p></span>
+        <span><p>First Quarter Payout :{{firstQtr}}</p></span>
+        <span><p>Second Quarter Payout :{{secQtr}}</p></span>
+        <span><p>Third Quarter Payout :{{thirdQtr}}</p></span>
+        <span><p>Final Payout :{{final}}</p></span>
+        <span><p>Final Payout At :{{eog}}</p></span>
+        <span><p>Notes: {{notes}}</p></span>
+          </strong>
+           
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="window.history.back()">Close</button>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+ 	 -->
+
+
+
+<input type="text" id ='flapp' class="hide" value ="{{rsn}}"/>
+
+
+
+
+
+<link href="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
+<!-- <script src="/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-tooltip.js"></script>  
+<script src="/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-popover.js"></script>  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<!--  <input type="submit" name="save6" id="save6" style= "background-color:blue">DownD.</button>  -->
+	<script>
+	
+	
+	var h = 0;
+	
+	var tracker = [];
+	var holder = []; 
+	var squares = ["a1","a2","a3","a4","a5","a6","a7","a8","a9","a10","a11","a12","a13","a14","a15","a16","a17","a18","a19","a20","a21","a22","a23","a24","a25"];
+	for(var n = 0; n < 26; n++) {
+		    tracker[n] = 0;
+			}
+	 var counterx = 0;
+	 var monkey = 0;
+	 
+	
+//********************************************************************************************************************/
+function doLoad() {
+ var ald = document.getElementById("homT")
+ var bld = document.getElementById("visT")
+ var cld = document.getElementById("gType")
+
+var ald1 = ald.value
+var bld1 = bld.value
+var cld1 = cld.value
+
+
+
+go(ald1, bld1, cld1)
+downDate()
+rNums()
+
+}
+
+function go(xx, yy, zz) {
+
+  X = xx
+  Y = yy
+  Z = zz
+
+
+
+  if (Z == "p") { 
+		enterTeams(X, Y);
+}
+  else  if ( Z == "cld") {
+		makeTeams(X, Y)
+}
+  else {
+		makeTeams(X, Y)
+}
+}
+
+
+
+// Value for ant is square number for selection set(Post to server DB)
+	function setColor() {
+	    var property = this;
+		var stat = squares.indexOf(property.id);
+        if (tracker[stat] == 1) {
+            property.style.backgroundColor = "#9FCBC5";
+			property.parentElement.style.backgroundColor = "#9FCBC5"; 
+		    tracker[stat] = 0;
+			var tar = property.textContent;
+		//	window.alert(tar);
+			holder.splice(holder.indexOf(property.textContent), 1);
+        }
+        else {
+            property.style.backgroundColor = "#08088A";
+			property.parentElement.style.backgroundColor = "#08088A"; 
+            tracker[stat] = 1;
+			var ant = property.innerHTML;
+			holder.push(ant);
+
+
+        }
+        // "#9FCBC5"	
+        // qv.value = sessionStorage.ant
+    }
+//********************************************************************************************************************//	
+	function setName() {
+			 var colors_list =["#FFFFFF", "#58D3F7", "#FE9A2E", "#F4FA58", "#BDBDBD", "#B18904"];
+	         if (counterx == 0) { 
+				       localStorage.setItem('counter', counterx);
+					   monkey = localStorage.counter % 6;
+					   counterx = counterx + 1;
+				  }
+				  else {
+					  localStorage.setItem('counter', counterx);
+				      monkey = localStorage.counter % 7;
+					  counterx = counterx + 1;
+				 }
+
+			 var mole = document.getElementById("player");	 
+						
+			 
+	         
+			 var counter = 0;
+		     for( var c = 0; c < squares.length; c++) {
+			     var rat = squares[c];
+			     var  item = document.getElementById(rat);
+
+				 //cat[c] = item.innerHTML;
+
+				 for( var t = 0; t < holder.length; t++) {
+				
+				 	
+				 //var test =  cat.has(holder[t].innerHTML);
+				 //alert(test);
+				 //test == true ? (counter = counter + 1, cat.add(item.innerHTML)) : "";
+				
+				 
+				 			 
+				 item.textContent == holder[t] ?  (item.innerHTML = mole.value , item.style.font ="normal 1vw arial", item.style.padding="0px",  item.style.whiteSpace= "normal", item.style.color = "#f4eb42", item.disabled = true) :  ""; 
+				 // colors_list[monkey]
+				 
+				 //alert(test);
+				 }
+				 
+
+				 // alert(holder[t].textContent);
+				}
+				var x1 = document.getElementById("a1").innerHTML;
+				document.getElementById("d0").value = x1;
+				var x2 = document.getElementById("a2").innerHTML;
+				document.getElementById("d1").value = x2;
+				var x3 = document.getElementById("a3").innerHTML;
+				document.getElementById("d2").value = x3;
+				var x4 = document.getElementById("a4").innerHTML;
+				document.getElementById("d3").value = x4;
+				var x5 = document.getElementById("a5").innerHTML;
+				document.getElementById("d4").value = x5;
+				var x6 = document.getElementById("a6").innerHTML;
+				document.getElementById("d5").value = x6;
+				var x7 = document.getElementById("a7").innerHTML;
+				document.getElementById("d6").value = x7;
+				var x8 = document.getElementById("a8").innerHTML;
+				document.getElementById("d7").value = x8;
+				var x9 = document.getElementById("a9").innerHTML;
+				document.getElementById("d8").value = x9;
+				var x10 = document.getElementById("a10").innerHTML;
+				document.getElementById("d9").value = x10;
+				var x11 = document.getElementById("a11").innerHTML;
+				document.getElementById("d10").value = x11;
+				var x12 = document.getElementById("a12").innerHTML;
+				document.getElementById("d11").value = x12;
+				var x13 = document.getElementById("a13").innerHTML;
+				document.getElementById("d12").value = x13;
+				var x14 = document.getElementById("a14").innerHTML;
+				document.getElementById("d13").value = x14;
+				var x15 = document.getElementById("a15").innerHTML;
+				document.getElementById("d14").value = x15;
+				var x16 = document.getElementById("a16").innerHTML;
+				document.getElementById("d15").value = x16
+				var x17 = document.getElementById("a17").innerHTML;
+				document.getElementById("d16").value = x17;
+				var x18 = document.getElementById("a18").innerHTML;
+				document.getElementById("d17").value = x18;
+				var x19 = document.getElementById("a19").innerHTML;
+				document.getElementById("d18").value = x19;
+				var x20 = document.getElementById("a20").innerHTML;
+				document.getElementById("d19").value = x20;
+				var x21 = document.getElementById("a21").innerHTML;
+				document.getElementById("d20").value = x21;
+				var x22 = document.getElementById("a22").innerHTML;
+				document.getElementById("d21").value = x22;
+				var x23 = document.getElementById("a23").innerHTML;
+				document.getElementById("d22").value = x23;
+				var x24 = document.getElementById("a24").innerHTML;
+				document.getElementById("d23").value = x24;
+				var x25 = document.getElementById("a25").innerHTML;
+				document.getElementById("d24").value = x25;
+
+				/* mole.value = ""; */
+
+				 }
+
+	
+			
+
+
+
+
+
+
+//*************************************************************************************************************************//			   
+	var count = 1;
+	for (var  i = 0; i < 25; i++){
+		var squares = ["a1","a2","a3","a4","a5","a6","a7","a8","a9","a10","a11","a12","a13","a14","a15","a16","a17","a18","a19","a20","a21","a22","a23","a24","a25"];
+		
+		 var containrs = ["a101","a102","a103","a104","a105","a106","a107","a108","a109","a110","a111","a112","a113","a114","a115","a116","a117","a118","a119","a120","a121","a122","a123","a124","a125","b1000"]
+ 
+		var dog =  document.getElementById(squares[i]);
+	   
+		
+		if(dog.addEventListener) {dog.addEventListener("click",setColor, false);
+			} 
+			 else if(dog.attachEvent) {
+			 dog.attachEvent("onclick", setColor);
+			 }  
+         }
+
+
+
+	
+
+   
+  
+  if ( window.addEventListener ) { 
+     window.addEventListener( "load", doLoad, false );
+  }
+  else 
+     if ( window.attachEvent ) { 
+        window.attachEvent( "onload", doLoad );
+  } else 
+        if ( window.onLoad ) {
+           window.onload = doLoad;
+  }	
+         
+
+
+
+
+
+
+
+/*var pig =  document.getElementById("subselect");
+        
+if(pig.addEventListener) {pig.addEventListener("click",setName, false);
+		} 
+		 else if(pig.attachEvent) {
+		 pig.attachEvent("onclick", setName); 
+		 }*/
+	
+
+
+
+	
+/*var badger =  document.getElementById("");
+        
+if(badger.addEventListener) {badger.addEventListener("click",downDate, false);
+		} 
+		 else if(badger.attachEvent) {
+		 badger.attachEvent("onclick", downDate); 
+		 }
+		*/
+
+
+
+
+   /* var cow =  document.getElementById("saveselect");
+        
+	if(cow.addEventListener) {cow.addEventListener("click",remote5, false);
+			} 
+			 else if(cow.attachEvent) {
+			 cow.attachEvent("onclick", remote5); 
+			 }	*/
+
+
+
+	var squirell =  document.getElementById("zebra");
+    if(squirell.innerHTML=="Games Available Page"){    
+		if(squirell.addEventListener) {squirell.addEventListener("click",lemurs, false);
+				} 
+				 else if(squirell.attachEvent) {
+				 squirell.attachEvent("onclick", lemurs); 
+				 }				 
+	}
+
+
+
+
+
+   /* var steer =  document.getElementById("colteams");
+        
+	if(steer.addEventListener) {steer.addEventListener("click",makeTeams, false);
+			} 
+			 else if(steer.attachEvent) {
+			 steer.attachEvent("onclick", makeTeams); 
+			 }		*/		 
+			 
+			 
+
+//******************************************************************************************************************************///	
+function enterTeams(A, B) {
+	var alpha = A
+	if (alpha.value == 17) {
+	var customHt = document.createElement("select");
+	customHt.setAttribute("width","250"); 
+	alpha.appendChild(customHt);
+	
+	}
+	else {
+			var team = document.getElementsByClassName('pro');
+			var beta = alpha;
+			var eggH = document.createElement("img");
+			eggH.setAttribute("src", "../static/thumbsPro/" + beta + ".png");
+			eggH.setAttribute("height" , "40");
+			eggH.setAttribute ("width" , "50");
+			eggH.setAttribute("padding", "0");
+			var lambH = document.getElementById("teamLog");
+			lambH.appendChild(eggH);
+	}
+    /*<!-- var team2 = document.getElementsByClassName('pro'); -->
+	<!-- var delta = document.getElementById("proList2"); -->*/
+	var pi = B
+	var eggH2 = document.createElement("img");
+    eggH2.setAttribute("src", "../static/thumbsPro/" + pi + ".png");
+    eggH2.setAttribute("height" , "40");
+	eggH2.setAttribute ("width" , "50");
+	eggH2.setAttribute("padding", "0");
+	var lambH2 = document.getElementById("teamLog2");
+	lambH2.appendChild(eggH2);
+	
+	
+	var calfH = beta.textContent;
+	var gamma = document.getElementById("hTeam");
+	gamma.style.textAlign = "center";
+    //var calfV = document.getElementById("teamV").value;
+    document.getElementById("hTeam").textContent = beta;
+	document.getElementById("hTeam").style.font="normal bold 32px arial,serif";
+	document.getElementById("vTeam").textContent = pi;
+	document.getElementById("vTeam").style.font="normal bold 32px arial,serif"; 
+	}
+//********************************************************************************************************************************///
+function makeTeams(A, B) {
+// window.alert("make")	
+	/*alert(A)
+	alert(B)*/
+  //    <!-- var team = document.getElementsByClassName('col');  -->
+	 // <!-- var alpha = document.getElementById("colSel");  -->
+	
+	function airaeGenerate() {
+		var TLs = []
+	    TLs =  [ "Sun Devils", "Wildcats", "Bears", "Eagles", "Golden Bears", "Tigers", "Buffalos", "Blue Devils", "Seminoles", "Yellow Jackets", "Fighting Illini", "Hoosiers", "Hawkeyes", "Cyclones", "Jayhawks", "Kansas State", "Cardinals", "Terrapins", "Hurricanes", "Spartans", "Arizona", "Crimson Tide",  "Auburn", "Rams ", "Gators", "Buckeyes", "Boise State", "Bulldogs", "Connecticut", "Cornhuskers", "Bruins", "Ducks",	 
+"Utes", "Wolverines", "Fighting Irish", "Black Knights", "Longhorns", "Sooners", "LSU", "Razorbacks", "Volunteers", "Aggies", "Trojans", "Northwestern", "Ball State", "Red Raiders", "Cowboys", "Rebels", 	
+"Horned Frogs",	 "Huskies", "Cougars", "Tar Heels", "Cardinal", "Nittany Lions", "Air Force", "Badgers", "Hokies", "Mountaineers", "BYU", "Mizzou", "RedHawks", "Wyoming", "Broncos", "Wash State", "Deacons", "Cavaliers", 'Commodores', 'Knights', 'UNLV', 'Minutemen', 'Boilermakers', 'Green Wave', 'Golden Hurricane', 'Mississippi State', 'Midshipmen', 'Gamecocks']
+	    return TLs;
+}
+	
+	var newList =['Arizona State', 'Kentucky', 'Baylor', 'Boston College', 'California', 'Clemson', 'Colorado', 'Duke', 'Florida State', 'Georgia Tech', 'Illinois', 'Indiana', 'Iowa', 'Iowa State', 'Kansas', 'Kansas State', 'Loisville', 'Maryland', 'Miami', 'Michigan State', 'Arizona', 'Alabama', 'Auburn', 'Colorado State', 'Florida', 'Ohio State', 'Boise State', 'Georgia', 'Connecticut', 'Nebraska', 'UCLA' , 'Oregon', 'Utah', 'Michigan', 'Notre Dame', 'Army', 'Texas', 'Oaklahoma', 'LSU', 'Arkansas', 'Tennesee', 'Texas A & M', 'USC', 'Northwestern', 'Ball State', 'Texas Tech', 'Oakla. State', 'Ole Miss', 'TCU', 'Washington', 'Houston', 'North Carolina', 'Stanford', 'Penn State', 'Air Force', 'Wisconsin', 'Virginia Tech', 'West Virginia', 'BYU', 'Missouri', 'Miami of Ohio', 'Wyoming', 'Western Michigan','Wash State', 'Wake Forest', 'Virginia', 'Vanderbilt', 'UCF', 'UNLV', 'UMASS', 'Purdue', 'Tulane', 'Tulsa', 'Mississippi State', 'Navy', 'South Carolina']
+
+
+
+
+
+	var teamer = airaeGenerate(); 
+	// alert("now")
+    var team = teamer
+	var alpha = A
+
+	for (var i = 0; i < newList.length; i++) {
+		if(newList[i] === alpha){
+			var b = i
+			alpha = team[b]
+		}
+		else{
+			alpha = alpha; 
+		}	
+	}
+	var beta = "Homie"
+	var ext = ".jpg"
+	// <!-- var cappa = alpha 
+	var cappa = beta;
+	for (var a = 0; a < team.length; a ++) { 
+		if (alpha === team[a]){
+			// var sigma = team[a].indexOf;
+		    beta = alpha
+			cappa = beta;
+
+			var ext = ".png"
+		}		
+	}
+			
+	var eggH = document.createElement("img");
+    eggH.setAttribute("src", "../static/thumbs/" + cappa + ext);
+    eggH.setAttribute("height" , "40");
+	eggH.setAttribute ("width" , "50");
+	eggH.setAttribute("padding", "0");
+	var lambH = document.getElementById("teamLog");
+	lambH.appendChild(eggH);
+	
+	
+    // var team = document.getElementsByClassName('col');
+	var alpha2 = B
+	for (var i = 0; i < newList.length; i++) {
+		if(newList[i] === alpha2){
+			var b = i
+			alpha2 = team[b]
+		}
+		else{
+			alpha2= alpha2; 
+		}	
+	}
+	var beta2 = "Visor"
+	var ext2 = ".jpg"
+	var cappa2 = beta2
+	
+	for (var z = 0; z < team.length; z ++) { 
+		if (alpha2 === team[z]){
+			// var sigma2 = team[z].indexOf;
+			// var beta2 = team[sigma2].value
+			beta2 = alpha2
+			cappa2 = beta2;
+			ext2 = ".png"
+		}
+			
+	}
+	
+	var eggH2 = document.createElement("img");
+    eggH2.setAttribute("src", "../static/thumbs/" + cappa2 + ext2);
+    eggH2.setAttribute("height" , "40");
+	eggH2.setAttribute ("width" , "50");
+	eggH2.setAttribute("padding", "0");
+	var lambH2 = document.getElementById("teamLog2");
+	lambH2.appendChild(eggH2);
+	
+	
+	
+	//var calfH = team[beta].textContent;
+	var calfH = beta;
+	var gamma = document.getElementById("hTeam");
+	gamma.style.textAlign = "center";
+    //var calfV = document.getElementById("teamV").value;
+	
+	document.getElementById("hTeam").textContent = cappa; 
+    document.getElementById("hTeam").textContent = alpha;
+	document.getElementById("hTeam").style.font="normal bold 2vw arial,serif";
+	document.getElementById("vTeam").textContent = cappa2; 
+	document.getElementById("vTeam").textContent = alpha2;
+	document.getElementById("vTeam").style.font="normal bold 2vw arial,serif";
+	
+	}
+
+function downDate() {
+	
+	var k = []
+    k = gather()  ;
+
+	for(var g = 0; g < k.length; g++){
+		var viper = document.getElementById(squares[k[g]-1])
+                var stat = squares.indexOf(viper.id);
+                if (tracker[stat] == 1) {
+                    viper.style.backgroundColor = "#9FCBC5";
+			property.parentElement.style.backgroundColor = "#9FCBC5"; 
+		        tracker[stat] = 0;
+			var tar = viper.textContent;
+		
+			holder.splice(holder.indexOf(viper.textContent), 1);
+        }
+        else {
+            viper.style.backgroundColor = "#08088A";
+	    viper.parentElement.style.backgroundColor = "#08088A"; 
+            tracker[stat] = 1;
+			var ant = viper.innerHTML;
+			holder.push(ant);
+			var h = h + 1;
+			/*alert(ant)*/	
+        }
+
+    }
+   persons();
+  }
+
+
+/* Gather selection numbers */
+function gather() {
+	
+	kj = []
+	mg = []
+	dh = 0
+	for( var e = 0; e < 25; e++) {
+		c = "e" + e
+		ut = document.getElementById(c);
+		if(isNaN(ut.value)) {
+			kj.push(e);
+
+			dh = e + 1;
+			mg.push(dh);
+
+		}
+
+	}
+	
+	
+	// window.alert(mg);
+	return mg;
+	}
+
+
+
+/*var egrit = document.getElementById("flagg")
+if (egrit != "") {
+		downDate();
+	}
+*/
+function persons()  {
+	var colors_list =["#FFFFFF", "#58D3F7", "#01DF01", "#FE9A2E", "#F4FA58", "#BDBDBD", "#B18904", "000000", "#DA81F5", "#BE0A0A", "#585858", "#DF01D7", "#FA5858", "#9FC300", "#F6CED8", "#0B614B", "#FF0040", "#088A08", "#01DF01", "#FE9A2E", "#F4FA58", "#BDBDBD", "#B18904", "#DA81F5", "#585858", "#DF01D7", "#FA5858", "#81BEF7"];
+	var j = [];
+        j = gather();
+
+    var colr = 0;   
+    var naems =[]   
+	for(var n = 0; n < j.length; n++ ) {
+		d = "e" + (j[n] -1);
+		
+		g = "a" + (j[n]);
+		// window.alert(naems);
+		us = document.getElementById(d);
+		tar = document.getElementById(g);
+		tar.innerHTML = us.value;
+		var colr = color_Assign(us.value, naems)
+		tar.style.font ="normal bold 1.25vw arial, serif", tar.style.padding="0px", tar.style.width = "6vw", tar.style.whiteSpace= "normal", tar.disabled = true, tar.style.color= colors_list[colr];
+		}
+		
+	}
+
+function rNums() {
+	var a = "m" + 0;
+	var vt = document.getElementById(a);
+	if(vt.value == "dig"){
+		for( var p = 0; p < 20; p++) {
+			var b = "j" + p;
+			var ot = document.getElementById(b);
+			var d = "b" + p;
+			var wt = document.getElementById(d);
+		    var fh = p + 1;
+			if(fh % 2 == 1) {
+			wt.innerHTML = ot.value,  wt.style.color = "#DF3A01"; 
+			wt.style.font = "710 5.00vw arial, serif";
+			}
+			else{
+				wt.innerHTML = ot.value, wt.style.color = "#0A122A" ;
+				wt.style.font = "710 5.00vw arial, serif";
+			}
+		for( var r =1; r<26; r++){
+			var i = "a" + r;
+			var kt = document.getElementById(i);
+			if(kt.disabled != true){
+				kt.disabled = true;
+			}
+		}
+	}
+		}
+}
+	
+function remote5() {
+	var numsform = document.getElementById("save5");
+	numsform.click();
+
+}
+
+function lemurs() {
+	
+	var lem = document.getElementById("save99");
+	lem.click();
+	localStorage.setItem('titl', 'Your Available Games');
+}
+
+function color_Assign(name, list) {
+	
+  var  nm = name;
+  var  li = list;
+    if(li.includes(nm)){
+	return li.indexOf(nm);
+	}	
+    li.push(nm);
+    return li.indexOf(nm);
+}
+
+var trigger = document.getElementById("loaded");
+var bullet = document.getElementById("thetoons");
+
+
+ // if (trigger.innerHTML == "modde"){
+     // window.alert('trigger on')	  
+	  
+	
+	/*$(document).ready(function(){
+		$(bullet).modal({display:true});
+		$(bullet).modal();
+		$(bullet).modal({backdrop:true})
+*/
+
+
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover({title: "TERMS"});  
+});
+
+// $('popover').popover();
+
+
+
+
+</script>
+
+	
+
+
+
+ <!-- <script src="C:Users/Steve/Desktop/pool/js/bootstrap.min.js"></script> -->
+</body>	
+
+</html>	
+
+

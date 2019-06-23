@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Terms</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+
+
+
+<ul>
+		<h3><p>TERMS</p></h3>
+
+        <li>  GAME NO   {{request.session.gamnum}} </li>
+		<li> Square Price : {{request.session.price}} </li> 
+        <li> Min Purch  : {{request.session.min}} </li>
+        <li> MAX PURCH :  {{request.session.max}} </li> 
+        <li> 1st QTR :  {{request.session.firstQtr}} </li> 
+        <li> 2nd QTR :   {{request.session.secQtr}} </li>  
+        <li> 3rd QTR :   {{request.session.thirdQtr}} </li>  
+        <li> FINAL   {{request.session.final}} </li>
+        <li> END OF GAME / End OF 4th: {{request.session.eog}} </li>
+        <li> HOME :   {{request.session.homeT}} </li> 
+        <li> VISIT  : {{request.session.visitT}} </li>
+        <li> GAME DATE: {request.session.{gameDat}} </li>  
+        <li> CLOSE :  {{request.session.closes}} </li>   
+        <li> NOTES :  {{request.session.notes}} </li>  
+</ul>
+
+
+<p>{{popovr}}</p>

@@ -1,0 +1,237 @@
+<!-- < <!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>PLAYER LOGIN</title>
+<! <link rel="stylesheet" href="stylesGrid.css"/> -->
+<!-- <link rel="stylesheet" href="C:Users/Steve/Desktop/TwentyFiveSq/pool/chosen.css"/> 
+ -->
+ <!-- <link rel="shortcut icon" href="../static/Zfav.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+</head> -->
+
+<!-- //edited 1/15/2017 -->
+
+
+
+
+
+<!-- <style>
+
+.container  {
+	background-color:white;
+	height: 1000px;
+	margin-top: -1%;
+}
+
+h2   {
+	text-align: center;
+	color: red;
+
+}
+
+
+#z1   {
+	height: 25px;
+
+	}
+
+
+
+label {
+		width: 20%;
+		float: left;
+		white-space: nowrap;
+		color: black;
+		font-size: 18px;
+		margin-left: 0%;
+
+}
+
+input { 
+		float: right;
+
+ }
+
+
+.panel-body  {
+
+	background-color: #DBA901;
+}
+
+#name  {
+
+	border-style: solid;
+	border-width: 2pt;
+	color: black;
+
+}
+
+#box1  {
+	height: 60px;
+	background-color: yellow;
+}
+
+#box2  {
+	height: 120px;
+	background-color: black;
+	margin-top: -20px;
+	text-align: center;
+}
+
+
+#a1  { margin-left: -4%;
+ white-space: nowrap;
+ color: black;
+ font-family: cursive;
+ font-size: 18px
+ }
+
+#b1  { margin-left: -4%;
+ white-space: nowrap;
+ color: black;
+ font-family: cursive;
+ font-size: 18px
+ }
+
+
+#c1  { 
+ 
+ color: black;
+ font-family: cursive;
+ font-size: 18px
+ }
+
+
+#w1   {
+	margin-left: 60%;
+	margin-top: 3%;
+}
+
+
+
+
+
+html  body  {
+	/*background-color: green;*/
+	background-color: #5F4C0B;
+}
+
+#p99  { height: 50px;
+background-color: #585858 
+/*background-color: green*/
+}
+
+#p100 li  {
+	list-style-type: none;
+	display: inline;
+	
+	font-family: arial;
+	font-size: 16px;
+	padding: 14px 16px;
+	text-align: center;
+}
+
+li a:hover {
+    background-color: #555;
+    color: white;
+
+}
+
+li a {
+
+	color: black;
+}
+
+#playerlogin {
+	font-family: arial
+    font-size: 14px;
+    color: white;
+}
+</style> -->
+
+
+
+
+<body>
+	
+
+
+<!-- <script src = "../static/test99.js"></script>
+<script src = "../static/setUpPageText.js"></script>
+<script src = "../static/RenderGridActiveT.js"></script>
+	<script src="../static/jquery-migrate-3.0.0.js"></script>
+	<script src="../static/jquery-migrate-1.4.1.js"></script>
+
+
+
+
+<div class= "container">
+		<div id = "box2">
+			<div id = "z1">
+			<img src = "C:Users\Steve\Desktop\TwentyFiveSq\pool\WelcomeTag.png" id = "w1">	
+			</div>
+		     <h2>SQUARES POOL SIGN IN</h2>
+		     
+        </div>
+        
+     
+     <div class="panel panel-default"><div class="panel-body"  id = "p99">
+    <nav id ="nav"><ul id="p100"><strong><li id ="homeli"><a href="/H">HOME</a></li></strong><strong><li id ="about"><a href="/A">MORE INFO</a></li></strong><strong><li id = "playerlogin">PLAYER LOG-IN</li></strong><strong><li id = "contact"><a href ="/C">CONTACT US</a></li></strong></ul></nav></div></div>  --> 
+ { % content % }   
+  
+    <div class="panel panel-default">
+  <div class="panel-body"> 
+
+<form class="form-horizontal" role="form" method="post" action="/PP">
+
+	<div class="form-group">
+		<div class = "col-sm-2">
+		
+		</div>
+		<div class= "col-sm-4">
+			<label for="authorization" class="col-sm-2 control-label">Authorization Password</label>
+			<input type="password" name="authorization9" id= id="password9" placeholder="Auth Password" class="form-control" required/>
+		</div>
+		<div class="col-sm-4">
+			  
+		</div>
+		<div class= "col-sm-2">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class = "col-sm-2">
+		
+		</div>
+		<div class= "col-sm-4">
+			<label for="eMail" class="col-sm-2 control-label">E-mail</label>
+			<input type="email" name="email" id= id="email" placeholder="e-Mail" class="form-control" required/>
+		</div>
+		<div class="col-sm-4">
+			  
+		</div>
+		<div class= "col-sm-2">
+		</div>
+	</div>
+
+	
+	<input type="submit" id = "kik"/>
+	
+	</form>
+	
+	</div>
+	</div>
+	<div>
+	<p id = "c1"> </p>
+	</div>
+</div>
+
+{ % endblock % }
+
+</body>
+</html>

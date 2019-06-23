@@ -1,0 +1,438 @@
+<!DOCTYPE HTML>
+<html  lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>PLAYER SIGN UP</title>
+<!-- <link rel="stylesheet" href="stylesGrid.css"/> -->
+<link rel="stylesheet" href="../static/chosen.css"/> 
+<link rel="shortcut icon" href= "../static/Zfav.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+
+<style>
+
+.container  {
+	background-color:white;
+	height: 1200px;
+
+}
+
+h2   {
+	text-align: center;
+	color: red;
+
+}
+
+
+#z1   {
+	height: 25px;
+
+	}
+
+
+
+label {
+		width: 20%;
+		float: left;
+		white-space: nowrap;
+		color:black;
+		font-size: 18px;
+		margin-left: 0%;
+
+}
+
+#state {
+	width: 100%;
+	margin-left: 0%;
+}
+
+#country {
+	width: 100%;
+	margin-left: 0%;
+}
+
+/*input { 
+		float: right;
+*/
+/* }*/
+
+
+.panel-body  {
+	/*background-color:#CEF6D8;*/
+	background-color: #DBA901;
+}
+
+#name  {
+
+	border-style: solid;
+	border-width: 2pt;
+	color: black;
+
+}
+
+#box1  {
+	height: 60px;
+	background-color: yellow;
+}
+
+#box2  {
+	height: 120px;
+	background-color: black;
+	margin-top: -20px;
+	text-align: center;
+}
+
+
+#a1  { margin-left: -4%;
+ white-space: nowrap;
+ color: black;
+ font-family: cursive;
+ font-size: 18px
+ }
+
+#b1  { margin-left: -4%;
+ white-space: nowrap;
+ color:black;
+ font-family: cursive;
+ font-size: 18px
+ }
+
+
+#c1  { 
+ 
+ color: black;
+ font-family: cursive;
+ font-size: 18px
+ }
+
+#p99  { height: 50px;
+background-color: #585858 
+}
+
+
+
+
+#p100 li  {
+	list-style-type: none;
+	display: inline;
+	
+	font-family: arial;
+	font-size: 16px;
+	padding: 14px 16px;
+	text-align: center;
+}
+
+li a:hover {
+    background-color: #555;
+    color: white;
+
+}
+
+li a {
+
+	color: black;
+}
+
+
+html  body  {
+	background-color: #5F4C0B;
+
+}
+
+#myModal {
+
+	color: #0B610B
+}
+
+.modal-header {
+      background-color: #5cb85c;
+</style>
+
+
+
+</head>
+<body>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">REGISTER</h4>
+        </div>
+        <div class="modal-body">
+          <p><strong>Hey there! It looks like you're new to us. We'd like to 
+          welcome you to 25 Squares Football. But first, please register by 
+          answering a few questions. Thanks.</strong></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>	
+<!-- <script src = "C:\Users\Steve\Desktop\TwentyFiveSq\pool\squares.js"></script> -->
+<script src = "../static/test99.js"></script>
+
+
+<script src="../static/chosen.jquery.min.js"</script>   
+<script src="../static/chosen.proto.js"</script>
+<script src="../static/chosen.proto.min.js"</script>  
+<script src="../static/jquery-migrate-3.0.0.js"</script>
+<script src="../static/jquery-migrate-1.4.1.js"</script>
+<script src="../static/chosen.jquery.js"</script>
+
+
+
+<div class= "container">
+		<div id = "box2">
+			<div id = "z1">
+				
+			</div>
+		     <h2>PLAYER SIGN UP</h2>
+		     
+        </div>
+
+     <div class="panel panel-default"><div class="panel-body"  id = "p99">
+    <nav id ="nav"><ul id="p100"><strong><li id ="homeli"><a href="twentyFiveSqHome.html">HOME</a></li></strong><strong><li id ="about"><a href="twentyFiveSqMore.html">MORE INFO</a></li></strong><strong><li id = "player login"><a href="twentyFiveSqPlayerLogin.html">PLAYER LOG-IN</li></strong<strong><li id = "contact"><a href ="twentyFiveSqContact.html">CONTACT US</li></strong></ul></nav></div></div> 
+      
+    <div class="panel panel-default">
+  <div class="panel-body"> 
+
+<form class="form-horizontal" name= "sup" role="form" method="post" action="/R">
+
+<div class="form-group">
+		
+		<div class = "col-sm-2">
+			<a href = "twentyFiveSqHome.html"><strong><li>Back</li><a></strong> 
+		</div>
+		<div class= "col-sm-4">
+			<label for="firstName" class="col-sm-2 control-label">First Name</label>
+			<input type="text" name="firstName" id= "firstName" placeholder="First Name" class="form-control" required/>
+		</div>
+		<div class="col-sm-4">
+			  
+		</div>
+
+		<div class= "col-sm-2">
+		</div>
+</div>
+
+	<div class="form-group">
+		<div class = "col-sm-2">
+		
+		</div>
+		<div class= "col-sm-4">
+			<label for="lastName" class="col-sm-2 control-label">Last Name</label>
+			<input type="text" name="lastName" id= "lastName" placeholder="Last Name" class="form-control" required"/>
+		</div>
+		<div class="col-sm-4">
+			  
+		</div>
+		<div class= "col-sm-2">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class = "col-sm-2">
+		
+		</div>
+		<div class= "col-sm-4">
+			<label for="eMail" class="col-sm-2 control-label">E-mail</label>
+			<input type="email" name="email" id= id="email" placeholder="e-Mail" class="form-control" required/>
+		</div>
+		<div class="col-sm-4">
+			  
+		</div>
+		<div class= "col-sm-2">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class = "col-sm-2">
+		
+		</div>
+		<div class= "col-sm-4">
+			<label for="userName" class="col-sm-2 control-label">User Name</label>
+			<input type="text" name="userName" id= "userName" placeholder="User Name" class="form-control" required/>
+		</div>
+		<div class="col-sm-4">
+		<p id= "a1"> </p>	
+		</div>
+		<div class= "col-sm-2">
+		 
+		</div>
+	</div>
+
+<div class="form-group">
+		<div class = "col-sm-2">
+		
+		</div>
+		<div class= "col-sm-4">
+			<label for="street" class="col-sm-2 control-label">Your Address</label>
+			<input type="text" name="street" id="street" placeholder="Street & unit" class="form-control" required/> 
+		</div>
+		<div class="col-sm-4">
+		<p id= "b1"> </p>	  
+		</div>
+		<div class= "col-sm-2">
+		
+		</div>
+	</div>
+
+<div class="form-group">
+		<div class = "col-sm-2">
+		
+		</div>
+		<div class= "col-sm-4">
+			<label for="city" class="col-sm-2 control-label">City</label>
+			<input type="text" name="city" id="city" placeholder="City" class="form-control" required/> 
+		</div>
+		<div class="col-sm-4">
+		<p id= "b1"> </p>	  
+		</div>
+		<div class= "col-sm-2">
+		
+		</div>
+</div>	
+
+<div class="form-group">
+		<div class = "col-sm-2">
+			
+			
+		</div>
+
+			
+		<div class= "col-sm-2">
+			<label for="state" class="col-sm-2 control-label">State/Province</label>
+			<input type="text"  name="state" id="state" placeholder="State/Province" class="form-control" required/> 
+		</div>
+		
+		<div class= "col-sm-2">
+			<label for="country" class="col-sm-2 control-label">Countwy</label>
+			<input type="text"  name="country" id="country" placeholder="Country" class="form-control" required/> 
+
+		</div>	  
+		<div class="col-sm-2">
+
+		<label for="zipcode" class="col-sm-2 control-label">Zip Code</label>
+		<input type="text"  name="zip" id="zip" placeholder="Zip Code" class="form-control" required/> 
+		
+		</div>
+		<div class= "col-sm-2">
+		
+		</div>
+		<div class= "col-sm-2">
+		
+		</div>
+</div>
+<!-- <button type="button" class="btn btn-primary btn-md">Join</button> -->
+
+<input type="submit" id="submitt" value="Join"/>
+</form>
+
+<div>
+	<p id = "c1"> </p>
+</div>
+ <div class="modal fade" id="#myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          <p></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<script src="../static/setUpPageText.txt"></script> 
+
+
+<!--  <div class="container">
+  <h2>Modal Example</h2>
+  Trigger the modal with a button -->
+  <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+  
+   <div class="modal fade" id="#myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!Modal content-->
+     <!--  <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div> --> 
+  <!-- </div> --> 
+  
+<!-- </div> 
+ --> 
+
+
+
+
+
+
+
+<script>
+$("#myModal").modal();
+
+
+
+
+
+window.addEventListener("load", textParagraphsSu.bind(null, sineUpName), false);
+
+function textParagraphsSu(One) {
+	document.getElementById("a1").innerHTML = One;
+	document.getElementById("b1").innerHTML = Two;
+	document.getElementById("c1").innerHTML = Three 
+	
+}
+
+var duck = document.getElementById("submitt");
+if(duck.addEventListener) {duck.addEventListener("click",paySub, false);
+			} 
+			 else if(duck.attachEvent) {
+			 duck.attachEvent("onclick", paySub); 
+			 }	
+
+function paySub() {
+	sessionStorage.fName = document.getElementById('firstName').value;
+	sessionStorage.pw = document.getElementById('password2').value;
+	
+}
+
+</script>
+</body>
+</html>

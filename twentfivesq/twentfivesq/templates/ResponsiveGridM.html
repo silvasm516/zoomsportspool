@@ -1,0 +1,187 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>ResponsiveGridM</title>
+<!-- MANAGER'S GRID VIEW NAV MENU. FROM DASHBOARD TO GRID(MOBIL VERSION) -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script> -->
+<!-- <link rel="stylesheet" href= "FlyO.html/fly.css"/> -->
+
+
+<style>
+
+{% block 'FlyT2.html' %}
+
+
+
+#menuwrapper {
+
+    font-family:Arial;
+    font-size:12px;
+	font-style: bold;
+
+}
+
+
+#menuwrapper ul, #menuwrapper ul li
+{
+    margin:0;
+    padding:0;
+    list-style:none;
+   /**/
+}
+
+
+#menuwrapper ul li 
+{
+    background-color: #cfcfd1;
+    border-bottom:solid 1px white;
+    width:6vw;
+    cursor:pointer;
+    display: block;
+  float: left;
+  position: relative;
+	
+}
+#menuwrapper ul li a{
+
+color:#190707;
+display: block;
+}
+
+#menuwrapper ul li:hover 
+{
+    background-color:#6679e9; 
+    position:relative;
+	color:#190707;
+	display: block;
+}
+ 
+#menuwrapper ul li ul
+{
+    position:absolute;
+    display:none;
+}
+
+#menuwrapper ul li:hover ul{
+    left:0px;
+	center:0px;
+    display:block;
+	position:absolute;
+	text-align: center;
+	color:#190707;
+}
+ 
+#menuwrapper ul li ul li{
+    background-color:#d1a934;
+	color:#190707;
+}
+ 
+#menuwrapper ul li:hover ul li:hover{
+    background-color:red;
+}
+
+#menuwrapper ul li:hover ul li ul{
+    position:absolute;
+    display:none;
+}
+
+#menuwrapper ul li:hover ul li:hover ul{
+    position:absolute;
+    display: block;
+    width: 4.5vw;
+     font-size:18px;
+}
+
+
+@media only screen and (max-width:70em) {
+
+li a {
+	display: inline;
+	font-family: arial;
+	font-size: 3vw;
+	margin-bottom: 1vh;
+	background-color: white;
+	visibility: visible;
+}
+
+
+
+
+#levitz {
+	margin-left: 0%;
+	padding: 2%;
+	visibility: visible;
+}
+
+
+ul ul li{
+	display: block;
+	margin-bottom: 1vh;
+	padding: 1vh;
+}
+
+
+
+#popover  {
+	font-family: arial;
+	font-size: 12;
+	width: 6vw;
+}
+
+
+
+
+}
+
+
+</style>
+</head>
+
+
+<body>
+<div id="levitz">
+    <ul>
+        <!-- <strong><li><a href="#">Submit</a></strong>
+			<ul> -->
+				<li><strong><a href = "#" id = "subselect">Submit Selections<a/></strong></li>
+			<!-- </ul>
+		</li>
+        <strong><li><a href="">Save</a></strong> -->
+			<!-- <ul> -->
+			    <li><strong><a href = "#" id = "saveselect">Save Selections</a></strong></li>
+			<!-- </ul> -->
+		<!-- </li>
+		 <strong><li><a href="">Nav / Help</a></strong> -->
+		<ul id= 'items'>
+			<li><strong><a href = "/b" id = "dashB">Dashboard</a></strong></li>
+			<br>
+			<li><strong><a href="/Q">Archive</a></strong></li>
+			<br>
+			<li><strong><a href="/N">Index</a></strong></li>
+			<br>
+			<li><strong><a href="/J">Home</a></strong></li>
+			<br>
+			<li><strong><a href= "#" id = "popover" data-toggle="popover" data-html = "true"  title="TERMS" data-placement="left" data-content="{% for key, value in popovr.items %}<span><p><h3>{{key}}  {{value}}</h3></p></span>{% endfor %}">Terms</a></strong></li>
+			<br>
+			<li><strong><a href="#" id = "zebra">Help</a></strong></li>
+			<br>
+		</ul>		
+			
+
+
+</ul>
+
+</div>
+
+{% endblock %}
+</body>
+</html>
+
+<script>
+
+
+</script>

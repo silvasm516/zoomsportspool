@@ -1,0 +1,471 @@
+<!DOCTYPE HTML>
+{% load staticfiles %} 
+<html  lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>{% block title %}{% endblock %}</title>
+
+
+
+<!-- <link rel="stylesheet" href="../static/chosen.css"/> --> 
+<link rel="shortcut icon" href= "../static/Zfav.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"</script -->
+<!-- <script src="../static/jquery-migrate-3.0.0.js"</script> -->
+
+<!-- <script src="../static/jquery-migrate-3.0.0.js"</script> -->
+   
+	<!-- Load Script and Stylesheet  -->
+
+ <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>   -->
+
+<!-- <link href= "//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel= "stylesheet">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> 
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href= "//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel= "stylesheet">
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet"/>
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"</script>
+
+<script>window.jQuery || document.write('<script src="js/jquery-2.1.4.min.js" type="text/javascript">')</script>
+<script src="../static/codecanyon-20099228-calentim-date-time-range-picker/build/js/moment.min.js"></script>
+
+<!-- .calentim includes -->
+<link href="../static/codecanyon-20099228-calentim-date-time-range-picker/build/css/calentim.min.css" rel="stylesheet"/>
+
+<script src="../static/codecanyon-20099228-calentim-date-time-range-picker/build/js/calentim.min.js"></script>
+
+
+<!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+
+
+
+
+
+
+<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+
+
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"</script> -->
+
+
+
+
+
+ <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <! <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+<!-- <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+ <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+	 <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  -->
+
+<style>
+
+.container  {
+	background-color:white;
+	height: 2100px;
+
+}
+
+
+
+#box2  {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	width: 100%;
+	align-items: center;
+	
+
+}
+
+
+
+
+
+
+#pro {
+	padding-left: 2.5vw;
+	padding-right: 2.5vw
+}	
+
+#col {
+	padding-left: 2.5vw;
+	padding-right: 2.5vw;
+	
+
+}
+
+#cus {
+	padding-left: 2.5vw;
+	padding-right: 2.5vw;
+
+	
+}
+
+
+
+
+
+#p500, li, label  {
+	list-style-type: none;
+	display: inline;
+	
+	font-family: arial;
+	
+	padding-left: 3vw;
+	
+}
+.panel-body {
+	background-color:#424242;
+	align-items: center;
+	height: 4vh;
+	
+}
+
+.panel-heading {
+	background-color:#424242;
+}
+
+
+/*.block:after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-left: -0.25em; /* Adjusts for spacing 
+}*/
+
+/*#p500 {*/
+	
+	/*padding-left: 2vw;*/
+	/*margin-left: 2.5vw;
+	margin-bottom:.5vw;
+}*/
+
+/*li a:hover {
+    background-color: #555;
+    color: white;
+
+}
+
+li a {
+
+	color: black;
+}*/
+
+
+html  body  {
+	/*background-color: #5F4C0B;*/
+	background-color: #084B8A;
+}
+
+#a  {
+height: 2300px;
+/*background-color :#5f4C0B;*/
+background-color :white;
+}
+
+#b  {
+height: 2300px;
+background-color :white
+}
+
+#c  {
+height: 2300px;
+background-color :white
+}
+
+#d  {
+height: 2300px;
+/*background-color :#5f4C0B;*/
+background-color :white;
+}
+
+#dash {
+	margin-left: 44%;
+	font-family: arial;
+	font-size: 1.5vw;
+}
+
+#p500 {
+	color: red;
+	
+	margin-left:9.5vw;
+	height: 2vh;
+}
+
+#p501 {
+	color: red;
+	
+	margin-left:5vw;
+	height: 2vh;
+}
+
+#p502 {
+	color: red;
+	
+	margin-left:5vw;
+	height: 1.5vh;
+}
+
+#p503 {
+	color: red;
+	
+	margin-left:5vw;
+	height: 2vh;
+}
+
+#p504 {
+	color: red;
+	
+	margin-left:5vw;
+	height: 1.75vh;
+}
+
+
+#p505 {
+	color: red;
+	
+	margin-left:5vw;
+	height: 1vh;
+}
+
+
+#p506 {
+	color: red;
+	
+	margin-left:1.5vw;
+	height: 2vh;
+}
+
+
+#logout {
+	float:right;
+	margin-right: 1%;
+	margin-top: -1.5%;
+	color: red;
+	font-weight: bold;
+}
+
+#t75 {
+	color: green;
+}
+
+
+#p600 {
+	color: red;
+	padding-bottom: 0vh;
+	/*text-align: center;*/
+	
+}
+
+#sp {
+color: black;
+}
+
+#box2 {
+	background-color: black;
+}
+.panel {
+	border-color: black;
+}
+
+#welcome, #mgrN{
+	color: red;
+	text-align: center;
+	/*margin-left: 45%;*/
+}
+
+td {
+	border: 2pt solid white;
+	font-family: arial
+	font-size: 1vw;
+	color: black;
+	align-self: center;
+	margin-left: 5%;
+	border-color: white;
+	text-align: center;
+
+}
+
+th {
+
+color: black;
+}
+
+#tabgrid th {
+	color: red;
+}
+
+#gridsleft {
+	color: white;
+}
+
+
+
+#mobilInst p {
+display: none;
+
+}
+
+
+@media only screen and (max-width:30em) {
+
+/*span, #flynav {
+	display: none;
+}*/
+
+#mobilInst p {
+display: contents;
+width: 100%
+font-family: arial;
+font-size: 1.75em;
+margin-left: 10%;
+font-weight: bold;
+}
+
+
+#dash {
+	font-size: 3.0vw;
+}
+
+.nomobile {
+	display: none;
+}
+
+}
+
+
+
+
+
+{% block style %}{% endblock %}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
+
+</head>
+
+
+
+<body>
+
+ 
+
+
+<div class= "container">
+
+
+<div>
+		<div id = "box2">
+			<strong><p id = 'welcome' style="color:red;">{{data.welcome}}</p></strong>
+			<strong><p id = 'mgrN' style="color:red;">{{data.userName}}</p></strong>
+
+			 <span><strong><p id ="dash">{{data.tit}}</p></strong></span>
+			 {% if 'UsrName' in request.session %}
+			 
+         		<a href="/o" id = "logout">logout</a>
+         	{% endif %}
+         <table>
+  			<tr id="tabgrid" >
+    			<th >Grids</th>
+  			</tr>
+  			<tr>
+    			<td id = "gridsleft">{{data.gridsout}}</td>
+ 			</tr>
+				</table>	
+
+ 		</div>
+ 		
+
+		<!-- {{c.data.gridsout}} -->
+
+		
+<div class= 'nomobile'>
+		{% include 'DashPanel.html' %}
+</div>
+		<div id = "mobilInst">
+		<p>To Set Up Games, Please Read Instructions First</p>
+		</div>
+
+		<span id ="flynav">{% include 'flyT3.html' %}</span>
+		
+		
+
+
+
+		</div>	
+
+		
+			
+			 <div class="panel panel-default"><div class="panel-body"><label id="p500"></label><label id="p501"></label><label id="p502"></label><label id="p503"></label><label id="p504"></label><label id="p505"></label></div></div> 
+ 			
+				
+					
+			
+			
+
+
+			<!-- <figure id = "zoom">
+	 		<img src="../static/zoomLogoGold.JPG" alt="../static/zoomLogoGold.JPG" height="30" width="175"/>
+	 		</figure> -->	
+			     
+	
+  
+ 
+   
+
+
+{% block submitTeams %}
+{% endblock %}
+
+{% block Nav %}
+{% endblock %}
+
+{% block labels %}
+{% endblock %}
+
+ {% block buttons %}
+ {% endblock %}
+
+
+
+
+
+
+
+
+
+</div>
+
+</body>
+{% block javascript %}{% endblock %}
+<script>
+
+
+
+
+
+</script>
+
+</html>
+

@@ -1,0 +1,430 @@
+<!DOCTYPE HTML>
+{% load staticfiles %} 
+<html  lang="en">
+<head>
+<meta charset="utf-8"/>
+<title id = "fish">{% block title %}{% endblock %}</title>
+
+
+<link rel="stylesheet" href="../static/chosen.css"/> 
+<link rel="shortcut icon" href= "../static/Zfav.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href= "//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel= "stylesheet">
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet"/>
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"</script>
+
+<script>window.jQuery || document.write('<script src="js/jquery-2.1.4.min.js" type="text/javascript">')</script>
+<script src="../static/codecanyon-20099228-calentim-date-time-range-picker/build/js/moment.min.js"></script>
+
+<!-- .calentim includes -->
+<link href="../static/codecanyon-20099228-calentim-date-time-range-picker/build/css/calentim.min.css" rel="stylesheet"/>
+
+<script src="../static/codecanyon-20099228-calentim-date-time-range-picker/build/js/calentim.min.js"></script>
+
+
+
+
+<style>
+
+#zoom {
+	float: left;
+	margin-left: 1%;
+	margin-top: 1%;
+	padding: 0px;
+}	
+
+.container  {
+	background-color:white;
+	height: 2000px;
+	overflow: hidden;
+
+}
+
+
+
+
+h2, #tit  {
+	text-align: center;
+	color: red;
+	height: 25px;
+}
+
+
+#z1   {
+	height: 25px;
+	padding: 0px;
+	}
+
+
+
+label {
+		width: 20%;
+		float: left;
+		white-space: nowrap;
+		color:black;
+		font-size: 18px;
+		margin-left: 0%;
+
+}
+
+/*.panel-body  {
+	background-color:#CEF6D8;
+	background-color: #DBA901;
+}
+*/
+#name  {
+
+	border-style: solid;
+	border-width: 2pt;
+	color: black;
+
+}
+
+#box1  {
+	height: 60px;
+	background-color:blue;
+}
+
+#box2  {
+	height: 120px;
+	background-color: black;
+	margin-top: -10px;
+	text-align: center;
+}
+
+
+#a1  { margin-left: -4%;
+ white-space: nowrap;
+ color: black;
+ font-family: cursive;
+ font-size: 18px
+ }
+
+#b1  { margin-left: -4%;
+ white-space: nowrap;
+ color:black;
+ font-family: cursive;
+ font-size: 18px
+ }
+
+#c1  { 
+ 
+ color: black;
+ font-family: cursive;
+ font-size: 18px
+ }
+
+/*#p999  { height: 50px;
+
+}*/
+
+#welcome {
+	color: red;
+	font-size: 1em;
+	padding-bottom: 3px;
+	margin-top: .5%;
+	margin-left: 1%;
+	float: center;
+}
+
+
+
+/*li a:hover {
+    background-color: 555;
+    color: red;
+
+}*/
+
+/*li a {
+
+	color: black;
+}*/
+
+
+html  body  {
+	/*background-color: #5F4C0B;*/
+	background-color: #084B8A;
+	
+}
+#a  {
+height: 1400px;
+/*background-color :#5f4C0B;*/
+background-color :white;
+}
+
+#description  {
+height: 1400px;
+background-color :white;
+}
+
+#c  {
+height: 1400px;
+background-color :white
+}
+
+#d  {
+height: 1400px;
+
+background-color :white;
+}
+
+ 
+#p100, #uu9, #vv9, #ww9, #xx9, #yy9, #zz9 {
+padding-left: 2vw;
+font-style: arial;
+font-color: black;
+display: inline-flex;
+list-style-type: none;
+}	
+
+
+#p999 {
+	height: 4vh;
+	background-color: silver;
+}
+
+
+#theTerms {
+width: 90%;
+height: 80%;
+
+}
+
+.modal-backdrop{
+  opacity:0; transition:opacity .1s;
+}
+.modal-backdrop.in{
+  opacity:.60;
+}
+.modal-body {
+background-color:#27AE60;
+
+}
+
+.nativehm {
+
+   pointer-events: none;
+   cursor: default;
+
+}
+
+#logout {
+	float: right;
+	margin-right: 1%;
+	color: red;
+	font-style: bold;
+	
+}
+#z {
+	margin-top: 10%;
+}
+
+#description{
+	height: 3600px;
+	background-color: white;
+	overflow: visible; 
+}
+@media only screen and (max-width:30em) {
+
+
+.nav {
+    
+      font-size: 2.75vw;
+    }
+
+
+
+#description{
+	/*from MoreInfo*/
+	height: 3700px;
+	background-color: white;
+	overflow: visible; 
+}
+
+
+html  {
+	background-color: white;
+}
+
+#ikea {
+
+    /*background-color: #cfcfd1;*/
+    background-color: white
+    border-bottom:solid 1px white;
+   
+    cursor:pointer;
+    display: block;
+    float: bottom;	
+}
+
+#zoom {
+	display: none;
+}
+
+}
+{% block morestyle %}{% endblock %}
+{% block MenusCSS %}{% endblock %}
+{% block indexstyle %}{% endblock %}
+{% block szstyle %}{% endblock %}
+{% block datestyle %}{% endblock %}
+
+</style>
+
+
+<script src = "../static/testaroo99.js"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src="../static/chosen.jquery.min.js"</script>   
+<script src="../static/chosen.proto.js"</script>
+<script src="../static/chosen.proto.min.js"</script>  
+<script src="../static/jquery-migrate-1.4.1.js"</script>
+<script src="../static/jquery-migrate-3.0.0.js"</script>
+<script src="../static/chosen.jquery.js"</script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+</head>
+
+<body>
+
+
+
+
+<div class= "container">
+
+
+		<div id = "box2">
+		
+			<!-- <br> -->
+			<strong><p id = 'welcome'>{{welcome}}    {{playername}}</p></SPAN></strong>
+			<strong><p id = "dash" {{ data.title }}></p></strong>
+			{% if data.title is "" %}
+			    data.title = 'TWENTYFIVE SQUARES FOOTBALL'
+			{% endif %}
+			 <h2 id ="tit">{{tit}}</h2> 
+			
+			
+			<!--  </div> -->
+			<figure id = "zoom">
+	 		<img src="../static/zoomLogoGold.JPG" alt="../static/zoomLogoGold.JPG" height="30" width="175"/>
+	 		</figure>
+	 		{% if 'UsrName' in request.session %}
+         		<a href="/o" id = "logout">logout</a>
+         	{% endif %}	 
+		    
+	    </div> 
+		     
+
+
+      
+     <!-- <div class="panel panel-default"><div class="panel-body"  id = "p99"><nav id ="nav"><ul id="p100"><strong><li id ="somelid"><a href="/J">HOME</a></li></strong><strong><li id ="about"><a href="/A">MORE INFO</a></li></strong><strong><li id = "login"><a href= "/L" >PLAYER LOG-IN<a/></li></strong><strong><li id = "contact"><a href ="/C">CONTACT US</a></li></ul></nav></div></div> -->
+     
+
+   <div class = "nav">
+
+    {% if  tit == 'Your Available Games' %}
+        {% include 'Nav2b.html' %}
+        
+    {% elif tit == 'Games Archive' %}
+        {% include 'Nav2.html' %}
+
+   {% elif tit == 'Archive' %}
+        {% include 'Nav3.html' %}
+
+    {% elif tit == 'Index' %}    
+        {% include 'Nav4b.html' %}
+
+    {% elif tit == 'Buy Games' %}
+     	{% include 'Nav4.html' %}
+
+    {% elif tit == '' %}
+          
+    	<!-- {% include 'Nav5.html' %} -->
+   
+    {% else %}
+    	{% include 'Nav1.html' %}
+    	
+{% endif %} 
+
+</div> 
+
+ <div class="row">
+{% block datepick1 %}{% endblock %}
+
+ 
+{% block datepick2 %}{% endblock %}
+ {% block loginform %}{% endblock %}
+ {% block More %}{% endblock %}
+ {% block menusform %}{% endblock %}
+
+ {% block form %}{% endblock %}
+ </div>
+
+  {% csrf_token %}
+
+
+
+
+<div class="row">
+
+<div class= "col-sm-2" id = "a">
+</div>
+
+<div class="col-sm-4" id = "b">
+
+
+</div>
+
+
+
+<div class="col-sm-4" id="c">
+	 	
+</div>
+
+
+
+<div class= "col-sm-2" id= "d">
+</div> 
+
+
+</div>
+
+
+{% block menusfoot %}{% endblock %}
+
+</div>
+
+<!-- <div class="row">
+<div class= "col-sm-12" id = "z">
+
+
+</div>
+</div> -->
+
+
+
+{% block menuscript %}{% endblock %}
+{% block javascript %}{% endblock %}
+{% block datescript %}{% endblock %}
+
+
+
+
+
+
+
+</body>
+
+

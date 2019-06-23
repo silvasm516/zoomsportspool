@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html  style= "background-color: #5F4C0B">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"/>
+	<link rel="shortcut icon" href="../static/Zfav.ico" />
+	 <title>25 Squares Football Pool</title>
+ 
+  
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<style>
+
+
+		
+#rectangle   {
+	width: 100%;
+ 	
+	}
+
+	
+	
+	
+	
+	
+#zoom {
+	float: left;
+	margin-left: 1%;
+	margin-top: 3%;
+	
+	
+	padding: 0px;
+}			  
+		
+aside header h2 {
+	height: 60px;
+	font-family: arial;
+	/*font-size:  48px;*/
+	margin-right: 23%;
+	color: red;
+	text-align: center;
+	margin-top: 2%;
+	padding: 0px;
+	
+	}
+
+
+#rectangle    {
+		border: solid 1pt black;
+		height: 12%;
+		background: black;
+		padding: 0px;
+		<!-- position: relative; -->
+		}
+
+
+
+
+
+nav ul  li {
+	  color: black;
+	 display: inline-block;
+	 text-align: center;
+	 margin-left: 1.5%;
+	 padding: 1%;
+	 font-family: arial;
+	 font-size:  125%;
+	 padding-top: 0%;
+	 padding-bottom: 3%;
+	font-weight: bold;	 
+		}
+
+
+nav ul li a:hover {
+	font-weight: bold;
+    color: white;
+    cursor: pointer;  
+}
+
+
+#fs li   {
+     display: inline-block;
+	 
+	 width: 25%; 
+     height: 20%;
+	 background: white;
+	 
+	 } 
+
+#login  {
+	padding: 4px;
+	border: solid 2pt green;
+	margin-left: 1%;
+    }
+	
+#email  {
+	padding:  4px;
+	border: solid 2pt green;
+	margin-left: -2%;
+    }
+
+
+ #username  {
+ 	height: 10%;
+	border: solid 2pt black;
+	padding:  4px;
+ }
+
+
+ #password9  {
+ 	height: 10%;
+	border: solid 2pt black;
+	padding:  4px;
+}
+	
+#submitL  {
+	width: 33%;
+    padding: 1.5%;
+	margin-left: 11.5%;
+	border-radius: 12.5px;
+	color: white;
+	background-color:green ;
+	border: solid 2pt black;
+
+}
+
+#submitL:hover {
+	cursor: pointer;
+	background-color: #FFBF00;
+	color: black;
+}
+	
+
+#list3 {
+
+	width: 40%;
+	float: right;
+	margin-top: 1%;
+	margin-right: 5%;
+	padding: 0%;
+	font-family: arial;
+    font-size: 20px;
+   /* font-weight: bold;*/
+	text-align: justify;
+    padding-top: 0px;
+	}
+	
+ #list3 li {
+	
+	line-height: 2.0;
+	
+	}
+
+#one  {
+   font-family: arial;
+   font-size: 18px;
+  /* font-weight: bold;*/
+   width: 40%;
+   margin-left: 5%;
+   text-align: justify;
+   padding: 0px;
+   }
+
+   #list2 {
+   
+     font-family: arial;
+     font-size: 18px; 
+	 margin-left: 5%;
+	 padding: 1px;
+	 color: #FF0000;
+}
+    #list2 li {
+	
+	line-height: 1.5;
+	
+	}
+	
+#figs #f3 { 
+
+	margin-top: 5%;
+	width: 80px;
+	/*float: right;*/
+	margin-left: 15%;
+	
+	
+	}
+	
+#figs #f2 {
+	margin-top: 0;
+	padding-bottom: 0px;
+	width:80px;
+	float:left;
+	
+	}	
+
+
+ #figs  {
+		margin-top: 5%;
+		}
+		
+		
+#set  {
+	
+	margin-left: 28%;
+	margin-top: 6%;
+	padding-top: 0px;
+	margin-bottom: 10%;
+}	
+
+nav  {
+margin-left: 10%;
+
+ }
+
+#ex1   {
+	max-width:65%;
+    margin: auto;
+    border: 3px solid #73AD21;
+	background-color: #FAFAFA;
+	height: 1000px;
+}
+
+#boxMain {
+	background-color: #5F4C0B;
+}
+
+.lft { float:left;
+margin-right: 80px;
+margin-left: 10px;
+margin-bottom: 0px;
+padding-bottom: 0px
+ }
+
+/*.panel-body  {margin-bottom: 0px;
+padding-bottom: 0px}*/
+
+.btn {margin-left: 5px;}
+
+#p99 {
+	background-color:  #585858;
+	height: 50px;
+	}
+
+ #m, #p, #c{
+
+	color: black;
+}
+
+ #m:hover, #p:hover, #c:hover {
+    color: white;
+    cursor: pointer;	
+ }
+
+
+.panel-body  {
+	background-color: green;
+}
+
+h2 {
+	margin-left: 23%;
+}
+
+#tmsi  {
+	color: #FAFAFA;
+}
+
+#panel-grn {
+	font-size: 14px;
+}
+
+
+</style>
+<script src= "C:Users/Steve/Desktop/pool/cod.js"></script>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+
+</head>
+
+
+
+
+<body id = "boxMain">
+<script src = "squares.js"></script>
+<script src = "test99.js"></script>
+
+
+	<script src="../static/chosen.jquery.min.js"></script>   
+	<script src="../static/chosen.proto.js"></script>
+	<script src="../static/chosen.proto.min.js"></script>  
+	<script src="../static/jquery-migrate-3.0.0.js"></script>
+	<script src="../static/jquery-migrate-1.4.1.js"></script>
+	<script src="../static/chosen.jquery.js"></script>
+
+
+<div class = "container" id = "ex1" >
+ <div class = "row">
+	
+	<div class = "col-sm-12" >
+	<div  id = "rectangle">
+		<figure id = "zoom">
+			<img src="../static/zoomLogoGold.JPG" alt="../static/zoomLogoGold.JPG" height="30" width="175" />
+		</figure>
+		<aside>	
+			<header>
+				<h2>25 SQUARES FOOTBALL</h2>
+			</header>
+		</aside>
+	</div>
+	<div class="panel panel-default">
+    <div class="panel-body"  id = "p99">
+   <nav id= "menu">
+
+	<ul >
+		<li ><a href="/A" id = "m">MORE</a></li>	
+		<li ><a href= "/L" id = "p">PLAYER LOG-IN</a></li>
+		<li ><a href = "/C" id = "c">CONTACT US</a></li>
+	</ul>
+
+	</nav>
+
+	</div>
+    </div>
+   </div>
+   </div>
+<div>		
+		<ul id = "list3">
+				<li>Manage up to ten game boards per week.</li>
+				
+				<li>Pay by the week, or entire season.</li>
+				
+				<li>Ten game boards: $25.00 / wk.</li>
+				
+				<li>Five game boards: $15.00 / wk.</li>
+				
+				<li>Seasonal max-limit pass: $200.00 / season</li>
+		
+				<br>
+	 <div id= "panel-grn" class="panel panel-default">
+  <div class="panel-body"> 
+  <div class = "col-sm-12">	
+  <p id= "tmsi">MANAGER SIGN-IN</p>
+  <br>
+  </div>		
+
+			<!-- <form class="form-horizontal" role="form" method= "post" action= "/SO"> -->
+
+	<div class="form-group">
+		
+		<div class = "col-sm-2">
+		<!--  <a href = "C:Users/Steve/Desktop/TwentyFiveSq/twentyFiveSqHome.html"<strong><li>Back</li><a></strong> -->
+		</div>
+		<div class= "col-sm-8">
+			<!-- <label for="gameNumber" class="control-label">User Name</label> -->
+			<input type="text" name="username" id= "username" placeholder="user name" class="form-cont" required/>
+		</div>
+		<!--  <div class="col-sm-4">
+			  
+		</div> -->
+
+		<div class= "col-sm-2">
+		</div> 
+	</div>
+	<!-- </form>
+	<form class="form-horizontal" role="form" method= "post" action= "/Grid/"> -->
+	<div class="form-group">
+		 <div class = "col-sm-2">
+		
+		</div> 
+		<div class= "col-sm-8">
+			<!-- <label for="authorization" class="control-label">Password</label> -->
+			<input type="password" name="password" id="password9" placeholder="password" class="form-cont" required/>
+		</div>
+		 <button name="button" id= "signIn" >Sign In</button>
+		<!-- <div class="col-sm-4">
+			  
+		</div> -->
+		 <div class= "col-sm-2">
+		
+		</div> 
+		
+
+	</form>
+
+	</div>
+
+		</div>
+	
+	</div>			
+		
+		</ul>		
+				<p id ="one">An online, 25 squares football pool, available for managers and players
+
+				who prefer this variation of football squares pools. Fewer squares can take the hassle out
+
+				of trying to fill 100 squares each week, allowing you to offer more games for a given number of
+
+				player/contestants. Other features include:<p>
+
+
+		<ul id = "list2">
+
+			<li>Automated random assignment of column/row numbers.</li>
+
+			<li>Customizable game display tailored to your organization.</li>
+
+			<li>Player list/ledger for easy accounting of payments.</li>
+
+			<li>Grid print-outs.</li>
+
+			<li>Use your Pay-pal link.</li> 
+
+			<li>Public and private pools available.</li>
+
+		</ul>
+
+
+	
+</div>
+
+<div id= "figs">
+	<figure id="f2">
+		<a href ="../static/gridSh(3).jpg"><img src = "../static/gridSh(3).jpg" height= "80" width= "80";  ></img></a>
+		<figcaption>Game Grid</figcaption>
+	</figure>
+
+	<figure id="f3">
+		<a href ="../static/GridPhoto2.jpg"><img src = "../static/aGame.jpg" height= "80" width= "80";  ></img></a>
+		<figcaption>Completed Grid</figcaption>
+	</figure>
+</div>
+
+
+	 <div id = "set">			
+		<!-- <ul id = "fs">
+		
+			<li><input style= "background-color:#FAFAFA" placeholder= "Email" type="text" name="manager-email" class="textbox22" id= "email" /></li>
+			<li><input style= "background-color:#FAFAFA" placeholder= "Create Password" type="password" name="manager-pw" class="textbox21" id= "login" /></li>
+			
+		</ul>	 -->
+
+		<a href="SignUp.html"><form><button type="button" name="submit" id="submitL"><strong>SIGN-UP TO MANAGE A POOL</strong></button></form></a>	
+	</div> 
+	
+
+
+<script>
+var lard = document.getElementById("about");
+  if (lard.addEventListener) {
+  lard.addEventListener("click", grid,
+  false); 
+  } else if (lard.attachEvent) {
+  lard.attachEvent("onclick", grid);
+  }
+
+  var fat = document.getElementById("submitL");
+  if (fat.addEventListener) {
+  fat.addEventListener("click", sineUps,
+  false); 
+  } else if (fat.attachEvent) {
+  fat.attachEvent("onclick", sineUps);
+  }
+
+ var wax = document.getElementById("gameSetUp");
+  if (wax.addEventListener) {
+  wax.addEventListener("click", gsu,
+  false); 
+  } else if (wax.attachEvent) {
+  wax.attachEvent("onclick", gsu);
+  }
+
+ var jam = document.getElementById("playerLogin");
+  if (jam.addEventListener) {
+  jam.addEventListener("click", playerL,
+  false); 
+  } else if (jam.attachEvent) {
+  jam.attachEvent("onclick", playerL);
+  }
+
+/*var sig = document.getElementById("signIn");
+  if (sig.addEventListener) {
+  sig.addEventListener("click", grid,
+  false); 
+  } else if (sig.attachEvent) {
+  sig.attachEvent("onclick", grid);
+  }*/
+
+
+
+
+  
+function grid() {
+  if (sessionStorage.homes == null || sessionStorage.vises == null) { 
+		 sessionStorage.homes = "HOME";
+		 sessionStorage.vises = "VISITOR";
+		 sessionStorage.category = "";
+		}
+  window.location.assign('GridEx')
+ 
+ // <!--  window.location.assign("file:///C:/Users/Steve/Desktop/ResponsiveGrid6.html") -->
+}
+
+function gsu() {
+	 window.location.assign("twentyFiveSquaresDashboard")
+	 }
+
+function sineUps() {
+	 window.location.assign("SignUp.html")
+	 
+	 
+	 }
+
+function playerL() {
+	window.location.assign("twentyFiveSqPlayerLogin")
+}
+	
+
+
+
+
+
+
+
+
+
+		 
+</script>
+</body>
+</html>

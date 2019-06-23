@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<!DOCTYPE HTML>
+
+
+
+<head>
+<html lang="en">
+  
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% extends "__base.html" %}
+    {% load staticfiles %} 
+
+
+    {% block title %}{{tit}}{% endblock %}
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    
+    
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    {% block datestyle %}
+    <style>
+    #num, #amt  {
+
+    }
+
+
+
+    .radio  {
+      margin-left: 45%;
+    }
+    #weekno {
+      margin-left: 47%;
+    }
+    #txt {
+      width: 90%;
+      margin-left: 10%;
+      line-height: 1.25;
+      font-size: 1.00vw;
+    }
+    #two {
+      margin-top: 10%;
+
+    }
+
+    #we {
+      width: 1.75vw;
+    }
+
+    #num {
+      width: 2.75vw;
+      display: none;
+    }
+
+    #amt {
+      width: 2.5vw;
+     display: none;
+    }
+
+#ant {
+  display: none;
+}
+
+    #paypal-button {
+      margin-top: 6%;
+      margin-left: 45%;
+    }
+
+    #boxes {
+     margin-left: 47%;
+
+    }
+
+    form {
+      margin-left: 60%;
+    }
+
+   #buy {
+    margin-top: 10%;
+   }
+
+    #flag {
+      display: none;
+
+    }
+
+    @media only screen and (max-width:70em) {
+
+ #buy, #amto  {
+      margin-top: 10%;
+      margin-left: 25%;
+    }
+
+    #i2 {
+      clear: both;
+      font-family: arial;
+      font-size: 3vw;
+    }
+
+
+    .nav {
+      margin-left: -2%;
+    }
+
+
+    }
+
+
+
+    </style>
+    {% endblock %}
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+{% block datepick1 %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BuyGames</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/hot-sneaks/jquery-ui.css" media="screen">
+  
+
+  </head>
+  
+  
+  <body>
+  <div class="row" >
+ <div class= "col-sm-2" id = "a2"> 
+ </div>
+ <div class= "col-sm-8" id = "b2"> 
+    <!-- <input type="text" name="selected_date" id="weekno"/>
+    <input type="text" name="selected_wk" id="we"/> -->
+     <div id = "boxes">
+    <!-- <span><p>Grids:</p></span>
+    <span><p>Amount:</p></span>  -->
+    </div>
+   </div>
+  <div class= "col-sm-2" id = "d2"> 
+ </div>
+  </div>
+   {% endblock %}
+
+  {% block datepick2 %} 
+  <div class="row" id = "two" style="height: 500px;">
+  <!-- <div class= "col-sm-2" id = "e2"> --> 
+ <!-- </div> --> 
+    <div class= "col-sm-4" id = "f2"> 
+<form role="form" method="post" action="/p">
+{% csrf_token %}
+<input type="number" id ="num" name="num"/>
+<input type="number" id ="amt" name="amt"/>
+<table>
+<tr><td><input type= "number" id = "ant"></td></tr>
+<tr><td>Grids</td></tr><td>
+ <tr><td> <select name="amto">
+  <option value="0">0-Select Grids-</option>
+  <option value="1">1 Grids $5.00</option>
+  <option value="2">2 Grids $10.00 USD</option>
+  <option value="3">3 Grids $15.00 USD</option> 
+  <option value="4">4 Grids $19.00 USD</option>
+  <option value="5">5 Grids $20.00 USD</option>
+  <option value="6">6 Grids $24.00 USD</option>
+  <option value="7">7 Grids $27.50 USD</option>
+  <option value="8">8 Grids $31.00 USD</option>
+  <option value="9">9 Grids $34.50 USD</option>
+  <option value="10">10 Grids $35.00 USD</option>
+  <option value="15">15 Grids $52.50 USD</option>
+  <option value="20">20 Grids $70.00 USD</option>
+  <option value="25">25 Grids $87.50 USD</option>
+  <option value="30">35 Grids $122.50 USD</option>
+  <option value="50">50 Grids $175.00 USD</option>
+  <option value="999">Unlimited $200.00 USD</option>
+  
+</select> </td></tr>
+</table>
+<input type="submit" class="btn btn-info" value="BUY GRIDS" name='buy' id="buy"/>
+</form> 
+    </div>
+ <div class= "col-sm-8" id = "i2">
+    <p id= "txt99">
+Purchase Your Grids Here. You Will Be Credited For The Number Of Grids Purchased. 
+Your Grids Credited Can Be Applied To Any Week Of The Season You Choose, Up To A
+Maximum Of Ten Grids Outstanding At Any Time. They Need Not Be Applied In The Same 
+Week As The Week Of Purchase. Pay With Credit Card, Debit Card, Or Paypal. Select The
+Number Of Grids At Left. Select Dates For Games When You Are Redirected To Your Dashboard.
+</p>
+<!-- <div id="paypal-button"></div>
+</div> -->
+<div class="modal fade" id="LimitModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">OVER LIMIT</h4>
+        </div>
+        <div class="modal-body">
+          <p><strong>Were Sorry But But Your Purchase Request Causes Your Grids Outstanding
+          To Exceed The Maximum Of Ten Grids Outstanding. Please, Revise Your Purchase To
+          Keep Within Acceptible Limits. Thank You. </strong></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>  
+
+
+
+<div class="modal fade" id="RunOutModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">OVER LIMIT</h4>
+        </div>
+        <div class="modal-body">
+          <p><strong>Sorry But But Your Grid Request Can't Be Processed Because
+          You've Run Out Of Grids. Please, Purchase Grids To Continue with Your Request. Thank You. 
+          </strong></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>  
+
+
+
+
+
+
+<!-- <div class= "col-sm-2" id = "g2">
+    </div> -->
+  </div> 
+ <div class="row"> 
+ <div class= "col-sm-12" id = "h2">   
+  <p id = "flag">{{m}}</p>
+    </div>
+ </div>
+
+<!-- <div class= "col-sm-4" id = "i">
+</div> -->
+
+</div>
+<footer>
+<div class="panel panel-default" style= "height: 600px; background-color: black; margin-top: 55%;">
+  <div class="panel-body" style= "color: white;">ZOOMSPORTSPOOL  all rights reserved</div>
+</div>
+</footer>
+{% endblock %}
+{% block datescript %}
+   <script> 
+   
+ var eagle = document.getElementById("flag");
+
+
+if(eagle.textContent=='modal') {
+    goModal();
+}
+
+if(eagle.textContent=='runout') {
+    goModal2();
+} 
+
+
+
+$('td').change(function(){ 
+
+var N = $("select[name = 'amto']").val();
+
+if (N == 1) {
+  $('#amt').val(5.00);}
+
+else if (N==2) {
+  $('#amt').val(10.00);
+}
+else if (N==3) {
+  $('#amt').val(15.00);
+}
+else if (N==4) {
+  $('#amt').val(19.00);
+}
+else if (N==5) {
+  $('#amt').val(20.00);
+}
+else if (N==6) {
+  $('#amt').val(24.00);
+}
+else if (N==7) {
+  $('#amt').val(27.50);
+}  
+else if (N==8) {
+  $('#amt').val(31.00);
+}
+else if (N==9) {
+  $('#amt').val(34.50);
+}
+else if (N==10) {
+  $('#amt').val(35.00);
+}
+else if (N==15) {
+  $('#amt').val(52.50);
+}
+else if (N==20) {
+  $('#amt').val(70.00);
+}
+else if (N==25) {
+  $('#amt').val(87.50);
+}
+else if (N==35) {
+  $('#amt').val(122.50);
+}
+else if (N==50) {
+  $('#amt').val(175.00);
+}
+else if (N==999) {
+  $('#amt').val(200.00);
+
+}
+
+
+
+
+$('#num').val(N);
+
+
+var F = $('#amt').val();
+F = float(F);
+N = int(N);
+ // window.alert(F)
+
+var dog = document.getElementById('ant');
+
+dog.value = F;
+
+})
+
+
+
+function goModal() {
+  $("#LimitModal").modal('show');
+
+}
+  
+function goModal2() {
+  $("#RunOutModal").modal('show');
+
+}
+
+
+
+ // paypal.Button.render({
+      /*env:'sandbox',
+
+      commit: true, // Show a 'Pay Now' button
+
+     style: {
+        color: 'gold',
+        size: 'small',
+      },
+
+      payment: function(data, actions) {*/
+        /* 
+         * Set up the payment here 
+         
+      },
+
+      onAuthorize: function(data, actions) {
+        /* */
+        /* * Execute the payment here 
+         
+      },
+
+      onCancel: function(data, actions) {
+         
+         * Buyer cancelled the payment 
+         
+      },
+
+      onError: function(err) {
+        /* */
+         // * An error occurred during the transaction 
+    /*     
+      },
+    }, '#paypal-button');
+
+ */
+
+   
+         // paypal.Button.render({
+
+             // env: 'sandbox', // sandbox | production
+
+            // PayPal Client IDs - replace with your own
+           // Create a PayPal app: https:developer.paypal.com/developer/applications/create
+            /*client: {
+                sandbox:    'AVx9zFKkUx1_4R0A6RTtdRVv5IuzVUjGprAOEyY_2ZWfPnTuLlDR045U9OhnFMCYQ4FxtF9w2L_Gs2JM',
+                
+                // production: 'access_token$production$6s6j72z9vj6dp856$965b259c722cdb9afed6da51c01bc4a2'
+            },*/
+
+            // Show the buyer a 'Pay Now' button in the checkout flow
+           /* commit: true,
+
+             style: {
+            color: 'gold',
+            size: 'small',
+            },*/
+
+            // payment() is called when the button is clicked
+            /* payment: function(data, actions) {
+
+                // Make a call to the REST api to create the payment
+                return actions.payment.create({
+                    payment: {
+                        transactions: [
+                            {
+                                // amount: { total:'5.00', currency: 'USD' 
+                                amount: { total: '1.00', currency: 'USD' }}
+                            
+                        ]
+                    }
+                });
+            },*/
+
+             //onAuthorize() is called when the buyer approves the payment
+            /* onAuthorize: function(data, actions) {
+
+                // Make a call to the REST api to execute the payment
+                return actions.payment.execute().then(function() {
+                    window.alert('Payment Complete!');
+                });
+            }*/
+
+          // }, '#paypal-button');
+
+    </script>
+
+
+
+ 
+  {% endblock %}  
+  </body>
+  
+</html>

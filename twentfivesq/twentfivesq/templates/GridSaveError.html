@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+
+ <head>
+ {% extends "__base.html" %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title></title>
+{% block title %}{{tit}}{% endblock %}
+
+
+
+
+	
+
+</div>
+
+
+
+{% block form %}
+<!-- 
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+  
+
+<script src = "../static/test99.js"></script> 
+<script src = "../static/setUpPageText.js"></script>
+<script src = "../static/RenderGridActiveT.js"></script>
+	<script src="../static/jquery-migrate-3.0.0.js"></script>
+	<script src="../static/jquery-migrate-1.4.1.js"></script>  -->
+<style>
+#a  {
+height: 2800px;
+/*background-color :#5f4C0B;*/
+background-color :#FFFFFF;
+/*#084B8A*/
+}
+
+
+#b  {
+height: 2800px;
+background-color :#FFFFFF;
+}
+
+#c  {
+height: 2800px;
+background-color :#FFFFFF;
+}
+
+#d  {
+height: 2800px;
+</style>
+</head>
+<BODY>
+
+<dic class = "row">
+<div class= "col-sm-3">
+</div>
+<div class= "col-sm-6">
+<h4><strong>The Grid Has Already Been Saved.
+       You May Logout</strong></h4>
+</div>
+<div class= "col-sm-3">
+</div>
+
+<div class="modal fade" id="unModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">WRONG USER NAME</h4>
+        </div>
+        <div class="modal-body">
+          <p><strong>We're Sorry, But The User Name You Entered Was Not Found</strong></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>	
+
+  </BODY>
+
+  <script type="text/javascript">
+  	
+
+	
+		$("#unModal").modal();
+	
+
+
+
+
+  
+
+
+
+
+  </script>
+
+  {% endblock %}

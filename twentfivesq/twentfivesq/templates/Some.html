@@ -1,0 +1,560 @@
+<!DOCTYPE HTML>
+
+ <head>
+ {% extends "__base.html" %}
+
+
+
+
+
+
+{% block title %}{{tit}}{% endblock %}
+
+
+
+<style type="text/css">
+
+	
+#i {
+
+	margin-top: 30%;
+}
+
+
+
+
+#k{
+
+	margin-top: 60%;
+}
+
+
+
+.panel-body  {
+	
+}
+
+.nativehm {
+
+   pointer-events: none;
+   cursor: default;
+   opacity: 0.4;
+}
+
+
+</style>	
+
+
+</head>
+
+
+
+
+<BODY>
+
+<div>
+	 <h2>{{tit}}</h2>
+	 
+</div>
+
+{{logLink}}
+
+{% block form %}
+
+
+
+<head>
+<style>
+
+#butt {
+margin-left:40%;
+margin-top:45px;	
+width:20%;	
+border:solid 2pt black;
+background-color:silver;
+		
+}	
+
+#butt:hover{
+background-color:yellow;
+}
+
+#figs {
+	border-width: 5px;
+	border-style: solid;
+	border-color: green;
+	padding-top: 10%;
+    padding-left: 12%;
+    margin-left: 0%;
+    height: 80%;
+}
+
+#f2, #f3 {
+	padding-bottom: 15%;
+}
+
+#sutext {
+	font-size: .70vw;
+	text-align: center;
+	padding: 0px;
+}
+
+#new {
+	display: none;
+}
+
+.hide {
+	visibility: hidden;
+}
+
+/*.panel-default {
+	overflow-y: hidden;
+	overflow overflow-x: hidden;
+}*/
+
+#nzi{
+	margin-left: 2%;
+	padding: 0%;
+}
+
+#ozi{
+	margin-left: 5%;
+	padding: 0%
+
+}
+
+#ozj {
+	margin-left: 57%;
+	margin-top: -28%;
+	padding: 0%;
+}
+
+
+
+@media only screen and (max-width:70em) {
+
+#butt {
+	width: 60%;
+	margin-left: 20%;
+}
+
+#sutext {
+	font-size: 12px;
+}
+
+img {
+	margin-left: 10%;
+}
+
+
+.panel, #pan1 {
+	margin-left: 10%;
+}
+
+ #signin {
+	margin-left: 10%;
+}
+
+#nzi{
+	margin-left: 2%;
+}	
+
+
+#ozi{
+	margin-left: 5%;
+}	
+
+
+
+#ozj {
+	margin-left: 6%;
+	margin-top: 7%;
+	width: 90%;
+	float:bottom;
+}
+
+
+#foot {
+	margin-top: 1%;
+}
+
+#k {
+	margin-top: -5%;
+}
+
+}
+</style>
+</head>
+
+<body>
+<div class = "container">
+
+<div class= "row" id= "i">
+
+ <div class= "col-sm-1" id = "mzi">
+</div> 
+
+<div class="col-sm-5" id = "nzi" style= "font-family: arial;  font-size:16px;">
+<strong><p id ="one">An online, 25 squares football pool, available for football fans
+
+				who prefer this variation of football squares pools. Many find 25 squares
+
+				 preferable to 100 squares. Smaller groups can enjoy playing because there 
+
+				 is just the rght amount of squares offered. Other features include:
+</p></strong>
+
+
+
+
+
+<strong><ul id = "list2" style="font-family: arial;  font-size:20px;  color: red; margin-top:10%" >
+
+			<li>Automated random assignment of column/row numbers.</li>
+
+			<li>Customizable team selection.</li>
+
+			<li>Archived game results, for easy record-keeping.</li>
+
+			<li>Indexed client contact information system.</li> 
+
+			<li>Extra large grid display.</li>
+
+			<li>Menu selection of all pro teams more than 75 college teams</li>
+</ul></strong>
+
+</div>
+<!-- </div> -->
+<div class="col-sm-5" id = "ozi">
+
+
+
+<div>		
+		<strong><ul id = "list3" style ="font-family: arial;  font-size:16px;">
+				<li>Manage up to ten game boards / week.</li>
+				
+				<li>Pay by the week, or entire season.</li>
+				
+				<li>Ten game boards: $35.00 / wk.</li>
+				
+				<li>Five game boards: $20.00 / wk.</li>
+
+				<li>One game board: $5.00 per board / wk.</li>
+				
+				<li>Seasonal max-limit pass: $200.00 / season</li>
+        </ul></strong>
+</div>
+<!-- </div> -->
+<!-- <img src= "../static/FBfile.PNG" height= "200" width="400"; ></img> --> 
+
+<img src= "../static/FBfile.PNG" style="width: 80%; height: 40%";>
+</div>
+
+<div class= "col-sm-1" id = "pzi">
+</div> 
+
+
+</div>
+
+
+
+
+
+
+
+<!-- {% load static %}
+{% static "../static/FBfile.jpg" as myphoto %} -->
+<!-- <img src="{{ myphoto }}" height= "250" width = 450";></img>  -->
+
+
+
+
+
+<div class="row" id= "j">
+
+<!-- div class= "col-sm-1" id = "mzj">
+</div> -->
+<div class= "col-sm-1" id = "mzj">
+</div> 
+
+<div class="col-sm-5" id = "nzj">
+<div id= "figs" >
+	<figure id="f2" style= "float:left";>
+		<a href ="../static/gridSh(3).jpg"><img src = "../static/gridSh(3).jpg" height= "100" width= "100";></a>
+		<figcaption>Game Grid</figcaption>
+	</figure>
+
+	<figure id="f3"  style="margin-left: 65%;">
+		<a href ="../static/GridPhoto2.jpg"><img src = "../static/aGame.jpg" height= "100" width= "100"; ></a>
+		<figcaption>Completed Grid</figcaption>
+	</figure>
+</div>
+
+</div>
+
+
+
+<div class= "col-sm-5" id="ozj">
+	
+	<div id = " pan1" class="panel panel-default" style= "margin-top: 20%; width:80%;">
+		<div class="panel-body" style= "background-color: green;  ">
+			
+			<strong><p id= "tmsi" style = "font-family: arial;  font-size:16px; color:white">MANAGER SIGN-IN</p></strong>
+			</div> 
+		</div>
+		 <div class="panel-body" id = "signin" style= "background-color: green;  height: 60%;  border-radius: 10px; width:80%;">
+			<br>
+			<form class="form-verticle" role="form" method= "post" action= "/SO" > {% csrf_token %} 
+				<div form-group> 
+				 <input type="text" class="form-control" id="inputSuccess4" aria-describedby="inputSuccess4Status" name="username" id= "username" placeholder="user name"required  style="margin-bottom:2%;  border:black;" />
+				
+				 <input type="password" class="form-control" aria-describedby="inputSuccess4Status" name="password" id="password9" placeholder="password"  required  style="margin-bottom:2%;"/>
+				</div>
+				<button name="button" id= "signIn" >Sign In</button>
+			</form>
+		 </div>
+	</div>
+
+<div class= "col-sm-1" id = "pzj">
+</div> 
+
+</div>
+
+
+<div class= "row" id="k">
+	
+
+<div class= "col-sm-12" id= "ozk">
+<form class="form-verticle" role="form" method= "post" action= "/sz">
+{% csrf_token %}
+<!-- <submit type="button"; name="button" id = "butt"; class="btn btn-primary-active";><strong>SIGN UP TO MANAGE A POOL</strong></submit> -->
+<button name="button" id = "butt"; class="btn btn-primary-active";><strong id = "sutext">SIGN UP TO MANAGE A POOL</strong></button>
+</form>	
+	</div>
+
+<footer id = "foot">
+<div class="panel panel-default" style= "height: 500px; width: 100%; margin-top: 55%; background-color: black">
+  <div class="panel-body" style= "color: white;">ZOOMSPORTSPOOL  all rights reserved</div>
+</div>
+</footer>
+
+<input type="text" id ='new' class="hide" value ="{{pw2}}"/>
+<input type="text" id ='flap' class="hide" value ="{{rsn}}"/>
+</div>
+</div>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">REGISTER</h4>
+        </div>
+        <div class="modal-body">
+          <p><strong>Welcome! {{name}}. Congratulations! You're Now A Manager!. Sign In with Your
+          User Name And Password To Get Started With Managing 25 Square Football
+          Pools. At Your Dashboard Page Read The Instructions To Get Started! To Help Familiarize
+          Yourself with The Site, Two Free Grids Are Added (With Purchase).</strong></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>	
+
+<div class="modal fade" id="pwModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">PASSWORD NOT FOUND</h4>
+        </div>
+        <div class="modal-body">
+          <p><strong>We're Sorry, But The Password You Entered Was Not Found</strong></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>	
+
+
+<div class="modal fade" id="unModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">WRONG USER NAME</h4>
+        </div>
+        <div class="modal-body">
+          <p><strong>We're Sorry, But The User Name You Entered Was Not Found</strong></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>	
+
+
+</body>
+
+
+
+  <!-- <div>
+<form method="post" action = "/Y">
+	{% csrf_token %}
+	<input type="submit" name= "dashboard" class="btn btn-primary btn-sm" id = "dash" />  
+</form>
+</div> -->
+
+
+
+
+
+
+	
+
+	
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+$("#nativehm").css({ 'pointer-events': 'none' });
+
+var rsn = document.getElementById('flap')
+var rsno = rsn.value;
+var newt = document.getElementById('new');
+var newto = newt.value;
+// window.alert(newto)
+var effect = document.getElementById('butt');
+
+
+
+
+
+
+
+
+/*if(rsn.addEventListener) {rsn.addEventListener("load",TestCat, false);
+			} 
+			 else if(rsn.attachEvent) {
+			 rsn.attachEvent("load", TestCat); 
+			 }
+*/
+
+
+
+
+
+/*function Dog() {
+	var d = document.getElementById("tit")
+	if (d == null) {
+var item = document.getElementById('butt')
+}
+}*/
+
+function Bass(harm) {
+	var dof = harm
+	// window.alert(dof)
+	if (dof == 'new') {
+		$("#myModal").modal();
+	}
+}
+
+
+function TestCat(bad) {
+	tc = bad;
+	
+	if (tc == 'pw') {
+		$("#pwModal").modal();
+	}
+	if (tc == 'un') {
+		$("#unModal").modal();
+	}
+}
+
+
+
+
+
+
+
+/*$item.mouseenter(function() {
+    $(this).css("background", "#D7DF01").css("border-radius", "3px");
+}).mouseleave(function() {
+     $(this).css("background", "#04B431").css("border-radius", "0px");
+});*/
+	
+	// d.innerHtml = "25 SQUARES FOOTBALL"
+
+
+
+
+
+
+
+
+window.onload = Bass(newto);
+window.onload = TestCat(rsno);
+
+   
+
+
+
+
+
+</script>	
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+</BODY>
+
+</html>

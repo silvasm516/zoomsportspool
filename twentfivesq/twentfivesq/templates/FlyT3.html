@@ -1,0 +1,219 @@
+<html>
+<!-- NAV FOR DASHBOARD -->
+<head>
+<meta charset="utf-8"/>
+<title>FlyT3</title>
+<!-- <link rel="shortcut icon" href= "../static/Zfav.ico" /> -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script> -->
+<!-- <link rel="stylesheet" href= "FlyO.html/fly.css"/ -->
+
+
+<style>
+
+{% block 'FlyT2.html' %}
+
+
+
+#menuwrapper {
+
+    font-family:Arial;
+    font-size:12px;
+	font-style: bold;
+
+}
+
+
+#menuwrapper ul, #menuwrapper ul li
+{
+    margin:0;
+    padding:0;
+    list-style:none;
+   /**/
+}
+
+
+#menuwrapper ul li 
+{
+    background-color: #cfcfd1;
+    border-bottom:solid 1px white;
+    width:6vw;
+    cursor:pointer;
+    display: block;
+  float: left;
+  position: relative;
+	
+}
+#menuwrapper ul li a{
+
+color:#190707;
+display: block;
+}
+
+#menuwrapper ul li:hover 
+{
+   <!--  background-color:#6679e9; -->
+    position:relative;
+	color:#190707;
+	display: block;
+}
+ 
+#menuwrapper ul li ul
+{
+    position:absolute;
+    display:none;
+}
+
+#menuwrapper ul li:hover ul{
+    left:0px;
+	center:0px;
+    display:block;
+	position:absolute;
+	text-align: center;
+	color:#190707;
+}
+ 
+#menuwrapper ul li ul li{
+    background-color:#d1a934;
+	color:#190707;
+}
+ 
+#menuwrapper ul li:hover ul li:hover{
+    background-color:red;
+}
+
+#menuwrapper ul li:hover ul li ul{
+    position:absolute;
+    display:none;
+}
+
+#menuwrapper ul li:hover ul li:hover ul{
+    position:absolute;
+    display: block;
+    width: 4.5vw;
+    font-size:18px;
+}
+
+
+.modal-body {
+	background-color: #82E0AA;
+}
+
+
+@media only screen and (max-width:30em) {
+#menuwrapper {
+	display: block;
+	width: 6.0vw;
+	float:left;
+	margin-top: 30%;
+	font-size: 7.5vw;
+	color: black;
+}
+
+}
+
+
+
+
+
+</style>
+</head>
+
+
+<body>
+<div id="menuwrapper">
+    <ul>
+       <!--  <strong><li><a href="#">Submit</a></strong>
+			<ul>
+				<strong><li><a a href = "#" id = "subselect">Submit Selections<a/></li></strong>
+			</ul>
+		</li>
+        <strong><li><a href="">Save</a></strong>
+			<ul>
+			    <strong><li><a href = "#" id = "saveselect">Save Selections</a></li></strong>
+			</ul>
+		</li> -->
+		<!--  <strong><li><a href="">Nav / Help</a></strong> -->
+		<ul>
+			<!-- <strong><li><a href = "/b" id = "dashB">Dashboard</a></li></strong> -->
+			<strong><li><a href="/Q">Archive</a></li></strong>
+			<strong><li><a href="/N">Index</a></li></strong>
+			<strong><li><a href="/t">Home</a></li></strong>
+			<strong><li><a href="/r">Buy Games</a></li></strong>
+			<strong><li id="InstrBut"><a>Instructions</a></li></strong>
+
+			<!-- <strong><li><a href= "#" id = "popover" data-toggle="popover" data-html = "true"  title="TERMS" data-placement="left" data-content="{% for key, value in popovr.items %}<span><p><h3>{{key}}  {{value}}</h3></p></span>{% endfor %}">Terms</a></a></li></strong> -->
+			<!-- <strong><li><a href="#" id = "zebra">Help</a> -->
+				
+			<!-- <ul>
+				<li><p>
+
+				1). Point and Click to Select Your Squares.
+
+				2). Click the Red 'Submit' link.
+
+				3). Click the Red 'Save' Link.
+
+				4). Navigate to Your Desired Page.</p></li>
+			</ul> -->
+			<!-- </li></strong>
+
+			</ul>
+			</li> -->
+    	
+    </ul>
+
+    <div class="modal fade" id="InstrModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">INSTRUCTIONS</h4>
+        </div>
+        <div class="modal-body">
+          <p><strong> 1). Start by taking note of the 'Grids' outstanding box at the upper left. If you
+          have grids remaining, a value greater than zero should appear. Otherwise, you will need to
+          select the 'Buy Games' option. Once you have grids available, select your teams from the 
+          dropdown menus. One 'Home' and one 'Visitor' per grid from the 'Pro', 'College', or choose
+          to create your own teams from the 'Custom' categories. Press the green 'Submit Teams' button.</strong></p>
+
+          <p><strong>2). Next, provide an authorization code password that your clients will
+          use to log in with. Then fill out the rest of the form. Press the blue 'Submit Grid' button.
+          Each grid will be noted in the Active Grid Display Panel below. You will need to contact your clients and direct 
+          them to the Site. The Row/Column numbers are selected at random, at grid creation, but are not revealed
+          until grid closing at midnight before game day. The grid will remain available for
+          viewing, however, for game day and approx. one extra day. </strong></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>	
+
+
+</body>
+</html>
+
+<script>
+
+ var striper =  document.getElementById("InstrBut");
+        
+	if(striper.addEventListener) {striper.addEventListener("click",goInstr, false);
+			} 
+			 else if(striper.attachEvent) {
+			 striper.attachEvent("onclick", goInstr); 
+			 }
+
+function goInstr() {
+	$("#InstrModal").modal();
+}
+
+</script>
+{% endblock %}

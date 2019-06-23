@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+
+ <head>
+ {% extends "__base.html" %}
+
+
+
+
+
+
+
+</head>
+
+<title>{{title}}</title>
+
+
+<BODY>
+<div>
+	 <h2>{{title}}</h2>
+	 
+</div>
+
+	
+
+{% block form %}
+<style type="text/css">
+
+#headd {
+	text-align: center;
+}	
+p {
+	text-align: center;
+}
+#dat0 {
+	margin-top: 9%;
+}
+
+.gameNum {
+	margin-top: 60%;
+	display: none;
+}
+
+/*.gameNumC {
+	margin-top: 80%;
+	display: none;
+}*/
+
+</style>
+
+
+
+<div class= "row" ></div>
+<header id = "headd"><h4>Note: Games That Are Closed Are Still Available For Viewing</h4></header>
+
+<div class= "col-sm-2" id = "a">
+</div>
+
+<div class="col-sm-4" id = "b">
+<h2>PRO GAMES</h2>
+
+
+<p id= "dat0">{{data.result0.homes}}   {{data.result0.visit}}</p>
+	<p>{{data.result1.homes}}   {{data.result1.visit}}</p>
+	<p>{{data.result2.homes}}   {{data.result2.visit}}</p>
+	<p>{{data.result3.homes}}   {{data.result3.visit}}</p>
+	<p>{{data.result4.homes}}   {{data.result4.visit}}</p>
+	<p>{{data.result5.homes}}   {{data.result5.visit}}</p>
+	<p>{{data.result6.homes}}   {{data.result6.visit}}</p>
+	<p>{{data.result7.homes}}   {{data.result7.visit}}</p>
+	<p>{{data.result8.homes}}   {{data.result8.visit}}</p>
+	<p>{{data.result9.homes}}   {{data.result9.visit}}</p>
+
+</div>
+
+<div class="col-sm-4" id = "c">
+<h2>COLLEGE GAMES</h2>
+<br>
+
+	<p>{{data.result10.homec}}   {{data.result10.visitc}}</p>
+	<p>{{data.result11.homec}}   {{data.result11.visitc}}</p>
+	<p>{{data.result12.homec}}   {{data.result12.visitc}}</p>
+	<p>{{data.result13.homec}}   {{data.result13.visitc}}</p>
+	<p>{{data.result14.homec}}   {{data.result14.visitc}}</p>
+	<p>{{data.result15.homec}}   {{data.result15.visitc}}</p>
+	<p>{{data.result16.homec}}   {{data.result16.visitc}}</p>
+	<p>{{data.result17.homec}}   {{data.result17.visitc}}</p>
+	<p>{{data.result18.homec}}   {{data.result18.visitc}}</p>
+	<p>{{data.result19.homec}}   {{data.result19.visitc}}</p>
+</div>
+
+<div class= "col-sm-2" = "d">
+</div>
+<p>{{mgrId}}</p>
+<p>{{userName}}</p>
+<p>{{firstname}}</p>
+
+
+
+<input type="text" name="gameNumP0" class= "gameNum"/>
+<input type="text" name="gameNumP1" class= "gameNum"/>
+<input type="text" name="gameNumP2" class= "gameNum"/>
+<input type="text" name="gameNumP3" class= "gameNum"/>
+<input type="text" name="gameNumP4" class= "gameNum"/>
+<input type="text" name="gameNumP5" class= "gameNum"/>
+<input type="text" name="gameNumP6" class= "gameNum"/>
+<input type="text" name="gameNumP7" class= "gameNum"/>
+<input type="text" name="gameNumP8" class= "gameNum"/>
+<input type="text" name="gameNumP9" class= "gameNum"/>
+
+
+<input type="text" name="gameNumC0" class= "gameNum"/>
+<input type="text" name="gameNumC1" class= "gameNum"/>
+<input type="text" name="gameNumC2" class= "gameNum"/>
+<input type="text" name="gameNumC3" class= "gameNum"/>
+<input type="text" name="gameNumC4" class= "gameNum"/>
+<input type="text" name="gameNumC5" class= "gameNum"/>
+<input type="text" name="gameNumC6" class= "gameNum"/>
+<input type="text" name="gameNumC7" class= "gameNum"/>
+<input type="text" name="gameNumC8" class= "gameNum"/>
+<input type="text" name="gameNumC9" class= "gameNum"/>
+
+
+{% endblock %}
+</BODY>

@@ -1,0 +1,160 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>FlyT2</title>
+<!-- <link rel="shortcut icon" href= "../static/Zfav.ico" /> -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script> -->
+<!-- <link rel="stylesheet" href= "FlyO.html/fly.css"/> -->
+
+
+<style>
+
+{% block 'FlyT2.html' %}
+
+
+
+#menuwrapper {
+
+    font-family:Arial;
+    font-size:12px;
+	font-style: bold;
+
+}
+
+
+#menuwrapper ul, #menuwrapper ul li
+{
+    margin:0;
+    padding:0;
+    list-style:none;
+   /**/
+}
+
+
+#menuwrapper ul li 
+{
+    background-color: #cfcfd1;
+    border-bottom:solid 1px white;
+    width:6vw;
+    cursor:pointer;
+    display: block;
+  float: left;
+  position: relative;
+	
+}
+#menuwrapper ul li a{
+
+color:#190707;
+display: block;
+}
+
+#menuwrapper ul li:hover 
+{
+   <!--  background-color:#6679e9; -->
+    position:relative;
+	color:#190707;
+	display: block;
+}
+ 
+#menuwrapper ul li ul
+{
+    position:absolute;
+    display:none;
+}
+
+#menuwrapper ul li:hover ul{
+    left:0px;
+	center:0px;
+    display:block;
+	position:absolute;
+	text-align: center;
+	color:#190707;
+}
+ 
+#menuwrapper ul li ul li{
+    background-color:#d1a934;
+	color:#190707;
+}
+ 
+#menuwrapper ul li:hover ul li:hover{
+    background-color:red;
+}
+
+#menuwrapper ul li:hover ul li ul{
+    position:absolute;
+    display:none;
+}
+
+#menuwrapper ul li:hover ul li:hover ul{
+    position:absolute;
+    display: block;
+    width: 4.5vw;
+     font-size:18px;
+}
+
+
+@media only screen and (max-width:70em) {
+
+}
+
+
+
+
+</style>
+</head>
+
+
+<body>
+<div id="menuwrapper" class= "nomobil">
+    <ul>
+         <strong><li>Submit</a></strong>
+			<ul> 
+				<strong><li><a a href = "#" id = "subselect">Submit Selections<a/></li></strong>
+			</ul>
+		</li>
+        <strong><li>Save</a></strong> 
+			<ul> 
+			    <strong><li><a href = "#" id = "saveselect">Save Selections</a></li></strong>
+			</ul>
+		</li>
+		 <strong><li>Nav / Help</a></strong> 
+		<ul>
+			<strong><li><a href = "/b" id = "dashB">Dashboard</a></li></strong>
+			<strong><li><a href="/Q">Archive</a></li></strong>
+			<strong><li><a href="/N">Index</a></li></strong>
+			<strong><li><a href="/J">Home</a></li></strong>
+			<strong><li><a href= "#" id = "popover" data-toggle="popover" data-html = "true"  title="TERMS" data-placement="left" data-content= "{% for key, value in popovr.items %}<span><p><h3>{{key}}  {{value}}</h3></p></span>{% endfor %}">Terms</a></a></li></strong>
+			<strong><li><a href="#" id = "zebra">Help</a>
+				
+			<ul>
+				<li><p>--------------------------------
+
+				1). Point and Click to Select Your Squares.
+
+				2). Click the Red 'Submit' link.
+
+				3). Click the Red 'Save' Link.
+
+				4). Navigate to Your Desired Page.</p></li>
+			</ul>
+			</li></strong>
+
+			</ul>
+			</li> 
+    	
+    </ul>
+
+
+
+{% endblock %}
+</body>
+</html>
+
+<script>
+
+
+</script>

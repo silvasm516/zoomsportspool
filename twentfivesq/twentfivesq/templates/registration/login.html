@@ -1,0 +1,12 @@
+<!DOCTYPE HTML>
+{% load staticfiles %} 
+<html  lang="en">
+<head>
+<meta charset="utf-8"/>
+
+<h2>Login</h2>
+<form method="post" action= "/SO" >
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Login</button>
+</form>

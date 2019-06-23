@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+
+ <head>
+ {% extends "__base.html" %}
+ <meta http-equiv="Cache-control" content="public">
+</head>
+
+<title id = "tit"><p>"Squares" {{tit}}</p></title>
+
+
+<body>
+
+
+
+<div class = "row">
+
+</div> 
+
+{% block form %}
+<style>
+
+#myModal {
+
+	color: #0B610B
+}
+
+.modal-header {
+      background-color: #5cb85c;
+}
+.panel-body {
+	background-color: #FE9A2E;
+}
+
+.panel-default2  {
+	margin-top: 1%;
+}
+
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
+
+
+</head>
+<body>
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">REGISTER</h4>
+        </div>
+        <div class="modal-body">
+          <p><strong>Hey there! It looks like you're new to us. We'd like to 
+          welcome you to 25 Squares Football. But first, please register by 
+          answering a few questions. Thanks.</strong></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>	
+<!-- <script src = "C:\Users\Steve\Desktop\TwentyFiveSq\pool\squares.js"></script> -->
+
+      
+    <div class="panel panel-default">
+  <div class="panel-body"> 
+
+<form class="form-horizontal" name= "sup" id="sup" role="form" method="post" action="/R">
+	{% csrf_token %}
+<div class="form-group">
+		
+		<div class = "col-sm-2">
+			<!-- <a href = "twentyFiveSqHome.html"><strong><li>Back</li><a></strong> --> 
+		</div>
+		<div class= "col-sm-4">
+			<label for="firstName" class="col-sm-2 control-label">First Name</label>
+			<input type="text" name="firstName" id= "firstName" placeholder="First Name" class="form-control" required/>
+		</div>
+		<div class="col-sm-4">
+			  
+		</div>
+
+		<div class= "col-sm-2">
+		</div>
+</div>
+
+	<div class="form-group">
+		<div class = "col-sm-2">
+		
+		</div>
+		<div class= "col-sm-4">
+			<label for="lastName" class="col-sm-2 control-label">Last Name</label>
+			<input type="text" name="lastName" id= "lastName" placeholder="Last Name" class="form-control" required"/>
+		</div>
+		<div class="col-sm-4">
+			  
+		</div>
+		<div class= "col-sm-2">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class = "col-sm-2">
+		
+		</div>
+		<div class= "col-sm-4">
+			<label for="eMail" class="col-sm-2 control-label">E-mail</label>
+			<input type="email" name="email" id= id="email" placeholder="e-Mail" class="form-control" required/>
+		</div>
+		<div class="col-sm-4">
+			  
+		</div>
+		<div class= "col-sm-2">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class = "col-sm-2">
+		
+		</div>
+		<div class= "col-sm-4">
+			<label for="userName" class="col-sm-2 control-label">User Name</label>
+			<input type="text" name="userName" id= "userName" placeholder="User Name" class="form-control" required/>
+			<a href="#" data-toggle="tooltip" title="Provide A Name You Wish To Be Known By On The Site(Nine Characters Max)"><i class="glyphicon glyphicon-question-sign"></i></a>
+		</div>
+		<div class="col-sm-4">
+		<p id= "a1"> </p>	
+		</div>
+		<div class= "col-sm-2">
+		 
+		</div>
+	</div>
+
+<div class="form-group">
+		<div class = "col-sm-2">
+		
+		</div>
+		<div class= "col-sm-4">
+			<label for="street" class="col-sm-2 control-label">Your Address</label>
+			<input type="text" name="street" id="street" placeholder="Street & unit" class="form-control" required/> 
+		</div>
+		<div class="col-sm-4">
+		<p id= "b1"> </p>	  
+		</div>
+		<div class= "col-sm-2">
+		
+		</div>
+	</div>
+
+<div class="form-group">
+		<div class = "col-sm-2">
+		
+		</div>
+		<div class= "col-sm-4">
+			<label for="city" class="col-sm-2 control-label">City</label>
+			<input type="text" name="city" id="city" placeholder="City" class="form-control" required/> 
+		</div>
+		<div class="col-sm-4">
+		<p id= "b1"> </p>	  
+		</div>
+		<div class= "col-sm-2">
+		
+		</div>
+</div>	
+
+<div class="form-group">
+		<div class = "col-sm-2">
+			
+			
+		</div>
+
+			
+		<div class= "col-sm-2">
+			<label for="state" class="col-sm-2 control-label">State/Province</label>
+			<input type="text"  name="state" id="state" placeholder="State/Province" class="form-control" required/> 
+		</div>
+		
+		<div class= "col-sm-2">
+			<label for="country" class="col-sm-2 control-label">Country</label>
+			<input type="text"  name="country" id="country" placeholder="Country" class="form-control" required/> 
+
+		</div>	  
+		<div class="col-sm-2">
+
+		<label for="zipcode" class="col-sm-2 control-label">Zip Code</label>
+		<input type="text"  name="zip" id="zip" placeholder="Zip Code" class="form-control" required/> 
+		
+		</div>
+		<div class= "col-sm-2">
+		
+		</div>
+		<div class= "col-sm-2">
+		
+		</div>
+</div>
+<!-- <button type="button" class="btn btn-primary btn-md">Join</button> -->
+
+<input type="submit" id="submitt" value="Join"/>
+
+</form>
+
+<div>
+	<p id = "c1"> </p>
+</div>
+</div>
+
+<footer>
+<div class="panel panel-default2" style= "height: 420px; width: 100%; padding: 0px; margin-top: 15%; background-color: black">
+  <div class="panel-body2" style= "color: white;">ZOOMSPORTSPOOL  all rights reserved</div>
+</div>
+</footer>
+
+</div>
+ <!-- <div class="modal fade" id="#myModal" role="dialog">
+    <div class="modal-dialog">
+    
+     <! <!Modal content-->
+     <!--  <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          <p></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>  -->
+
+<script src="../static/setUpPageText.txt"></script> 
+
+
+
+
+
+
+<script>
+$("#myModal").modal();
+
+
+function Dog() {
+	var d = document.getElementById("tit")
+	if (d == null) {
+		var s = document.getElementById("login");
+		s.innerHTML = "PLAYER SIGN-UP"}
+		
+}
+window.onload = Dog();
+
+$("#sup").validate({
+  rules: {
+  	userName: {
+  	minlength: 3,
+    maxlength: 9
+ },
+    password: {	
+    required: true,
+    minlength: 5
+},
+    /*password2: {
+      equalTo: "#password1"*/
+    }
+  
+
+  /*messages: {
+ 	password: {
+ 	required: "this field required",
+ 	minlength: "please make password at least five characters"
+ 	},
+  	password2: {
+  	 equalTo: "password doesn't match"
+  	}
+  }*/
+});
+</script>	
+
+
+{% endblock %} 
+
+</body>
+
+</html>

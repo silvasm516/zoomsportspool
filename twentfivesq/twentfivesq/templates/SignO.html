@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"/>
+	<link rel="shortcut icon" href="../static/Zfav.ico" />
+	<title>Grid set up</title>*/
+
+	{% extends "Dashboard2.html" %} 
+	{% load staticfiles %}
+	<title>""</title> 
+	
+</head>
+
+
+<body>
+
+
+
+{% block signon %}
+
+<p id = "tempaddition"  style= "color: white"><strong>Welcome   {{c.data.name}}<strong></p>
+
+
+
+<form method="post" action= "/E" id = "hedgehog"" >
+	{% csrf_token %}
+	<input type= "text" class = "hid" name= "managerName" id = "mgrName" value= {{ data.userName }}/>
+	<input type= "text" class = "hid" name= "mgrNumber" id = "mgrNumber" value= {{ data.mgrId }} />
+	<input type= "text" class = "hid" name= "butsrc" id =  "zerot"/> 
+	<input type= "submit" style="display:none" />
+	<input type= "text" id = "msg" value = {{ msg }}/>		
+</form>	
+
+
+{% endblock %}
+
+
+
+
+<script>
+
+function Cat() {
+	
+
+	var msg = document.getElementById("msg");
+	window.alert(msg.value);	
+}
+
+
+</script>
+
+		
+
+					
+
+
+</body>
+
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE HTML>
+
+ <head>
+ {% extends "__base.html" %}
+
+</head>
+
+<title>{{title}}</title>
+
+
+<BODY>
+
+
+	
+
+</div>
+
+
+
+{% block form %}
+
+<head>
+	<style type="text/css">
+	.panel {
+		background-color: #FE9A2E;
+
+	}	
+body {
+	padding: 0px;
+
+}
+.panel-body {
+	height: 1350px;
+	/*overflow-y: hidden;
+	overflow overflow-x: hidden;*/
+}
+
+
+#signupform {
+	margin-top: 2%;
+}
+
+	</style>
+<link href="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script> 
+
+</head>
+
+<!-- {% block title %}{{tit}}{% endblock %} -->
+ <div class="panel panel-default">
+  <div class="panel-body" style="padding: 0px;"> 
+
+<!-- <form class="form-horizontal" name= "sup" id = "sup" role="form" method="post" action="/M"> -->
+<form class="form-horizontal" name= "signupform" id="signupform" role="form" autocomplete="on" method="post" action="/M">
+{% csrf_token %}
+<div class="form-group">
+		
+		<div class = "col-sm-2">
+			 
+		</div>
+		<div class= "col-sm-4">
+			<label for="firstName" class="col-sm-2 control-label">First Name</label>
+			<input type="text" name="firstName" id= "firstName" placeholder="First Name" class="form-control" required/>
+		</div>
+		<div class="col-sm-4">
+			  
+		</div>
+
+		<div class= "col-sm-2">
+		</div>
+</div>
+
+	<div class="form-group">
+		<div class = "col-sm-2">
+		
+		</div>
+		<div class= "col-sm-4">
+			<label for="lastName" class="col-sm-2 control-label">Last Name</label>
+			<input type="text" name="lastName" id= "lastName" placeholder="Last Name" class="form-control" required"/>
+		</div>
+		<div class="col-sm-4">
+			  
+		</div>
+		<div class= "col-sm-2">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class = "col-sm-2">
+		
+		</div>
+		<div class= "col-sm-4">
+			<label for="eMail" class="col-sm-2 control-label">E-mail</label>
+			<input type="email" name="email" id= id="email" placeholder="e-Mail" class="form-control" required/>
+		</div>
+		<div class="col-sm-4">
+			  
+		</div>
+		<div class= "col-sm-2">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class = "col-sm-2">
+		
+		</div>
+		<div class= "col-sm-4">
+			<label for="userName" class="col-sm-2 control-label">User Name</label>
+			<input type="text" name="userName" id= "userName" placeholder="User Name" maxlength="9" minlength="2" class="form-control" required/>
+			<a href="#" data-toggle="tooltip" title="Provide A Name You Wish To Be Known By On The Site (nine characters or less)"><i class="glyphicon glyphicon-question-sign" style="margin-left:80%;"></i></a>
+		</div>
+		<div class="col-sm-4">
+		<p id= "a1"> </p>	
+		</div>
+		<div class= "col-sm-2">
+		 
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class = "col-sm-2">
+		
+		</div>
+		<div class= "col-sm-4">
+			<label for="password" class="col-sm-2 control-label">Your Password</label>
+			<input type="password" name="password1" id="password1" placeholder="Password" class="form-control" minlength="5" required/> 
+		</div>
+		<div class="col-sm-4">
+		<p id= "b1"> </p>	  
+		</div>
+		<div class= "col-sm-2">
+		
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<div class = "col-sm-2">
+		
+		</div>
+		<div class= "col-sm-4">
+			<label for="password" class="col-sm-2 control-label"></label>
+			<!-- <input type="password" name="password2" id="password2" placeholder="Password" class="form-control" required/> -->
+			<input id="password2" name="password2" type="password" placeholder="Re-Enter Password" minlength="5" value="" style= "margin-top: 8%;">
+		</div>
+		<div class="col-sm-4">
+			  
+		</div>
+		<div class= "col-sm-2">
+		</div>
+	</div>
+
+<div class="form-group">
+		<div class = "col-sm-2">
+		
+		</div>
+		<div class= "col-sm-4">
+			<label for="street" class="col-sm-2 control-label">Your Address</label>
+			<input type="text" name="street" id= id="street" placeholder="Street & unit" class="form-control" required/> 
+		</div>
+		<div class="col-sm-4">
+		<p id= "b1"> </p>	  
+		</div>
+		<div class= "col-sm-2">
+		
+		</div>
+	</div>
+
+<div class="form-group">
+		<div class = "col-sm-2">
+		
+		</div>
+		<div class= "col-sm-4">
+			<label for="city" class="col-sm-2 control-label">City</label>
+			<input type="text" name="city" id= id="street" placeholder="City" class="form-control" required/> 
+		</div>
+		<div class="col-sm-4">
+		<p id= "b1"> </p>	  
+		</div>
+		<div class= "col-sm-2">
+		
+		</div>
+</div>	
+
+<div class="form-group">
+		<div class = "col-sm-2">
+			
+			
+		</div>
+
+			
+		<div class= "col-sm-2">
+			<label for="state" class="col-sm-2 control-label">State/Province</label>
+			<input type="text"  name="state" id="state" placeholder="State/Province" class="form-control" required/> 
+		</div>
+		
+		<div class= "col-sm-2">
+			<label for="country" class="col-sm-2 control-label">Country</label>
+			<input type="text"  name="country" id="country" placeholder="Country" class="form-control" required/> 
+
+		</div>	  
+		<div class="col-sm-4">
+
+		<p id= "b1"> </p>
+
+		</div>
+
+		<div class= "col-sm-2">
+		<label for="zipcode" class="col-sm-2 control-label">Zip Code</label>
+		<input type="text"  name="zip" id="zip" placeholder="Zip Code" class="form-control" required/> 
+		
+		</div>
+</div>
+<!-- <button type="button" class="btn btn-primary btn-md">Join</button> -->
+
+<!-- <input type="submit" id="submitt" value="Join"/> -->
+<input id="signupsubmit" name="signupsubmit" type="submit" value="Signup" style="margin-left: 50%; color: blue";>
+</form>
+
+<div>
+	<p id = "c1"> </p>
+</div>
+
+</div>
+</div>
+
+<div class= "row">
+<div class= "col-sm-12">
+<footer>
+<div class="panel panel-default" style= "height: 750px; width: 100%; padding: 0px; margin-top: -25%; background-color: black">
+  <div class="panel-body" style= "color: white;">ZOOMSPORTSPOOL  all rights reserved</div>
+</div>
+</footer>
+</div>
+</body>
+<!-- {% csrf_token %} -->
+<script src="../static/setUpPageText.txt"></script> 
+
+<script>
+/*jQuery.validator.setDefaults({
+  debug: true,
+  success: "valid"
+});*/
+$("#signupform").validate({
+  rules: {
+  	userName: {
+  	minlength: 3
+ },
+    password: {	
+    required: true,
+    minlength: 5
+},
+    password2: {
+      equalTo: "#password1"
+    }
+  
+},
+  messages: {
+ 	password: {
+ 	required: "this field required",
+ 	minlength: "please make password at least five characters"
+ 	},
+  	password2: {
+  	 equalTo: "password doesn't match"
+  	}
+  }
+});
+// $("#signupform").validate();
+
+ 
+
+window.addEventListener("load", textParagraphsSu.bind(null, sineUpName, sineUpPassW, sineUpJoin), false);
+
+function textParagraphsSu(One, Two, Three) {
+	document.getElementById("a1").innerHTML = One;
+	document.getElementById("b1").innerHTML = Two;
+	document.getElementById("c1").innerHTML = Three 
+
+}
+
+var duck = document.getElementById("signupsubmit");
+if(duck.addEventListener) {duck.addEventListener("click",paySub, false);
+			} 
+			 else if(duck.attachEvent) {
+			 window.alert("test")
+			 duck.attachEvent("onclick", paySub); 
+			 }	
+
+function paySub() {
+	sessionStorage.fName = document.getElementById('firstName').value;
+	sessionStorage.pw = document.getElementById('password2').value;
+	
+}
+
+
+
+</script>
+
+</html>
+
+
+<script>
+
+/*function Dog() {
+	var d = document.getElementById("tit")
+	if (d == null) {
+		var s = document.getElementById("contact");
+		s.innerHTML = "Manager Sign-Up"}
+		
+}
+window.onload = Dog();*/
+</script>	
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,58 @@
+def Giraffe(request):
+    #CREATES 'TERMS' MODAL FROM GRID PAGE
+    import datetime
+    from manager.models import Managers
+    from manager.views import Cat
+    #from django.template.context_processors import csrf
+    from django.template import RequestContext
+    from grid2.models import Grid
+    from grid2.models import Terms
+    
+    g = Grid.objects.all()
+    t = Terms.objects.all()
+    gridnum = request.POST.get('gameNumber')
+    name = g.filter(id = gridnum)[0].managerName
+    homet = g.filter(id = gridnum)[0].homeTeam
+    visitt = g.filter(id = gridnum)[0].visitingTeam
+    gamedate = g.filter(id = gridnum)[0].gameDate
+    price = t.filter(id = gridnum)[0].PRICE
+    minn = t.filter(id = gridnum)[0].MIN
+    maxx = t.filter(id = gridnum)[0].MAX
+    firstpo = t.filter(id = gridnum)[0].FIRST
+    secondpo = t.filter(id = gridnum)[0].SECND
+    thirdpo = t.filter(id = gridnum)[0].THIRD
+    finalpo = t.filter(id = gridnum)[0].FINAL
+    last = t.filter(id = gridnum)[0].FRTH
+    notes = t.filter(id = gridnum)[0].NOTES
+    gamnum = gridnum.innerHTML
+    gg = "display:none" 
+    if last == '1':
+            FINAL_PAYOUT_AT_ = 'End of fourth Qtr score'
+    else: 
+            FINAL_PAYOUT_AT_ = 'End of game score'
+            
+    closes = deadline(gridnum, gamedate)
+    top = dumbmonkey
+    modal = {
+            'price': price,
+            'min': minn,
+            'firstQtr': firstpo,
+            'secQtr' : secondpo,
+            'thirdQtr' : thirdpo,
+            'final' : finalpo,	    
+            'eog' : FINAL_PAYOUT_AT_,
+            'name' : name,
+            'gamnum' : gamnum,
+            'homeT' : homet,
+            'visitT' : visitt,
+            'gameDat' : gamedate,
+            'closes'  : closes,
+            'max' :  maxx,
+            'notes' : notes,
+            'dog' : 'loaded',
+            'data': data
+            } 
+       
+    temp = loader.get_template("testGrid.html')
+    return HttpResponse(temp.render(modal,request))
+    

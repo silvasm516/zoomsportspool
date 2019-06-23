@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+
+ <head>
+ {% extends "__base.html" %}
+<meta name="viewport" content="width= device-width, initial-scale=1"/>
+<script src = "http://benalman.com/projects/jquery-bbq-plugin/"/>
+<script src = "http://benalman.com/projects/jquery-bbq-plugin/"/>
+<script src = "http://localhost:8080/static/jquery-migrate-3.0.0.js"/>
+
+ <!-- copied from dashboard -->
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+<!-- end copy -->
+ 
+
+
+<title>{% block title %}{{tit}}{% endblock %}</title>
+
+
+
+<div>
+	 <h2 id = "ti">{{tit}}</h2>
+	 
+</div> 
+
+
+
+{% block MenusCSS %}
+<style type="text/css">
+
+/*.row2  {
+  visibility: hidden;
+}*/
+
+.row1 {
+	background-color: white;
+    /* background-color: white*/
+}
+
+.table {
+ background-color: #E6E6E6; 
+}
+
+.row2 {
+  background-color: green;
+}
+
+.red { 
+  color: red; }
+
+.green {
+ color: green; }
+
+.blue {
+  color: blue;
+}
+
+#f {
+  font-weight: normal;
+  font-family: arial;
+  font-size: .65vw;
+ 
+  margin-left: 1%;
+}
+
+
+td button {
+	padding:10pt; 
+}
+
+
+#headd {
+	text-align: center;
+}	
+
+p {
+	text-align: center;
+	font-family: arial;
+	font-size: .65vw;
+}
+
+
+
+.gameNumP {
+	margin-top: 6%;
+	/*display: none;*/
+}
+
+/*hidden {
+  display: none;
+  visibility: hidden;
+
+} 
+
+.gameNum , #termm {
+display: none;
+}*/
+tr  {
+  height: 10pt;
+  padding: 0px;
+}
+
+#theTerms {
+width: 90%;
+height: 80%;
+
+}
+
+.modal-backdrop{
+  opacity:0; transition:opacity .1s;
+}
+.modal-backdrop.in{
+  opacity:.60;
+}
+.modal-body {
+background-color:#27AE60;
+
+}
+
+.btn {
+	width: 2vw;
+}
+
+#close {
+	width: 3.5vw;
+}
+
+.gameNum, .hide, .pnanmes {
+  visibility: visible;
+}
+
+.row2 {
+  display: none;
+}
+
+
+.modal-body {
+text-align: center;
+font-family: arial;
+font-size: 1.25vw;
+padding: 2px;
+font-style: bold;
+}
+
+.row99 {
+  display: none;
+}
+@media only screen and (max-width:70em) {
+
+.teamNams {
+  text-align: center;
+  font-family: arial;
+  font-size: 2.0vw;
+}
+
+.modal-body {
+text-align: center;
+font-family: arial;
+font-size: 3.0vw;
+padding: 5px;
+font-style: bold;
+}
+
+
+
+ .row2 {
+  display: none;
+}
+
+#a {
+  height: 0px;
+  display: none;
+}
+
+
+#b {
+  margin-top: 3%;
+  padding: 0px,0px,0px,0px;
+  height: 750px; 
+}
+
+#c {
+  margin-top: 3%;
+  padding: 0px,0px,0px,0px;
+  height: 750px;
+}
+
+.row1 {
+  
+   margin-top: 1%;
+   float: top;
+   width: 100%;
+
+  }
+
+
+#h1 #h2 #u #t {
+      width: 100%;
+      display: block; 
+    }
+
+#t {
+  
+  margin-top: 3%;
+}
+
+#u , #h2 {
+
+ margin-top: 5%; 
+}
+
+input {
+  
+  visibility: visible;
+}
+
+
+
+td { 
+  
+  display: block;
+
+}
+
+.btn-responsive {
+    width: 20%;
+    font-size:70%;
+    border-radius:3px;
+    line-height: 1;
+  }
+
+
+  /*p {
+    margin-left:0%;
+  }*/
+
+#f, #ff, #gg, #hh, #ii, #jj, #kk, #ll, #mm, #nn, #oo {
+  font-size:100%;
+
+}
+
+/*.container {
+  height: 1000px;
+  background-color: white;
+  overflow: visible;
+
+}*/
+
+#close{
+  width: 12%;
+  margin-right: 20%;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 1.0em;
+}
+
+.row99 {
+  display: none;
+}
+
+
+
+}
+
+{% endblock %}
+
+{% block menusform %}
+</style>
+
+</head>
+
+<Body>
+
+
+<div class = "container">
+
+
+
+<div class= "row1" >
+<header id = "headd"><h4>Note: Games That Are Closed Are Still Available For Viewing</h4></header>
+
+<div class= "col-sm-2" id = "a">
+</div>
+<div class= "col-sm-4" id = "c">
+<h2 id = "h1">PRO GAMES</h2>
+<table id="t" class = "table">
+<tr>
+ 	<td><p class='teamNams'>{{data.result0.homes}}   {{data.result0.visit}}</p></td>
+	<td><button id ="e0" type="button" class="btn  btn-primary btn-xs btn-responsive"  style= {{data.t0}} >terms</button></td>
+	<td><button  id ="s0" type="button" class="btn  btn-primary btn-xs btn-responsive" style= {{data.vv0}}>view</button><p class='content' id="f">{{Pstatus.0}}</p></td>
+
+</tr>
+<tr>
+ 	<td><p class='teamNams'>{{data.result1.homes}}   {{data.result1.visit}}</p></td> 	
+   	<td><button  id ="e1" type="button" class="btn  btn-primary btn-xs btn-responsive" style= {{data.t1}} >terms</button></td>
+    <td><button  id ="s1" type="button" class="btn  btn-primary btn-xs btn-responsive" style= {{data.vv1}}>view</button><p class='content' id="f">{{Pstatus.1}}</p></td>  
+</tr>
+<tr>
+	<td><p class='teamNams'>{{data.result2.homes}}   {{data.result2.visit}}</p></td>
+	<td><button  id ='e2' type="button" class="btn  btn-primary btn-xs btn-responsive" style= {{data.t2}} >terms</button></td>
+	<td><button  id ='s2' type="button" class="btn  btn-primary btn-xs btn-responsive" style= {{data.vv2}}>view</button><p class='content' id="f">{{Pstatus.2}}</p></td>
+</tr>
+<tr>
+	<td><p class='teamNams'>{{data.result3.homes}}   {{data.result3.visit}}</p></td>
+	<td><button  id ='e3' type="button" class="btn  btn-primary btn-xs btn-responsive" style= {{data.t3}} >terms</button></td>
+	<td><button  id ='s3' type="button" class="btn  btn-primary btn-xs btn-responsive" style= {{data.vv3}}>view</button><p class='content' id="f">{{Pstatus.3}}</p></td>
+</tr>
+<tr>
+	<td><p class='teamNams'>{{data.result4.homes}}   {{data.result4.visit}}</p></td>
+	<td><button  id ='e4' type="button" class="btn  btn-primary btn-xs btn-responsive" style= {{data.t4}} >terms</button></td>
+	<td><button  id ='s4' type="button" class="btn  btn-primary btn-xs btn-responsive" style= {{data.vv4}}>view</button><p class='content' id="f">{{Pstatus.4}}</p></td>
+</tr>
+<tr>
+	<td><p class='teamNams'>{{data.result5.homes}}   {{data.result5.visit}}</p></td>
+	<td><button  id ='e5' type="button" class="btn  btn-primary btn-xs btn-responsive" style= {{data.t5}} >terms</button></td>
+	<td><button  id ='s5' type="button" class="btn  btn-primary btn-xs btn-responsive" style= {{data.vv5}}>view</button><p class='content' id="f">{{Pstatus.5}}</p></td>
+</tr>
+<tr>
+	<td><p class='teamNams'>{{data.result6.homes}}   {{data.result6.visit}}</p></td>
+	<td><button  id ='e6' type="button" class="btn  btn-primary btn-xs btn-responsive" style= {{data.t6}} >terms</button></td>
+	<td><button  id ='s6' type="button" class="btn  btn-primary btn-xs btn-responsive" style= {{data.vv6}}>view</button><p class='content' id="f">{{Pstatus.6}}</p></td>
+</tr>
+<tr>
+	<td><p class='teamNams'>{{data.result7.homes}}   {{data.result7.visit}}</p></td>
+	<td><button  id ='e7' type="button" class="btn  btn-primary btn-xs btn-responsive" style= {{data.t7}} >terms</button></td>
+	<td><button  id ='s7' type="button" class="btn  btn-primary btn-xs btn-responsive" style= {{data.vv7}}>view</button><p class='content' id="f">{{Pstatus.7}}</p></td>
+</tr>
+<tr>
+	<td><p class='teamNams'>{{data.result8.homes}}   {{data.result8.visit}}</p></td>
+	<td><button  id ='e8' type="button" class="btn  btn-primary btn-xs btn-responsive" style= {{data.t8}}>terms</button></td>
+	<td><button  id ='s8' type="button" class="btn  btn-primary btn-xs btn-responsive" style= {{data.vv8}}>view</button><p class='content' id="f">{{Pstatus.8}}</p></td>
+</tr>
+<tr>
+	<td><p class='teamNams'>{{data.result9.homes}}   {{data.result9.visit}}</p></td>
+	<td><button  id ='e9' type="button" class="btn  btn-primary btn-xs btn-responsive" style= {{data.t9}}>terms</button></td>
+	<td><button  id ='s9' type="button" class="btn  btn-primary btn-xs btn-responsive" style= {{data.vv9}} >view</button><p class='content' id="f">{{Pstatus.9}}</p></td>
+</tr>
+
+</table>
+</div>
+
+
+
+<div class="col-sm-4" id = "b">
+<h2 id = "h2">COLLEGE GAMES</h2>
+<table id="u" class = "table">
+<tr>
+	<td><p class='teamNams'>{{data.result10.homec}}   {{data.result10.visitc}}</p></td>
+	<td><button  id ="e10" type="button" class="btn  btn-primary btn-xs btn-responsive" style= {{data.n0}}>terms</button></td>
+	<td><button  id ="s10" type="button" class="btn  btn-primary btn-xs btn-responsive" style= {{data.vw0}}>view</button><p class='content' id="ff">{{Cstatus.0}}</p></td>
+</tr>
+<tr>
+	<td><p class='teamNams'>{{data.result11.homec}}   {{data.result11.visitc}}</p></td>
+	<td><button  id ="e11" type="button" class="btn  btn-primary btn-xs btn-responsive" style={{data.n1}}>terms</button></td>
+	<td><button id ="s11" type="button" class="btn  btn-primary btn-xs btn-responsive" style= {{data.vw1}} >view</button><p class='content' id="gg">{{Cstatus.1}}</p></td>
+</tr>
+<tr>
+	<td><p class='teamNams'>{{data.result12.homec}}   {{data.result12.visitc}}</p></td>
+	<td><button id ="e12" type="button" class="btn  btn-primary btn-xs btn-responsive"  style={{data.n2}}>terms</button></td>
+	<td><button id ="s12" type="button" class="btn  btn-primary btn-xs btn-responsive" style= {{data.vw2}} >view</button><p class='content' id="hh">{{Cstatus.2}}</p></td> 
+</tr>
+<tr>
+	<td><p class='teamNams'>{{data.result13.homec}}   {{data.result13.visitc}}</p></td>
+	<td><button id ="e13" type="button" class="btn  btn-primary btn-xs btn-responsive"  style= {{data.n3}}>terms</button></td>
+	<td><button id ="s13" type="button" class="btn  btn-primary btn-xs btn-responsive"  style= {{data.vw3}} >view</button><p class='content' id="ii">{{Cstatus.3}}</p></td>
+</tr>
+<tr>
+	<td><p class='teamNams'>{{data.result14.homec}}   {{data.result14.visitc}}</p></td>
+	<td><button id ="e14" type="button" class="btn  btn-primary btn-xs btn-responsive"  style= {{data.n4}}>terms</button></td>
+	<td><button id ="s14" type="button" class="btn  btn-primary btn-xs btn-responsive"  style= {{data.vw4}} >view</button><p class='content' id="jj">{{Cstatus.4}}</p></td>
+</tr>
+<tr>
+	<td><p class='teamNams'>{{data.result15.homec}}   {{data.result15.visitc}}</p></td>
+	<td><button id ="e15" type="button" class="btn  btn-primary btn-xs btn-responsive"  style= {{data.n5}}>terms</button></td>
+	<td><button id ="s15" type="button" class="btn  btn-primary btn-xs btn-responsive"  style= {{data.vw5}} >view</button><p class='content' id="kk">{{Cstatus.5}}</p></td>
+</tr>
+<tr>
+	<td><p class='teamNams'>{{data.result16.homec}}   {{data.result16.visitc}}</p></td>
+	<td><button id ="e16" type="button" class="btn  btn-primary btn-xs btn-responsive"  style= {{data.n6}}>terms</button></td>
+	<td><button id ="s16" type="button" class="btn  btn-primary btn-xs btn-responsive"  style= {{data.vw6}} >view</button><p class='content' id="ll">{{Cstatus.6}}</p></td>
+</tr>
+<tr>
+	<td><p class='teamNams'>{{data.result17.homec}}   {{data.result17.visitc}}</p></td>
+	<td><button id ="e17" type="button" class="btn  btn-primary btn-xs btn-responsive"  style= {{data.n7}}>terms</button></td>
+	<td><button id ="s17" type="button" class="btn  btn-primary btn-xs btn-responsive"  style= {{data.vw7}} >view</button><p class='content' id="mm">{{Cstatus.7}}</p></td>
+</tr>
+<tr>
+	<td><p class='teamNams'>{{data.result18.homec}}   {{data.result18.visitc}}</p></td>
+	<td><button id ="e18" type="button" class="btn  btn-primary btn-xs btn-responsive"  style= {{data.n8}}>terms</button></td>
+	<td><button id ="s18" type="button" class="btn  btn-primary btn-xs btn-responsive"  style= {{data.vw8}} >view</button><p class='content' id="nn">{{Cstatus.8}}</p></td>
+</tr>
+<tr>
+	<td><p class='teamNams'>{{data.result19.homec}}   {{data.result19.visitc}}</p></td>
+	<td><button id ="e19" type="button" class="btn  btn-primary btn-xs btn-responsive"  style= {{data.n9}}>terms</button></td>
+	<td><button id ="s19" type="button" class="btn  btn-primary btn-xs btn-responsive"  style= {{data.vw9}} >view</button><p class='content' id="oo">{{Cstatus.9}}</p></td>
+</tr>
+</table>
+</div>
+
+<div class="col-sm-2" id = "d">
+
+</div>
+
+
+
+</div>
+
+
+
+	
+
+	
+	
+	
+	
+
+<div class= "row2" style="background-color: green;">	
+
+<div class= "col-sm-12" id = "e" style = "color: black">
+<form id="common" method = "post" action= "/W">
+  
+<input type="text" class= "pnanmes" name="mgrId" value= "{{mgrId}}">
+<!-- <p type="text" class= "pnanmes" name= "playername"  id= "playername">{{playername}}</p> -->
+<input type="text" class= "pnanmes" name= "player1" id = "player1" value= "{{playername}}">
+
+<input type="text" class= "hide" name="FN" value="{{firstname}}">
+</form>
+
+</div>
+</div> 
+
+<div class = "row">
+
+<div class="col-sm-12" id = "footer">
+<footer>
+<div class="panel panel-default" style= "height: 500px; width: 100%; margin-top: 35%; background-color: black">
+  <div class="panel-body" style= "color: white;">ZOOMSPORTSPOOL  all rights reserved</div>
+</div>
+</footer>
+</div> 
+
+</div> 
+
+<!-- <br> -->
+<!-- <form id="rambo" method = "post" action= "/O">
+<div class= "col-sm-2" id = "d" style = "color: black">
+<input type="text" class= "pnanmes" name="mgrId" value= {{mgrId}}>
+<input type="text" class= "pnanmes" id= "player" name="player" value= {{playerName}}>
+</div>
+ <p>{{firstname}}</p>  -->
+<!-- </form> -->
+
+
+
+
+
+<div class="row99">
+<!-- INPUT BOXES THAT CONTAIN THE GRID NUMBERS OF GRIDS AVAILABLE. POSTED WHEN 
+'VIEW' BUTTON IS CLICKED -->
+
+<form method = "post" action= "/W" id ="form0">
+{% csrf_token %}
+<input type="text" name="gameNumP" class= "gameNum" value = {{ data.gnP0 }}>
+</form>
+<form method = "post" action= "/W" id ="form1">
+ {% csrf_token %}
+<input type="text" name="gameNumP" class= "gameNum" value = {{ data.gnP1 }}>
+</form>
+<form method = "post" action= "/W" id="form2">
+ {% csrf_token %}
+<input type="text" name="gameNumP" class= "gameNum" value = {{ data.gnP2 }}>
+</form>
+<form method = "post" action= "/W" id="form3">
+ {% csrf_token %}
+<input type="text" name="gameNumP" class= "gameNum" value = {{ data.gnP3 }}>
+</form>
+<form method = "post" action= "/W" id="form4">
+ {% csrf_token %}
+<input type="text" name="gameNumP" class= "gameNum" value = {{ data.gnP4 }}>
+</form>
+<form method = "post" action= "/W" id="form5">
+ {% csrf_token %}
+<input type="text" name="gameNumP" class= "gameNum" value = {{ data.gnP5 }}>
+</form>
+<form method = "post" action= "/W" id="form6">
+ {% csrf_token %}
+<input type="text" name="gameNumP" class= "gameNum" value = {{ data.gnP6 }}>
+</form>
+<form method = "post" action= "/W" id="form7">
+ {% csrf_token %}
+<input type="text" name="gameNumP" class= "gameNum" value = {{ data.gnP7 }}>
+</form>
+<form method = "post" action= "/W" id="form8">
+ {% csrf_token %}
+<input type="text" name="gameNumP" class= "gameNum" value = {{ data.gnP8 }}>
+</form>
+<form method = "post" action= "/W" id="form9">
+ {% csrf_token %}
+<input type="text" name="gameNumP" class= "gameNum" value = {{ data.gnP9 }}>
+</form>
+
+<form method = "post" action= "/W" id ="form10">
+ {% csrf_token %}
+<input type="text" name="gameNumP" class= "gameNum" value= {{  data.gnC0 }}>
+</form>
+<form method = "post" action= "/W" id ="form11">
+ {% csrf_token %}
+<input type="text" name="gameNumP" class= "gameNum" value= {{  data.gnC1 }}>
+</form>
+<form method = "post" action= "/W" id ="form12">
+ {% csrf_token %}
+<input type="text" name="gameNumP" class= "gameNum" value= {{  data.gnC2 }}>
+</form>
+<form method = "post" action= "/W" id ="form13">
+ {% csrf_token %}
+<input type="text" name="gameNumP" class= "gameNum" value= {{  data.gnC3 }}>
+</form>
+<form method = "post" action= "/W" id ="form14">
+ {% csrf_token %}
+<input type="text" name="gameNumP" class= "gameNum" value= {{  data.gnC4 }}>
+</form>
+<form method = "post" action= "/W" id ="form15">
+ {% csrf_token %}
+<input type="text" name="gameNumP" class= "gameNum" value= {{  data.gnC5 }}>
+</form>
+<form method = "post" action= "/W" id ="form16">
+ {% csrf_token %}
+<input type="text" name="gameNumP" class= "gameNum" value= {{  data.gnC6 }}>
+</form>
+<form method = "post" action= "/W" id ="form17">
+ {% csrf_token %}
+<input type="text" name="gameNumP" class= "gameNum" value= {{  data.gnC7 }}>
+</form>
+<form method = "post" action= "/W" id ="form18">
+ {% csrf_token %}
+<input type="text" name="gameNumP" class= "gameNum" value= {{  data.gnC8 }}>
+</form>
+<form method = "post" action= "/W" id ="form19">
+ {% csrf_token %}
+<input type="text" name="gameNumP" class= "gameNum" value= {{  data.gnC9 }}>
+</form>
+ 
+
+</div>
+<!-- <div class="col-sm-12" >
+<footer>
+<div class="panel panel-default" style= "height: 400px; width: 100%; margin-bottom: 0%; background-color: black; float: bottom">
+  <div class="panel-body" style= "color: white;">ZOOMSPORTSPOOL  all rights reserved</div>
+</div>
+</footer>
+</div>  -->
+</div>
+
+
+</Body>
+
+<div class= "modal fade" id="theterms" role="dialog">
+    <div class="modal-dialog">
+    
+         <!--  Modal content  -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <span><h4 class="modal-title">POOL TERMS   -  {{homeT}} VS {{visitT}}</h4></span>
+        </div>
+        <div class="modal-body"><strong>
+        <span><p class="modal-body">Sponser-Manager: {{name}}</p></span>
+        <span><p class="modal-body">Game Number :{{gamnum}}</p></span>
+        <span><p class="modal-body">Home Team :{{homeT}}</p></span>
+        <span><p class="modal-body">Visiting Team :{{visitT}}</p></span>
+        <span><p class="modal-body">Game Date :{{gameDat}}</p></span>
+        <span><p class="modal-body">Pool Closing Deadline :{{closes}}</p></span>
+        <span><p class="modal-body">Price Per Square : {{price}}</p></span>
+        <span><p class="modal-body"> Minimum Squres Purchase :{{min}}</p></span>
+        <span><p class="modal-body">Maximum Squares Purchase : {{max}}</p></span>
+        <span><p class="modal-body">First Quarter Payout :{{firstQtr}}</p></span>
+        <span><p class="modal-body">Second Quarter Payout :{{secQtr}}</p></span>
+        <span><p class="modal-body">Third Quarter Payout :{{thirdQtr}}</p></span>
+        <span><p class="modal-body">Final Payout :{{final}}</p></span>
+        <span><p class="modal-body">Final Payout At :{{eog}}</p></span>
+        <span><p class="modal-body">Notes: {{notes}}</p></span>
+          </strong>
+           
+        </div>
+        <div class="modal-footer">
+        <!-- <form>
+         {% csrf_token %} -->
+          <button type="button" id = "close" class="btn btn-default" onclick="window.history.back()">Close</button>
+          
+         </form> 
+        </div>
+      </div>
+      
+    </div>
+  </div>	
+
+
+<!--  onclick="window.history.back()" -->
+
+ 
+
+
+
+<!-- data-dismiss="modal" -->
+
+
+<!-- onclick="window.history.back()" -->
+
+
+
+
+
+<p id = "loaded" class="hide">{{dog}}</p>
+<p id = 'msg' >{{msg}}</p>
+{% endblock %}
+
+<!-- {% block menusfoot %}
+
+<footer>
+<div class="panel panel-default2" style= "height: 420px; width: 100%; padding: 0px; margin-top: 5%; background-color: black">
+  <div class="panel-body2" style= "color: white;">ZOOMSPORTSPOOL  all rights reserved</div>
+</div>
+</footer>
+
+{% endblock %} -->
+
+</Body>
+
+{% block menuscript %}
+<script>
+
+
+
+
+
+
+
+
+
+
+// var input = document.createElement("input");
+
+
+
+
+
+
+//CONCATENATES TARGET BUTTON ID WITH 'FORM' TO
+//REFERENCE THE CORRECT GRID NUMBER TO POST. FORM 'ACTION' ATTRIBUTE VALUE IS
+//SET FOR ROUTING FORM GRIDNUM VALUE TO CORRECT URL AND VIEW. WORKS WITH
+//AND GETS ITS BUTTON ID VALUE FROM SWITCH STATEMENT.
+
+function forms(fire) {
+	
+	
+	var ko = 1;
+	var bird = "form";
+	var plane = fire.slice(ko);
+	var bee = bird + plane;
+	
+	if(fire[0] == 'e') {
+		var dom = document.getElementById(bee)
+		// alert(dom.gameNumP.value)
+		var narc = dom.gameNumP.value;
+
+
+
+
+
+
+
+		dom.getAttribute('action')
+		dom.setAttribute('action', '/B')
+		// dom.setAttribute('action', '/d')
+		
+		}
+		
+
+		var flight = document.getElementById(bee);
+		flight.submit()
+		
+		 
+
+	var flight = document.getElementById(bee)
+	var fly = document.getElementById("player1");  
+	flight.appendChild(fly);     //appends the form to include the input element containing the player name
+
+	flight.submit();
+  
+		};
+
+
+
+
+/*function forms(fire) {
+	window.alert(fire);
+	var xhttp; 
+	  
+	  xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	window.alert(fire);
+	     	$("#theterms").modal({backdrop:true})
+	    }
+	  };
+	  xhttp.open("GET", '/B'fire, true);
+	  xhttp.send();
+	}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+	
+
+
+
+
+
+function cases(event) {
+//SENDS VARIBLE 'FIRE' TO 'FORMS' FUNCTION WITH
+//TARGET BUTTON ID NUM, WITH EACH CLICK EVENT.
+//USED FOR ALL BUTTONS, 'VIEW' AND 'TERMS'
+
+var fire = event.target.id;
+if(fire[0] == 's') {   
+    switch (fire) {
+    	case 's0':
+            forms(fire);
+            break
+        case 's1':
+            forms(fire);
+            break;
+        case 's2':
+            forms(fire);
+            break;
+        case 's3':
+           forms(fire);
+            break;
+         case 's4':
+            forms(fire);
+            break;
+        case 's5':
+            forms(fire);
+            break;
+        case 's6':
+           forms(fire);
+            break;    
+         case 's7':
+            forms(fire);
+            break;
+        case 's8':
+            forms(fire);
+            break;
+        case 's9':
+           forms(fire);
+            break;
+		case 's10':
+            forms(fire);
+            break
+        case 's11':
+            forms(fire);
+            break;
+        case 's12':
+            forms(fire);
+            break;
+        case 's13':
+           forms(fire);
+            break;
+         case 's14':
+            forms(fire);
+            break;
+        case 's15':
+            forms(fire);
+            break;
+        case 's16':
+           forms(fire);
+            break;    
+         case 's17':
+            forms(fire);
+            break;
+        case 's18':
+            forms(fire);
+            break;
+        case 's19':
+           forms(fire);
+       	    break;   	    	
+        default:
+            return false;
+            }
+        }
+       else {
+       	switch (fire) {
+    	case 'e0':
+            forms(fire);
+            break
+        case 'e1':
+            forms(fire);
+            break;
+        case 'e2':
+            forms(fire);
+            break;
+        case 'e3':
+           forms(fire);
+            break;
+        case 'e4':
+            forms(fire);
+            break;
+        case 'e5':
+            forms(fire);
+            break;
+        case 'e6':
+           forms(fire);
+            break;    
+         case 'e7':
+            forms(fire);
+            break;
+        case 'e8':
+            forms(fire);
+            break;
+        case 'e9':
+           forms(fire);
+            break;
+		    case 'e10':
+            forms(fire);
+            break
+        case 'e11':
+            forms(fire);
+            break;
+        case 'e12':
+            forms(fire);
+            break;
+        case 'e13':
+           forms(fire);
+            break;
+         case 'e14':
+            forms(fire);
+            break;
+        case 'e15':
+            forms(fire);
+            break;
+        case 'e16':
+           forms(fire);
+            break;    
+         case 'e17':
+            forms(fire);
+            break;
+        case 'e18':
+            forms(fire);
+            break;
+        case 'e19':
+           forms(fire);
+       	    break;   	    	
+        default:
+            return false;
+
+        }
+
+    }
+
+}
+
+// Contextually colors 'full' & 'open' 
+$(document).ready(function(){
+     
+  $(".content:contains('open')").addClass("green");
+  $(".content:contains('closed')").addClass("red");
+  $(".content:contains('full')").addClass("blue");
+});
+    
+//STORES TWO TABLES CONTAINING 'VIEW' AND 'TERMS' BUTTONS.
+var parElem = document.getElementById('t');
+var parElem2 = document.getElementById('u');
+
+//LISTENS FOR CLICK EVENTS FROM 't' TABLE.
+if(parElem.addEventListener) {parElem.addEventListener("click",cases, false);
+			} 
+			 else if(parElem.attachEvent) {
+			 parElem.attachEvent("onclick", cases);
+
+
+
+
+			 }  
+
+//LISTENS FOR CLICK EVENTS FROM 'u' TABLE.
+if(parElem2.addEventListener) {parElem2.addEventListener("click",cases, false);
+			} 
+			 else if(parElem2.attachEvent) {
+			 parElem2.attachEvent("onclick", cases);
+			 };  
+
+
+
+var trigger = document.getElementById("loaded");
+if (trigger.innerHTML == "loaded"){
+
+
+
+	$(document).ready(function(){
+		$("#theterms").modal('show');
+		$("#theterms").modal({backdrop:true})
+		
+	  });
+
+ };
+
+   // $(window).trigger('loaded');
+
+
+
+
+
+ // });
+
+/*function selectPage(pageNumber) {
+        pageIndex = pageNumber - 1;
+        $.bbq.pushState({ pageIndex: pageIndex });
+    }*/
+
+
+/*var spider =  document.getElementById("archive");
+        
+if(spider.addEventListener) {spider.addEventListener("click",archsub, false);
+		} 
+		 else if(spider.attachEvent) {
+		 spider.attachEvent("onclick", archsub); 
+		 }*/
+/*function forms(fire) {
+	
+	
+	var ko = 1;
+	var bird = "form";
+	var plane = fire.slice(ko);
+	var bee = bird + plane;
+	// alert(fire[0])
+	if(fire[0] == 'e') {
+		var dom = document.getElementById(bee)
+		// alert(dom.gameNumP.value)
+		var narc = dom.gameNumP.value;
+
+   $(document).ready(function() {
+        $(dom).submit(function() { // catch the form's submit event
+            $.ajax({ // create an AJAX call...
+                data: $(this).serialize(), // get the form data
+                type: $(this).attr('post'), // GET or POST
+                url: $(this).attr('/d'), // the file to call
+            });
+                success: function(data) { // on success..
+                    $("#theterms").modal('show');
+	    			$("#theterms").modal({backdrop:true})
+		
+	  };.html(response); // update the DIV
+                
+            
+            return false;
+        });
+    });
+}*/
+
+var pagnam = document.getElementById("tit");
+if(pagnam != 'Your Available Games') {
+  pagnam.innerHTML = localStorage.getItem("titl")
+  
+}
+
+</script>	
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+</BODY>
+</html>

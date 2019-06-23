@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<html lang="en">
+ <head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width= device-width, initial-scale=1">
+<link rel="shortcut icon" href="../static/Zfav.ico" />
+<title>Responsive Grid</title>
+<script src="../static/jquery-migrate-3.0.0.js"></script>
+</head>
+{% block 'Responsive_Grid.html' %}
+<style type="text/css">
+	#levits{
+
+    font-family:Arial;
+    font-size:12px;
+	font-style: bold;
+
+}
+
+@media only screen and (max-width:70em) {
+
+#levits {
+	margin-left: 0%;
+}
+
+
+}
+
+
+</style>
+<body>
+
+
+
+
+
+<container id="ikea">
+<div id="levits">
+    <ul>
+         <li><strong><a>Submit</a></strong>
+			<ul> 
+				<strong><li><a href="#" onclick= 'setName()'>Submit Selections</a></strong><!-- <a href = "#" id = "subselect" >Submit Selections</a></li></strong> -->
+			 </ul> 
+		 </li> 
+        <li><strong><a>Save</a></strong>
+			<ul> 
+			   <strong><li><a href="#" onclick= 'remote5()'>Save Selections</a></li></strong> <!-- <strong><li><a href = "#" id = "saveselect">Save Selections</a></li></strong>
+			 </ul>  -->
+		 </li> 
+		  <li><strong><a nohref>Menu</a></strong> 
+		<ul>
+			<strong><li><a href="/e" id = "zebra">Games Available Page</a></li></strong>
+			<strong><li><a href="/V">Archive</a></li></strong>
+			<strong><li><a href="/J">Home</a></li></strong>
+			<strong><li><a href="/L">Player Login</a></li></strong>
+			<strong><li><a href="#">Instructaons</a>
+
+			<ul>
+				<li id = "inst"><p>-
+
+				1). Point and Click to Select Your Squares.
+
+				2). Select All Your Squares Before Submitting.
+
+				3).  Click the'Submit' link.
+
+				4). Click the 'Save' link.
+
+				5). Navigate to Your Desired Page. Or, Logout.</p></li>
+			</ul>
+			</li></strong>
+
+			</ul>
+			</li>
+    	
+    </ul> 
+    
+</container>
+{% endblock %}
+<script type="text/javascript">
+
+// var pig =  document.getElementById("subselect");
+
+
+
+
+        
+/*if(pig.addEventListener) {pig.addEventListener("click",setName, false);
+		} 
+		 else if(pig.attachEvent) {
+		 pig.attachEvent("onclick", setName); 
+		 }*/
+
+
+var cow =  document.getElementById("saveselect");
+        
+	if(cow.addEventListener) {cow.addEventListener("click",remote5, false);
+			} 
+			 else if(cow.attachEvent) {
+			 cow.attachEvent("onclick", remote5); 
+			 }			 	
+
+
+$('#subselect').click(function(){ setNames(); return false; });
+
+
+
+
+
+function remote5() {
+	var numsform = document.getElementById("save5");
+	numsform.click();
+
+}
+
+/*function lemurs() {
+	
+	var lem = document.getElementById("save99");
+	lem.click();
+	localStorage.setItem('titl', 'Your Available Games');*/
+// }
+
+
+/*function setName() {
+			 var colors_list =["#FFFFFF", "#58D3F7", "#FE9A2E", "#F4FA58", "#BDBDBD", "#B18904"];
+	         if (counterx == 0) { 
+				       localStorage.setItem('counter', counterx);
+					   monkey = localStorage.counter % 6;
+					   counterx = counterx + 1;
+				  }
+				  else {
+					  localStorage.setItem('counter', counterx);
+				      monkey = localStorage.counter % 7;
+					  counterx = counterx + 1;
+				 }
+
+			 var mole = document.getElementById("person");	 
+			 		
+			 
+	         
+			 var counter = 0;
+		     for( var c = 0; c < squares.length; c++) {
+			     var rat = squares[c];
+			     var  item = document.getElementById(rat);
+
+				 //cat[c] = item.innerHTML;
+
+				 for( var t = 0; t < holder.length; t++) {*/
+				
+				 	
+				 //var test =  cat.has(holder[t].innerHTML);
+				 //alert(test);
+				 //test == true ? (counter = counter + 1, cat.add(item.innerHTML)) : "";
+				
+				 
+				 			 
+				 // item.textContent == holder[t] ?  (item.innerHTML = mole.value , item.style.font ="normal 1vw arial", item.style.padding="0px",  item.style.whiteSpace= "normal", item.style.color = "#f4eb42", item.disabled = true) :  ""; 
+				 // colors_list[monkey]
+				 
+				 //alert(test);
+				 // }
+				 
+
+				 // alert(holder[t].textContent);
+				// }
+				/*var x1 = document.getElementById("a1").innerHTML;
+				document.getElementById("d0").value = x1;
+				var x2 = document.getElementById("a2").innerHTML;
+				document.getElementById("d1").value = x2;
+				var x3 = document.getElementById("a3").innerHTML;
+				document.getElementById("d2").value = x3;
+				var x4 = document.getElementById("a4").innerHTML;
+				document.getElementById("d3").value = x4;
+				var x5 = document.getElementById("a5").innerHTML;
+				document.getElementById("d4").value = x5;
+				var x6 = document.getElementById("a6").innerHTML;
+				document.getElementById("d5").value = x6;
+				var x7 = document.getElementById("a7").innerHTML;
+				document.getElementById("d6").value = x7;
+				var x8 = document.getElementById("a8").innerHTML;
+				document.getElementById("d7").value = x8;
+				var x9 = document.getElementById("a9").innerHTML;
+				document.getElementById("d8").value = x9;
+				var x10 = document.getElementById("a10").innerHTML;
+				document.getElementById("d9").value = x10;
+				var x11 = document.getElementById("a11").innerHTML;
+				document.getElementById("d10").value = x11;
+				var x12 = document.getElementById("a12").innerHTML;
+				document.getElementById("d11").value = x12;
+				var x13 = document.getElementById("a13").innerHTML;
+				document.getElementById("d12").value = x13;
+				var x14 = document.getElementById("a14").innerHTML;
+				document.getElementById("d13").value = x14;
+				var x15 = document.getElementById("a15").innerHTML;
+				document.getElementById("d14").value = x15;
+				var x16 = document.getElementById("a16").innerHTML;
+				document.getElementById("d15").value = x16
+				var x17 = document.getElementById("a17").innerHTML;
+				document.getElementById("d16").value = x17;
+				var x18 = document.getElementById("a18").innerHTML;
+				document.getElementById("d17").value = x18;
+				var x19 = document.getElementById("a19").innerHTML;
+				document.getElementById("d18").value = x19;
+				var x20 = document.getElementById("a20").innerHTML;
+				document.getElementById("d19").value = x20;
+				var x21 = document.getElementById("a21").innerHTML;
+				document.getElementById("d20").value = x21;
+				var x22 = document.getElementById("a22").innerHTML;
+				document.getElementById("d21").value = x22;
+				var x23 = document.getElementById("a23").innerHTML;
+				document.getElementById("d22").value = x23;
+				var x24 = document.getElementById("a24").innerHTML;
+				document.getElementById("d23").value = x24;
+				var x25 = document.getElementById("a25").innerHTML;
+				document.getElementById("d24").value = x25;*/
+
+				/* mole.value = ""; */
+
+				 // }
+
+</script>
+</body>

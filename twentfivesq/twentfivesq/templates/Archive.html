@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+
+ <head>
+ {% extends "__base.html" %}
+
+<style type="text/css">
+	
+@viewport {
+
+}
+
+
+</style>
+
+
+
+
+
+
+
+</head>
+
+<title></title>
+
+{% block title %}{{tit}}{% endblock %}
+
+<BODY>
+
+
+	
+
+</div>
+
+
+
+{% block form %}
+<div class = "row" style= "height: 550px">
+<div class="col-sm-2">
+</div>
+<div class="col-sm-8">
+
+<p id="intro" style="font-family: arial; color:red"><h3><strong>You can find all EXPIRED games no longer visible, that were sponsored by the manager you reference when you enter the manager's authorization code. To
+find games sponsored by a different manager, enter that manager's authorization code.</strong></h3></p>
+
+
+<form method="post" action = "/v">
+	{% csrf_token %}
+ <div class="form-group">
+<p><label class="control-label" for = "authorization code">Auth Code</label></p>
+<input type= "text"  name= "auth code" id ="authorization code" required/>
+</div>
+
+<p><label class="control-label" for = "game No">Game No</label></p>
+<input type= "text"  name= "game No" id ="game No" required/>
+<button type="submit" class="btn btn-default">Submit</button>
+<input type= "text"  name= "player" id ="player" value ={{"Scratch"}} style="display:none"/>
+
+</form>
+
+
+</div>
+
+<div class="col-sm-2">
+</div>
+</div>
+<footer>
+<div class="panel panel-default" style= "height: 400px; background-color: black; margin-top: 80%">
+  <div class="panel-body" style= "color: white;">ZOOMSPORTSPOOL  all rights reserved</div>
+</div>
+</footer>
+
+<input type="text" id ='flag' value ="{{rsn}}" style="display:none"/>
+
+<div class="modal fade" id="reasonModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">WRONG CODE</h4>
+        </div>
+        <div class="modal-body">
+          <p><strong>{{msg}}</strong></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>	
+<script>
+var r = document.getElementById('flag');
+var rsn = r.value;
+
+
+function Dog() {
+	var d = document.getElementById("tit")
+	if (d == null) {
+		var s = document.getElementById("archive");
+		s.innerHTML = "ARCHIVE"}
+		
+}
+var squirell =  document.getElementById("zebra");
+    if(squirell.innerHTML=="GANES AVAILABLE PAGE"){    
+		if(squirell.addEventListener) {squirell.addEventListener("click",lemurs, false);
+				} 
+				 else if(squirell.attachEvent) {
+				 squirell.attachEvent("onclick", lemurs); 
+				 }				 
+	}
+
+function lemurs() {
+	
+	var lem = document.getElementById("save99");
+	lem.click();
+	localStorage.setItem('titl', 'Your Available Games');
+}
+
+/*var squirell =  document.getElementById("zebra");
+    if(squirell.innerHTML=="Games Available Page"){    
+		if(squirell.addEventListener) {squirell.addEventListener("click",lemurs, false);
+				} 
+				 else if(squirell.attachEvent) {
+				 squirell.attachEvent("onclick", lemurs); 
+				 }				 
+	}*/
+
+
+
+
+function validate(arg)  {
+	var f = arg;
+	if(f != "") {
+		$("#reasonModal").modal();
+		
+	}
+
+
+}
+
+
+
+
+validate(rsn)
+window.onload = Dog();
+</script>	
+
+{% endblock %}
+
+
+
+
+
+
+
+
+</BODY>>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

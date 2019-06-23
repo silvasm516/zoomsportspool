@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+
+ <head>
+ {% extends "__base.html" %}
+
+{% block indexstyle %}
+<style>
+#flag {
+ display: none;
+}
+
+
+</style>
+{% endblock %}
+
+
+
+
+</head>
+
+<!-- <title>{{title}}</title> -->
+{% block title %}{{tit}}{% endblock %}
+
+<BODY>
+<div>
+	 <!-- <h2>{{title}}</h2> -->
+	 
+</div>
+
+	
+
+{% block form %}
+
+<p><label class="control-label" for = "game No">Game No</label></p>
+<form id = "IndexR" method = "post" action ="/X">
+{% csrf_token %}
+<input type= "text"  name= "game No" id ="game No" required/>
+<button type="submit" class="btn btn-default" >Submit</button>
+</form>
+
+<div class="row" style= "height: 700px;">
+                                                                                   
+  <div class="table-responsive">          
+  <table class="table" style ="width: 95%; margin-left: 5%;">
+    <thead>
+      <tr>
+        <th>USER NAME</th>
+        <th>FIRST NAME</th>
+        <th>LAST NAME</th>
+        <th>E MAIL</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{d}}</td>
+        <td>{{b}}</td>
+        <td>{{c}}</td>
+        <td>{{a}}</td>
+      </tr>
+       <tr>
+        <td>{{h}}</td>
+        <td>{{f}}</td>
+        <td>{{g}}</td>
+        <td>{{e}}</td>
+      </tr>
+       <tr>
+        <td>{{l}}</td>
+        <td>{{j}}</td>
+        <td>{{k}}</td>
+        <td>{{i}}</td>
+      </tr>
+       <tr>
+        <td>{{p}}</td>
+        <td>{{n}}</td>
+        <td>{{o}}</td>
+        <td>{{m}}</td>
+      </tr>
+       <tr>
+        <td>{{t}}</td>
+        <td>{{r}}</td>
+        <td>{{s}}</td>
+        <td>{{q}}</td>
+      </tr>
+       <tr>
+        <td>{{z6}}</td>
+        <td>{{z4}}</td>
+        <td>{{z5}}</td>
+        <td>{{z3}}</td>
+      </tr>
+      <tr>
+        <td>{{z10}}</td>
+        <td>{{z8}}</td>
+        <td>{{z9}}</td>
+        <td>{{z7}}</td>
+      </tr>
+       <tr>
+        <td>{{z14}}</td>
+        <td>{{z12}}</td>
+        <td>{{z13}}</td>
+        <td>{{z11}}</td>
+      </tr>
+       <tr>
+        <td>{{z18}}</td>
+        <td>{{z16}}</td>
+        <td>{{z17}}</td>
+        <td>{{z15}}</td>
+      </tr>
+       <tr>
+        <td>{{z22}}</td>
+        <td>{{z20}}</td>
+        <td>{{z21}}</td>
+        <td>{{z19}}</td>
+      </tr>
+       <tr>
+        <td>{{z26}}</td>
+        <td>{{z24}}</td>
+        <td>{{z25}}</td>
+        <td>{{z23}}</td>
+      </tr>
+       <tr>
+        <td>{{z30}}</td>
+        <td>{{z28}}</td>
+        <td>{{z29}}</td>
+        <td>{{z27}}</td>
+      </tr>
+      <tr>
+        <td>{{z34}}</td>
+        <td>{{z32}}</td>
+        <td>{{z33}}</td>
+        <td>{{z31}}</td>
+      </tr>
+       <tr>
+        <td>{{z38}}</td>
+        <td>{{z36}}</td>
+        <td>{{z37}}</td>
+        <td>{{z35}}</td>
+      </tr>
+       <tr>
+        <td>{{z42}}</td>
+        <td>{{z40}}</td>
+        <td>{{z41}}</td>
+        <td>{{z39}}</td>
+      </tr>
+       <tr>
+        <td>{{z46}}</td>
+        <td>{{z44}}</td>
+        <td>{{z45}}</td>
+        <td>{{z43}}</td>
+      </tr>
+       <tr>
+        <td>{{z50}}</td>
+        <td>{{z48}}</td>
+        <td>{{z49}}</td>
+        <td>{{z47}}</td>
+      </tr>
+       <tr>
+        <td>{{z54}}</td>
+        <td>{{z52}}</td>
+        <td>{{z53}}</td>
+        <td>{{z51}}</td>
+      </tr>
+      <tr>
+        <td>{{z58}}</td>
+        <td>{{z56}}</td>
+        <td>{{z57}}</td>
+        <td>{{z55}}</td>
+      </tr>
+       <tr>
+        <td>{{z62}}</td>
+        <td>{{z60}}</td>
+        <td>{{z61}}</td>
+        <td>{{z59}}</td>
+      </tr>
+       <tr>
+        <td>{{z66}}</td>
+        <td>{{z64}}</td>
+        <td>{{z65}}</td>
+        <td>{{z63}}</td>
+      </tr>
+       <tr>
+        <td>{{z70}}</td>
+        <td>{{z68}}</td>
+        <td>{{z69}}</td>
+        <td>{{z67}}</td>
+      </tr>
+       <tr>
+        <td>{{z74}}</td>
+        <td>{{z72}}</td>
+        <td>{{z73}}</td>
+        <td>{{z71}}</td>
+      </tr>
+       <tr>
+        <td>{{z78}}</td>
+        <td>{{z76}}</td>
+        <td>{{z77}}</td>
+        <td>{{z75}}</td>
+      </tr>
+      <tr>
+        <td>{{z82}}</td>
+        <td>{{z80}}</td>
+        <td>{{z81}}</td>
+        <td>{{z79}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<div class="modal fade" id="reasonModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">WRONG INPUT</h4>
+        </div>
+        <div class="modal-body">
+          <p><strong>{{msg}}</strong></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+
+<input type='text' id='flag' value = '{{rsn}}' style="display: none" />
+<footer>
+<div class="panel panel-default" style= "height: 600px; width: 100%; margin-top: 55%; background-color: black">
+  <div class="panel-body" style= "color: white;">ZOOMSPORTSPOOL  all rights reserved</div>
+</div>
+</footer>
+</body>
+
+
+
+</BODY>
+
+<script type="text/javascript">
+var reason = document.getElementById('flag')
+var r = reason.value;
+validate(r);
+
+function validate(arg)  {
+  var f = arg;
+  if(f == "num") {
+    $("#reasonModal").modal();
+    
+  }
+
+
+}
+
+
+// window.onload = Dog();
+
+</script>	
+
+{% endblock %}

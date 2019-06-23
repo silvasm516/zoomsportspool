@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+{% load staticfiles %} 
+<html  lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<title>Nav6</title>
+
+<link rel="stylesheet" href="../static/chosen.css"/> 
+<link rel="shortcut icon" href= "../static/Zfav.ico" />
+
+
+  
+ <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+ <!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+<!-- <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+ integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+ crossorigin="anonymous"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ -->
+ <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style type="text/css">
+
+@media only screen and (max-width:70em) {
+li {
+	display: block;
+}	
+
+ #proList1, #proList2, #colSel1, #colSel2, .custList1, .custList2 
+ {
+width: 100%;
+padding: 1em;
+margin-bottom: 1em;
+	
+}
+
+}
+
+
+@media only screen and (min-width:70em) {
+
+#p1000, li {
+	border-radius:.2vw;
+	/*width:6.75vw;*/
+	/*padding-left: 4.75vw;*/
+	/*align-items: center;*/
+	display: inline;
+	list-style-type: none;
+	vertical-align: middle;
+	
+	
+	padding-left: 0%;
+	margin-right: 0%;
+	
+}
+
+#p5000  {
+	margin-left: 0%;
+}
+
+#proList1, #proList2, #colSel1, #colSel2, #otherList1, #otherList2 {
+border-radius:.2vw;
+height: 1.1vw;	
+/*padding-left: 1vw;*/
+width:100%;
+margin-left: 1vw;
+margin-right: .5vw;
+/*position: relative;*/
+margin-right: 1vw;
+
+}
+
+#p1000  {
+	
+}
+
+select { 
+width: 1.5em;
+
+ }
+#p5000 {
+ background-color: #585858;
+ width: 100%;
+ align-items: center;
+
+}
+
+.panel {
+	height: 4vh;
+}
+
+}
+
+@media only screen and (max-width:70em) {
+
+.panel {
+  	height: 450px;
+  }
+
+
+
+
+
+
+}
+
+
+</style>
+
+<body>
+
+
+
+<div class="panel panel-default" style= "background-color: black;"><div class="panel-body" id = "p5000" ><ul id="p1000">
+
+<li><div class= "col-sm-2" ><select class= "proList1" id = "proList1"><option value="0" selected>--Pro Home--</option><option value = "49ERS" class = "pro" label = "49ERS">49ERS</option><option value = "RAMS" class = "pro" label = "RAMS">RAMS</option> <option value = "SEAHAWKS" class = "pro" label = "SEAHAWKS">SEAHAWKS</option><option value = "CARDINALS" class = "pro" label = "CARDINALS">CARDINALS</option><option value = "FALCONS" class = "pro" label = "FALCONS">FALCONS</option><option value = "PANTHERS" class = "pro" label = "PANTHERS">PANTHERS</option> <option value = "BUCCANEERS" class = "pro" label = "BUCCANEERS">BUCCANEERS</option><option value = "SAINTS" class = "pro" label = "SAINTS">SAINTS</option><option value = "PACKERS" class = "pro" label = "PACKERS">PACKERS</option><option value = "LIONS" class = "pro" label = "LIONS">LIONS</option><option value = "VIKINGS" class = "pro" label = "VIKINGS">VIKINGS</option><option value = "BEARS" class = "pro" label = "BEARS">BEARS</option><option value = "GIANTS" class = "pro" label = "GIANTS">GIANTS</option><option value = "REDSKINS" class = "pro" label = "REDSKINS">REDSKINS</option><option value = "COWBOYS" class = "pro" label = "COWBOYS">COWBOYS</option><option value = "EAGLES" class = "pro" label = "EAGLES">EAGLES</option><option value = "CHIEFS" class = "pro" label = "CHIEFS">CHIEFS</option><option value = "PATRIOTS" class = "pro" label = "PATRIOTS" >PATRIOTS</option><option value = "STEELERS" class = "pro" label = "STEELERS">STEELERS</option><option value = "RAVENS" class = "pro" label = "RAVENS">RAVENS</option><option value = "DOLPHINS" class = "pro" label = "DOLPHINS">DOLPHINS</option><option value = "CHARGERS" class = "pro" label = "CHARGERS">CHARGERS</option><option value = "RAIDERS" class = "pro" label = "RAIDERS">RAIDERS</option><option value = "COLTS" class = "pro" label = "COLTS">COLTS</option><option value = "TEXANS" class = "pro" label = "TEXANS">TEXANS</option><option value = "BENGALS" class = "pro" label = "BENGALS">BENGALS</option><option value = "BRONCOS" class = "pro" label = "BRONCOS">BRONCOS</option><option value = "JAGUARS" class = "pro" label = "JAGUARS">JAGUARS</option><option value = "BILLS" class = "pro" label = "BILLS">BILLS</option><option value = "JETS" class = "pro" label = "JETS">JETS</option><option value = "BROWNS" class = "pro" label = "BROWNS">BROWNS</option><option value = "TITANS" class = "pro" label = "TITANS">TITANS</option></select></div></li>
+
+<li><div class= "col-sm-2" style= background-color: black;"><select class= "prolList2" id = "proList2"><option value="0" selected>--Pro Visitor--</option><option value = "49ERS" class = "pro" label = "49ERS">49ERS</option><option value = "RAMS" class = "pro" label = "RAMS">RAMS</option> <option value = "SEAHAWKS" class = "pro" label = "SEAHAWKS">SEAHAWKS</option><option value = "CARDINALS" class = "pro" label = "CARDINALS">CARDINALS</option><option value = "FALCONS" class = "pro" label = "FALCONS">FALCONS</option><option value = "PANTHERS" class = "pro" label = "PANTHERS">PANTHERS</option> <option value = "BUCCANEERS" class = "pro" label = "BUCCANEERS">BUCCANEERS</option><option value = "SAINTS" class = "pro" label = "SAINTS">SAINTS</option><option value = "PACKERS" class = "pro" label = "PACKERS">PACKERS</option><option value = "LIONS" class = "pro" label = "LIONS">LIONS</option><option value = "VIKINGS" class = "pro" label = "VIKINGS">VIKINGS</option><option value = "BEARS" class = "pro" label = "BEARS">BEARS</option><option value = "GIANTS" class = "pro" label = "GIANTS">GIANTS</option><option value = "REDSKINS" class = "pro" label = "REDSKINS">REDSKINS</option><option value = "COWBOYS" class = "pro" label = "COWBOYS">COWBOYS</option><option value = "EAGLES" class = "pro" label = "EAGLES">EAGLES</option><option value = "CHIEFS" class = "pro" label = "CHIEFS">CHIEFS</option><option value = "PATRIOTS" class = "pro" label = "PATRIOTS" >PATRIOTS</option><option value = "STEELERS" class = "pro" label = "STEELERS">STEELERS</option><option value = "RAVENS" class = "pro" label = "RAVENS">RAVENS</option><option value = "DOLPHINS" class = "pro" label = "DOLPHINS">DOLPHINS</option><option value = "CHARGERS" class = "pro" label = "CHARGERS">CHARGERS</option><option value = "RAIDERS" class = "pro" label = "RAIDERS">RAIDERS</option><option value = "COLTS" class = "pro" label = "COLTS">COLTS</option><option value = "TEXANS" class = "pro" label = "TEXANS">TEXANS</option><option value = "BENGALS" class = "pro" label = "BENGALS">BENGALS</option><option value = "BRONCOS" class = "pro" label = "BRONCOS">BRONCOS</option><option value = "JAGUARS" class = "pro" label = "JAGUARS">JAGUARS</option><option value = "BILLS" class = "pro" label = "BILLS">BILLS</option><option value = "JETS" class = "pro" label = "JETS">JETS</option><option value = "BROWNS" class = "pro" label = "BROWNS">BROWNS</option><option value = "TITANS" class = "pro" label = "TITANS">TITANS</option></select></div></li>
+
+<li><div class= "col-sm-2" style= background-color: black;"><select class= "collList1" id = "colSel1"><option value="0" selected>--College Home--</option>				<option value ='Virginia Tech' class = ""col"" label =""Virginia Tech"">Virginia Tech</option>				<option value ='Wisconsin' class = ""col"" label =""Wisconsin"">Wisconsin</option>				<option value ='Air Force' class = ""col"" label =""Air Force"">Air Force</option>				<option value ='Penn State' class = ""col"" label =""Penn State"">Penn State</option>				<option value ='Stanford' class = ""col"" label =""Stanford"">Stanford</option>				<option value ='North Carolina' class = ""col"" label =""North Carolina"">North Carolina</option>				<option value ='Houston' class = ""col"" label =""Houston"">Houston</option>				<option value ='Washington' class = ""col"" label =""Washington"">Washington</option>				<option value ='TCU' class = ""col"" label =""TCU"">TCU</option>				<option value ='Ole Miss' class = ""col"" label =""Ole Miss"">Ole Miss</option>				<option value ='Oakla. State' class = ""col"" label =""Oakla. State"">Oakla. State</option>				<option value ='Texas Tech' class = ""col"" label =""Texas Tech"">Texas Tech</option>				<option value ='Ball State' class = ""col"" label =""Ball State"">Ball State</option>				<option value ='Northwestern' class = ""col"" label =""Northwestern"">Northwestern</option>				<option value ='USC' class = ""col"" label =""USC"">USC</option>				<option value ='Texas A & M' class = ""col"" label =""Texas A & M"">Texas A & M</option>				<option value ='Tennesee' class = ""col"" label =""Tennesee"">Tennesee</option>				<option value ='Arkansas' class = ""col"" label =""Arkansas"">Arkansas</option>				<option value ='LSU' class = ""col"" label =""LSU"">LSU</option>				<option value ='Oaklahoma' class = ""col"" label =""Oaklahoma"">Oaklahoma</option>				<option value ='Texas' class = ""col"" label = ""Texas"">Texas</option>				<option value ='Army' class = ""col"" label =""Army"">Army</option>				<option value ='Notre Dame' class = ""col"" label =""Notre Dame"">Notre Dame</option>				<option value ='Michigan' class = ""col"" label =""Michigan"">Michigan</option>				<option value ='Utes' class = ""col"" label =""Utah"">Utah</option>				<option value ='Oregon' class = ""col"" label = ""Oregon"">Oregon</option>				<option value ='UCLA' class = ""col"" label =""UCLA"">UCLA</option>				<option value ='Nebraska' class = ""col"" label =""Nebraska"">Nebraska</option>				<option value ='Connecticut' class = ""col"" label =""Connecticut"">Connecticut</option>				<option value ='Georgia' class = ""col"" label =""Georgia"">Georgia</option>				<option value ='Boise State' class = ""col"" label =""Boise State"">Boise State</option>				<option value ='Ohio State' class = ""col"" label =""Ohio State"">Ohio State</option>				<option value ='Florida' class = ""col"" label =""Florida"">Florida</option>				<option value ='Colorado State' class = ""col"" label =""Colorado State"">Colorado State</option>				<option value ='Auburn' class = ""col"" label =""Auburn"">Auburn</option>				<option value ='Alabama' class = ""col"" label =""Alabama"">Alabama</option>				<option value ='Arizona' class = ""col"" label =""Arizona"">Arizona</option>				<option value ='Michigan State' class = ""col"" label = ""Michigan State"">Michigan State</option>				<option value ='Miami' class = ""col"" label = ""Miami"">Miami</option>				<option value ='Maryland' class = ""col"" label = ""Maryland"">Maryland</option>				<option value ='Loisville' class = ""col"" label = ""Loisville"">Loisville</option>				<option value ='Kansas State' class = ""col"" label = ""Kansas State"">Kansas State</option>				<option value ='Kansas' class = ""col"" label = ""Kansas"">Kansas</option>				<option value ='Iowa State' class = ""col"" label = ""Iowa State"">Iowa State</option>				<option value ='Iowa' class = ""col"" label = ""Iowa"">Iowa</option>				<option value ='Indiana' class = ""col"" label =  ""Indiana"">Indiana</option>				<option value ='Illinois' class = ""col"" label= ""Illinois"">Illinois</option>				<option value ='Georgia Tech' class = ""col"" label = ""Georgia Tech"">Georgia Tech</option>				<option value ='Florida State' class = ""col"" label = ""Florida State"">Florida State</option>				<option value ='Duke' class = ""col"" label = ""Duke"">Duke</option>				<option value ='Colorado' class = ""col"" label = ""Colorado"">Colorado</option>				<option value ='Clemson' class = ""col"" label= ""Clemson"">Clemson</option>				<option value ='California' class = ""col"" label =""California"">California</option>				<option value ='Boston College' class = ""col"" label =""Boston College"">Boston College</option>				<option value ='Baylor' class = ""col"" label =""Baylor"">Baylor</option>				<option value ='Arizona State' class = ""col"" label = ""Arizona State"">Arizona State</option>				<option value ='Kentucky' class = ""col"" label = ""Kentucky"">Kentucky</option>"<option value ='West Virginia' class = ""col"" label =""West Virginia"">West Virginia</option><option value ='BYU' class = ""col"" label =""BYU"">BYU</option><option value ='Missouri' class = ""col"" label ="Missouri">Missouri</option><option value ='Miami of Ohio' class = ""col"" label ="Miami of Ohio">Miami of Ohio</option><option value ='Wyoming' class = ""col"" label ="Wyoming">Wyoming</option><option value ='Western Michigan' class = ""col"" label ="Western Michigan">Western Michigan</option><option value ='Wash State' class = ""col"" label ="Wash State">Wash State</option><option value ='Wake Forest' class = ""col"" label ="Wake Forest">Wake Forest</option><option value ='Virginia' class = ""col"" label ="Virginia">Virginia</option><option value ='Vanderbilt' class = ""col"" label ="Vanderbilt">Vanderbilt</option><option value ='UCF' class = ""col"" label ="UCF">UCF</option><option value ='UNLV' class = ""col"" label ="UNLV">UNLV</option><option value ='UMASS' class = ""col"" label ="UMASS">UMASS</option><option value ='Purdue' class = ""col"" label ="Purdue">Purdue</option><option value ='Tulane' class = ""col"" label ="Tulane">Tulane</option><option value ='Tulsa' class = ""col"" label ="Tulsa">Tulsa</option><option value ='Mississippi State' class = ""col"" label ="Mississippi State">Mississippi State</option><option value ='Navy' class = ""col"" label ="Navy">Navy</option><option value ='South Carolina' class = ""col"" label ="South Carolina">South Carolina</option></select></div></li>
+
+<li><div class= "col-sm-2" style= background-color: black;"><select class= "collList2" id = "colSel2"><option value="0" selected>--College Visitor--</option>				<option value ='Virginia Tech' class = ""col"" label =""Virginia Tech"">Virginia Tech</option>				<option value ='Wisconsin' class = ""col"" label =""Wisconsin"">Wisconsin</option>				<option value ='Air Force' class = ""col"" label =""Air Force"">Air Force</option>				<option value ='Penn State' class = ""col"" label =""Penn State"">Penn State</option>				<option value ='Stanford' class = ""col"" label =""Stanford"">Stanford</option>				<option value ='North Carolina' class = ""col"" label =""North Carolina"">North Carolina</option>				<option value ='Houston' class = ""col"" label =""Houston"">Houston</option>				<option value ='Washington' class = ""col"" label =""Washington"">Washington</option>				<option value ='TCU' class = ""col"" label =""TCU"">TCU</option>				<option value ='Ole Miss' class = ""col"" label =""Ole Miss"">Ole Miss</option>				<option value ='Oakla. State' class = ""col"" label =""Oakla. State"">Oakla. State</option>				<option value ='Texas Tech' class = ""col"" label =""Texas Tech"">Texas Tech</option>				<option value ='Ball State' class = ""col"" label =""Ball State"">Ball State</option>				<option value ='Northwestern' class = ""col"" label =""Northwestern"">Northwestern</option>				<option value ='USC' class = ""col"" label =""USC"">USC</option>				<option value ='Texas A & M' class = ""col"" label =""Texas A & M"">Texas A & M</option>				<option value ='Tennesee' class = ""col"" label =""Tennesee"">Tennesee</option>				<option value ='Arkansas' class = ""col"" label =""Arkansas"">Arkansas</option>				<option value ='LSU' class = ""col"" label =""LSU"">LSU</option>				<option value ='Oaklahoma' class = ""col"" label =""Oaklahoma"">Oaklahoma</option>				<option value ='Texas' class = ""col"" label = ""Texas"">Texas</option>				<option value ='Army' class = ""col"" label =""Army"">Army</option>				<option value ='Notre Dame' class = ""col"" label =""Notre Dame"">Notre Dame</option>				<option value ='Michigan' class = ""col"" label =""Michigan"">Michigan</option>				<option value ='Utes' class = ""col"" label =""Utah"">Utah</option>				<option value ='Oregon' class = ""col"" label = ""Oregon"">Oregon</option>				<option value ='UCLA' class = ""col"" label =""UCLA"">UCLA</option>				<option value ='Nebraska' class = ""col"" label =""Nebraska"">Nebraska</option>				<option value ='Connecticut' class = ""col"" label =""Connecticut"">Connecticut</option>				<option value ='Georgia' class = ""col"" label =""Georgia"">Georgia</option>				<option value ='Boise State' class = ""col"" label =""Boise State"">Boise State</option>				<option value ='Ohio State' class = ""col"" label =""Ohio State"">Ohio State</option>				<option value ='Florida' class = ""col"" label =""Florida"">Florida</option>				<option value ='Colorado State' class = ""col"" label =""Colorado State"">Colorado State</option>				<option value ='Auburn' class = ""col"" label =""Auburn"">Auburn</option>				<option value ='Alabama' class = ""col"" label =""Alabama"">Alabama</option>				<option value ='Arizona' class = ""col"" label =""Arizona"">Arizona</option>				<option value ='Michigan State' class = ""col"" label = ""Michigan State"">Michigan State</option>				<option value ='Miami' class = ""col"" label = ""Miami"">Miami</option>				<option value ='Maryland' class = ""col"" label = ""Maryland"">Maryland</option>				<option value ='Loisville' class = ""col"" label = ""Loisville"">Loisville</option>				<option value ='Kansas State' class = ""col"" label = ""Kansas State"">Kansas State</option>				<option value ='Kansas' class = ""col"" label = ""Kansas"">Kansas</option>				<option value ='Iowa State' class = ""col"" label = ""Iowa State"">Iowa State</option>				<option value ='Iowa' class = ""col"" label = ""Iowa"">Iowa</option>				<option value ='Indiana' class = ""col"" label =  ""Indiana"">Indiana</option>				<option value ='Illinois' class = ""col"" label= ""Illinois"">Illinois</option>				<option value ='Georgia Tech' class = ""col"" label = ""Georgia Tech"">Georgia Tech</option>				<option value ='Florida State' class = ""col"" label = ""Florida State"">Florida State</option>				<option value ='Duke' class = ""col"" label = ""Duke"">Duke</option>				<option value ='Colorado' class = ""col"" label = ""Colorado"">Colorado</option>				<option value ='Clemson' class = ""col"" label= ""Clemson"">Clemson</option>				<option value ='California' class = ""col"" label =""California"">California</option>				<option value ='Boston College' class = ""col"" label =""Boston College"">Boston College</option>				<option value ='Baylor' class = ""col"" label =""Baylor"">Baylor</option>				<option value ='Arizona State' class = ""col"" label = ""Arizona State"">Arizona State</option>				<option value ='Kentucky' class = ""col"" label = ""Kentucky"">Kentucky</option><option value ='West Virginia' class = ""col"" label =""West Virginia"">West Virginia</option><option value ='BYU' class = ""col"" label =""BYU"">BYU</option><option value ='Missouri' class = ""col"" label ="Missouri">Missouri</option><option value ='Miami of Ohio' class = ""col"" label ="Miami of Ohio">Miami of Ohio</option><option value ='Wyoming' class = ""col"" label ="Wyoming">Wyoming</option><option value ='Western Michigan' class = ""col"" label ="Western Michigan">Western Michigan</option><option value ='Wash State' class = ""col"" label ="Wash State">Wash State</option><option value ='Wake Forest' class = ""col"" label ="Wake Forest">Wake Forest</option><option value ='Virginia' class = ""col"" label ="Virginia">Virginia</option><option value ='Vanderbilt' class = ""col"" label ="Vanderbilt">Vanderbilt</option><option value ='UCF' class = ""col"" label ="UCF">UCF</option><option value ='UNLV' class = ""col"" label ="UNLV">UNLV</option><option value ='UMASS' class = ""col"" label ="UMASS">UMASS</option><option value ='Purdue' class = ""col"" label ="Purdue">Purdue</option><option value ='Tulane' class = ""col"" label ="Tulane">Tulane</option><option value ='Tulsa' class = ""col"" label ="Tulsa">Tulsa</option><option value ='Mississippi State' class = ""col"" label ="Mississippi State">Mississippi State</option><option value ='Navy' class = ""col"" label ="Navy">Navy</option><option value ='South Carolina' class = ""col"" label ="South Carolina">South Carolina</select></div></li>
+
+<li><div class= "col-sm-2"><input type= "text" name="otherList1" id = "otherList1" class= "custList1" placeholder = "Custom Home"></div></li>
+
+<li><div class= "col-sm-2"><input type= "text" name="otherList2" id = "otherList2" class= "custList2" placeholder = "Custom Visitor"></div></li>
+
+</ul></div></div>
+
+
+
+
+
+
+</body>
+
+</html>
+

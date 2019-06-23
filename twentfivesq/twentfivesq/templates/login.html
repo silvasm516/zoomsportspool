@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+
+ <head>
+ {% extends "__base.html" %}
+
+
+
+
+{% block title %}{{tit}}{% endblock %}
+
+
+
+
+
+<!-- <div class = "row">
+
+
+
+</div>  -->
+{% block loginform %}
+<style>
+
+
+
+p {
+	display: none;
+}
+
+
+
+
+
+
+	
+</style>
+</head>
+<body>
+<div class = "container" id = "login">
+  <div class="panel panel-default">
+  <div class="panel-body" style="background-color: #FE9A2E; width: 97.5%"> 
+
+<form class="form-horizontal" role="form" method="get" action="/PP">
+	 {% csrf_token %}
+	<div class="form-group">
+		<div class = "col-sm-2">
+		
+		</div>
+		<div class= "col-sm-4">
+			<label for="authorization" class="col-sm-2 control-label">Authorization Password</label>
+			<input type="password" name="authorization9" id= id="password9" placeholder="Auth Password" class="form-control" required/>
+		</div>
+		<div class="col-sm-4">
+			  
+		</div>
+		<div class= "col-sm-2">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class = "col-sm-2">
+		
+		</div>
+		<div class= "col-sm-4">
+			<label for="eMail" class="col-sm-2 control-label">E-mail</label>
+			<input type="email" name="email" id= id="email" placeholder="e-Mail" class="form-control" required/>
+		</div>
+		<div class="col-sm-4">
+			  
+		</div>
+		<div class= "col-sm-2">
+		</div>
+	</div>
+
+	
+	<input type="submit" id = "kik"/>
+	
+	</form>
+	
+	</div>
+	</div>
+
+	
+
+	<div>
+	<p id = "c1"> </p>
+	</div>
+
+<input  type = "text" name= "msg" id = "flag" value = "{{flag}}" style="display:none;" />
+<footer>
+<div class="panel panel-default" style= "height: 500px; width: 97.5%; margin-top: 90%; background-color: black">
+  <div class="panel-body" style= "color: white;">ZOOMSPORTSPOOL  all rights reserved</div>
+</div>
+</footer>
+</div>
+
+
+
+
+
+<div class="modal fade" id="pwModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">WRONG CODE</h4>
+        </div>
+        <div class="modal-body">
+          <p><strong>"{{msg}}"</strong></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+</body>
+
+<script>
+
+var mg = document.getElementById('flag')
+
+
+var mgno = mg.value;
+
+
+
+
+
+function TestFish(bad) {
+	tc = bad;
+	
+	if (tc == 'pw') {
+		$("#pwModal").modal();
+	}
+	
+}
+
+ window.onload = TestFish(mgno);
+
+
+
+
+</script>	
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

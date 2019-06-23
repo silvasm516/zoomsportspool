@@ -1,0 +1,1200 @@
+<!DOCTYPE HTML>
+<html  lang="en">
+ <head>
+ {% extends "__base2.html" %}
+ <!-- {% load staticfiles %} -->
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- <script src = "http://benalman.com/projects/jquery-bbq-plugin/"/>
+<script src = "http://benalman.com/projects/jquery-bbq-plugin/"/>
+<script src = "http://localhost:8080/static/jquery-migrate-3.0.0.js"/>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+ integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+ crossorigin="anonymous"></script> 
+ -->
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script> -->  
+<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>  -->
+<!-- <script src="../static/datetimepicker-master (1)/datetimepicker-master/jquery.js"></script>
+<script src="../static/datetimepicker-master (1)/datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script> -->
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script> -->
+
+<script src="../static/datetimepicker-master (1)/datetimepicker-master/jquery.js"></script> 
+ 
+<script src="../static/datetimepicker-master (1)/datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../static/datetimepicker-master (1)/datetimepicker-master/build/jquery.datetimepicker.min.css"> 
+
+
+
+<title></title>
+{% block title %}{{tit}}{% endblock %}
+{% block style %}
+
+
+
+<style type="text/css">
+
+#box2  {
+	height: 20vh;
+	background-color: black;
+
+}
+
+#dash {
+	color: red;
+}
+
+button {
+	padding-left: 0%;
+}
+
+br {
+	height: 1vh;
+}
+
+.ngt {
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+	width: 11vw;
+	padding: 0%;
+}
+
+
+.payouts {
+	width: 2vw;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.hid {
+	display:none;
+}
+
+.control-label {
+	margin-top: .85vh;
+	margin-bottom: .85vh;
+
+}
+.lft  {
+
+	padding:0%;
+	margin-left: 0%
+	margin-right:0%;
+	margin-top: 0%;
+	margin-bottom: 0%;
+	height: 530px;
+
+}
+  .panelst  {
+  	width:100%;
+ 	text-align:left;
+   	font-family: arial;
+   	color: white;
+  }
+
+.row0 {
+	margin-left: 0%;
+	width: 100%;
+}
+  .row1 {
+  	height: 60px;
+  	width: 100%;
+  	 
+  }
+
+  .row2 {
+
+  	height: 1300px;
+  	width: 100%;
+  	
+  }
+  .row3 {
+  	height: 900px;
+    width: 100%;
+   
+  }
+
+.panel {
+	margin-top: 0%;
+	width: 100%;
+}
+  .btn {
+  	margin-left: 25%;
+	vertical-align:top;
+  }
+
+#sgbutt {
+	margin-left: 0%;
+}
+
+
+#p1, #p2, #p3, #p4, #p5, #p6, #p7, #p8, #p9, #p10 {
+	height: 6.5vh;
+}
+
+.parag1  {
+	display: :inline;
+	font-size: .625vw;
+	padding: 0%;
+	font-weight: bold;
+}
+
+.parag2 {
+	display: :inline;
+	font-size: .625vw;
+	padding: 0%;
+	font-weight: bold;
+}
+
+.parag3  {
+	display: :inline;
+	font-size: .625vw;
+	padding: 0%;
+	font-weight: bold;
+}
+
+.glyphicon  {
+	padding: 0%;
+	margin-left: 2%;
+}
+
+#t67c, #t75 {
+	font-family: arial
+	color: red;
+}
+
+#tempaddition {
+	color: red;
+}
+
+.payouts {
+	width: 3vw;
+}
+
+#div {
+	display: inline;
+}	
+
+.datetimepicker {
+width: 10.0em; /*what ever width you want*/
+display: inline;
+margin-left: auto;
+height: 1.75em;
+}
+
+
+.modal2-body {
+  background-color: #ffff80;
+}
+
+
+
+
+/*#tooltip1 { position: relative; }
+#tooltip1 span { display: none; color: #FFFFFF; }
+#tooltip1 a:hover span { display: block; position: absolute; width: 200px; height: 50px; left: 100px; top: -10px; color: #FFFFFF; padding: 0 5px; }
+*/
+
+@media only screen and (max-width:30em) {
+
+.row1 {
+  	height: 450px;
+  }
+
+  #subteams510e {
+  	float: bottom;
+  }
+
+#labels {
+	display: none;
+}
+
+#mainform {
+	margin-left: 35%;
+}
+
+.ngt{
+	width: 85%;
+}
+
+.payouts {
+	width: 50px;
+}
+}
+
+
+/*.panel-body {
+	width: 400px;*/
+
+
+/*.btn {
+	width: 2vw;
+}*/
+/*.rec1 {
+	border: solid; color: black; width: 2pt;
+}*/
+/*@media only screen and (max-width:30em;) {
+
+.row2 {
+	width: 90%;
+}
+
+#fields {
+	width: 40%;
+	float:center;
+	padding:0%;
+	margin-right: 0%;
+	margin-left: 0%;
+}
+
+#labels { 
+	width: 45%;
+	float:left;
+	padding:0%;
+	margin-left: 0%;
+	margin-right: 0%;
+ }
+
+.ngt {
+	margin-top: .75vh;
+	margin-bottom: .75vh;
+	width: 3vw;
+	padding:0%;
+	margin-left: 0%;
+	margin-right: 0%;
+}
+
+.lft  {
+
+	padding:0%;
+	margin-left: 0%
+	margin-right:0%;
+	margin-top: 0%;
+	margin-bottom: 0%;
+	height: 530px;
+	width: 45%;
+}
+ .panelst  {
+  	width: 45%;
+
+}*/
+
+
+
+</style>
+<!-- <link href="build/css/bootstrap-datetimepicker.css" rel="stylesheet">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="build/js/bootstrap-datetimepicker.min.js"></script>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script> -->
+
+
+	<!-- <link type="text/css" href="jquery.simple-dtpicker.css" rel="stylesheet" />
+
+<script src=https://github.com/xdan/datetimepicker.git/> -->
+ 
+{% endblock %}
+ 
+
+</head>
+
+
+
+<body>
+{% block signon %}{% endblock %}
+
+
+{% block submitTeams %}
+<br>
+<br>
+<!-- <p id = "t63b"  class = "parag1" style= "padding: 0px;"> </p> -->
+
+
+
+
+
+
+ <div class = "row0">
+
+
+<div class = "col-sm-10">
+<p id = "t75"  class = "parag3" style= "padding: 0px;">FIRST, CHOOSE TEAMS FROM DROPDOWN MENU (PRO, COLLEGE, OR CUSTOM) THEN PRESS GREEN SUBMIT TEAMS BUTTON.<br> SECOND, FILL OUT FORM BELOW THEN PRESS BLUE SUBMIT GRID BUTTON</p>
+</div>
+<div class="col-sm-2">
+<button type="button" name= "teams" class="btn btn-primary btn-sm" id = "subteams510e" style= "background-color: green;">SUBMIT TEAMS</button>
+</div>
+</div>
+{% endblock %}
+{% block Nav %}
+<div class = "row1">
+ 
+<div class = "col-sm-12">
+
+{% include 'Nav6.html' %} 
+</div>
+
+
+</div>
+{% endblock %}
+
+
+
+
+{% block labels %}
+<div class= "row2">
+
+<div class ="col-sm-6" id = "labels" style="background-color: #FE9A2E; padding:0%; border-left: solid 3pt black;  border-bottom: solid 3pt #FE9A2E;  border-top: solid 3pt black;">
+
+	
+		<h3 style= "margin-left: 20%; padding:0%;"><strong>New Grid Set-Up Form</strong></h3>	
+		
+		
+			<div class = "form-group1">
+
+
+				<p><label class="control-label" for = "gridPassworCode" >Authorization Password</label></p>
+
+
+				<p><label class="control-label" for = "homeTeam">Home Team</label></p>
+
+
+				<p><label class="control-label" for = "visitingTeam">Visiting Team</label></p>
+
+		 
+				<p><label class="control-label" for ="gameDate">Game Date</label></p>
+				
+				
+				<p><label class="control-label" for ="squarePrice">Price Per Square</label></p>
+				
+				
+				<p><label class="control-label" for ="payouts">Payouts Per Quarter</label></p>
+				
+				
+				<p><label class="control-label" for ="minPurchase">Min Sq. Purch.</label></p>
+				
+				
+				<p><label class="control-label" for ="maxPurchase">Max Sq. Purch.</label></p>
+				
+				
+				<p><label class="control-label" for ="notes" >Notes To Players</label></p>
+				
+				
+				<p><label id = "fp" class="control-label" for = "fnlPayout" style="padding-bottom: 17.75%;">Final Payout</label></p>
+				
+			</div>
+		
+	</div>
+
+
+<div class = "col-sm-6" style="background-color: #FE9A2E;  padding:0%; border-right: solid 3pt black;  border-bottom: solid 7pt #FE9A2E;  border-top: solid 3pt black;"" id = "fields">
+			<!-- <h4><span style= "padding-bottom: 0%;"class="label label-default" id = "one">1</span></h4> -->
+
+
+		<form class = "form-horizontal" id = "mainform" name="mainform" method="post" action = "/D"> 
+		{% csrf_token %}
+			<div class = "form-group2" style= "margin-top: 10%">
+				
+					<div>
+					<div>
+						<div>
+							
+             			<input style = "margin-top: -8%;" type="text" class = "ngt" name= "gridPasswordCode" id = "gridPasswordCode"  placeholder = "Enter password" required/>
+             			<!-- <a href="#" data-toggle="tooltip" data-html="true" title="Provide A Unique Pass Code That Your Clients Can Use To Access Your Games Available Page. Warning Passcodes Are Case Sensitive!"><i class="glyphicon glyphicon-question-sign"></i></a> -->
+             			<a href="#" data-toggle="tooltip" data-placement="right" data-html="true" title="Provide A Unique Pass Code That Your Clients Can &#013;Use To Access Your Games Available Page &#013; At least six, but at most 12 characters &#013;Warning Passcodes Are Case Sensitive!">
+             			<i class="glyphicon glyphicon-question-sign"></i></a>
+             			
+             			<br>
+
+             		</div>
+
+		    			<input type= "text" class = "ngt" name= "homeTeam" id = "homeTeam" placeholder="HOME TEAM"required/>
+						<br>
+					</div>
+					<div>
+						<input type= "text" class = "ngt" name= "visitingTeam"   id = "visitingTeam" placeholder="VISITING TEAM"required/>
+						<br>
+					</div>
+					 <!-- <br>  -->
+					
+					 <div>
+					 <br>
+					<!-- <input type="date"> -->
+						<!-- <input type="text"  id = "datetimes" name= "gameDate" style= "font-color: black"; value= "" required/> -->
+						<div id = "dat" div style = "display:inline ;"> 
+
+							<input type="date"  class="datetimepicker" name = "gamedate" placeholder="GAME DATE"/>
+
+							<input type="time"  class="datetimepicker" name = "gtime" placeholder="GAME TIME"/><br>
+
+						</div>
+						<br>
+					</div> 
+ 
+	
+
+					<div >
+						<input type= "text" class = "ngt" name= "squarePrice" placeholder="SQUARE PRICE"style = "margin-bottom: 4%;" id = "squarePrice" required/>
+					</div>
+		
+				<div style = "display:inline ;">
+					<input type= "text" class = "payouts" name= "fQtr" id = "fQtr" placeholder="QTR 1"required/>
+					
+			
+					<input type= "text" class = "payouts" name= "sQtr" id = "sQtr" placeholder="QTR 2"required/>
+					
+					
+					<input type= "text" class = "payouts" name= "tQtr" id = "tQtr" placeholder="QTR 3"required/>
+					
+			
+			
+					<input type= "text" class = "payouts" name= "fthQtr" id = "fthQtr" placeholder="QTR 4"required/>
+
+
+					
+				</div>
+		
+				<div id = "blk">
+					<input style= "margin-top: 4%;" type= "text"  name= "minPurchase" class = "ngt" id ="minPurchase" placeholder="MIN SQUARES"required/>
+				</div>
+				
+				<div>
+        			<input type= "text"  name= "maxPurchase" class = "ngt" id ="maxPurchase" placeholder="MAX SQUARES"required/>	
+				</div>
+					
+				<div>
+				
+					<p><textarea name= "notes" class = "notes" id = "notes" placeholder="NOTES"></textarea></p>
+				</div>
+
+				<div id = "rads"  style="padding-bottom: 10%;">
+					<input type = "radio" name = "when" value = "1" >4th Qtr<br/>
+					<input type = "radio" name = "when" value = "2" checked>End of Game<br/>
+				</div>
+			</div>	
+			<input type= "submit" name="submit" value = "submit grid" class="btn btn-primary btn-sm" id ="sgbutt"/>
+			<input type= "text" class = "hid" name= "managerName" id = "mgrName" value="{{ data.userName }}" />
+			<input type= "text" class = "hid" name= "mgrNumber" id = "mgrNumber" value= "{{ data.mgrId }}" />
+			<input type="text" class = "hid" placeholder= "type" name="gType" id = "gType" value= "{{gType}}"/>
+			</div>
+			</form>
+
+			<form id = "hedgehog" method="post" action="/E"> 
+			{% csrf_token %}
+				<input type= "text" class = "hid" name= "mgrNumber" id = "mgrNumber" value= "{{ data.mgrId }}" />
+				<input type= "text" class = "hid" name= "butsrc" id = "zerot"/> 
+				
+   			    
+				<input type="submit" class = "hid" id = "mongo"/> 
+			</form>	
+
+			
+</div>					
+				
+
+ 
+{% endblock %}
+
+{% block buttons %}
+
+<!-- <div class="row3"> -->
+<div class = "col-sm-12" style= "background-color:grey"> 
+		                                        
+	<div class="panel-group">
+	<span class="lft">
+		<div class="panel panel-primary" id= 'p1'; style= "background-color:green">
+		<div class="panelst">{{data.result0.home}} vs {{data.result0.visit}}<br><button type="button" id = "Z0" name = "Z0" class="btn btn-primary btn-sm">View</button></div>
+		<p style= "color: white; margin-left: 60%; font-size: 1.5vw;">Active Grid Display Panel</p>
+		</div>
+	</span>
+	<span class="rgt">
+		<div class="panel panel-primary" id= 'p2'; style= "background-color:green">
+		<div class="panelst">{{data.result1.home}} vs {{data.result1.visit}}<br><button type="button" id = "Z1" name = "Z1" class="btn btn-primary btn-sm">View</button></div>
+
+		</div>	
+	</span>	
+	<span class="lft">
+		<div class= "panel panel-primary" id= 'p3'; style= "background-color:green">
+		<div class="panelst">{{data.result2.home}} vs {{data.result2.visit}}<br><button type="button" id = "Z2" name = "Z2" class="btn btn-primary btn-sm">View</button></div>
+		</div>
+	</span>
+	<span class="rgt">
+		<div class="panel panel-primary" id= 'p4'; style= "background-color:green">
+		<div class="panelst">{{data.result3.home}} vs {{data.result3.visit}}<br><button type="button" id = "Z3" name = "Z3" class="btn btn-primary btn-sm">View</button></div>
+		</div>
+	</span>	
+	<span class="lft">
+		<div class="panel panel-primary" id= 'p5'; style= "background-color:green">
+		<div class="panelst" >{{data.result4.home}} vs {{data.result4.visit}}<br><button type="button" id = "Z4" name = "Z4" class="btn btn-primary btn-sm">View</button></div>
+		</div>
+	</span>
+	<span class="rgt">
+		<div class="panel panel-primary" id= 'p6'; style= "background-color:green">
+		<div class="panelst">{{data.result5.home}} vs {{data.result5.visit}}<br><button type="button" id = "Z5" name = "Z5" class="btn btn-primary btn-sm">View</button></div>
+		</div>	
+	</span>	
+	<span class="lft">
+		<div class="panel panel-primary" id= 'p7'; style= "background-color:green">
+		<div class="panelst">{{data.result6.home}} vs {{data.result6.visit}}<br><button type="button" id = "Z6" name = "Z6" class="btn btn-primary btn-sm">View</button></div>
+		</div>
+	</span>
+	<span class="rgt">
+		<div class="panel panel-primary" id= 'p8'; style= "background-color:green">
+		<div class="panelst">{{data.result7.home}} vs {{data.result7.visit}}<br><button type="button" id = "Z7" name = "Z7" class="btn btn-primary btn-sm">View</button></div>
+		</div>
+	</span>	
+	<span class="lft">
+		<div class="panel panel-primary" id= 'p9'; style= "background-color:green">
+		<div class="panelst" >{{data.result8.home}} vs {{data.result8.visit}}<br><button type="button" id = "Z8" name = "Z8" class="btn btn-primary btn-sm">View</button></div>
+		</div>
+	</span>
+	<span class="rgt">
+		<div class="panel panel-primary" id= 'p10'; style= "background-color:green">
+		<div class="panelst">{{data.result9.home}} vs {{data.result9.visit}}<br><button type="button" id = "Z9" name = "Z9" class="btn btn-primary btn-sm">View</button></div>
+	</div>
+	</span>
+	</div>
+	
+
+<!-- </div> -->
+
+</div>
+
+</div>
+
+<input type= "text" class = "hid" name= "tripper" id = "tripper" value="{{data.tripper}}"/>
+
+<footer>
+<div class="panel panel-default2" style= "height: 420px; width: 100%; padding: 0px; margin-top: 0%; background-color: black">
+  <div class="panel-body2" style= "color: white;">ZOOMSPORTSPOOL  all rights reserved</div>
+</div>
+</footer>
+
+
+<div class="modal fade" id="NoGame" name = "NoGame" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">NO GAME HERE</h4>
+        </div>
+        <div class="modal-body">
+          <p><strong>This Position Currently Has No Scheduled Game</strong></p>
+
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+<div class="modal fade" id="awthcode" name = "awthcode" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Access Number Error</h4>
+        </div>
+        <div class="modal-body">
+          <p><strong>Please Make The Authorization Code 6 To 12 Characters</strong></p>
+
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+
+  <div class="modal fade" id="unique" name = "unique" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Access Number Error</h4>
+        </div>
+        <div class="modal-body">
+          <p><strong>This Code Is Already Taken By Another Manager
+          Please Select Another Access Code.</strong></p>
+
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+{% endblock %}
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+<!-- <link rel="stylesheet" type="text/css" href="../static/datetimepicker-master (1)/datetimepicker-master/jquery.datetimepicker.css"/> -->
+
+{% block javascript %}
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script> 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="../static/jquery-simple-datetimepicker-1.12.0/jquery-simple-datetimepicker-1.12.0/jquery.simple-dtpicker.js"></script>
+<link type="text/css" href="../static/jquery-simple-datetimepicker-1.12.0/jquery-simple-datetimepicker-1.12.0/jquery.simple-dtpicker.css" rel="stylesheet"/>
+  -->
+
+
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href= "//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel= "stylesheet"/>
+
+
+<script>
+// $('#datetimepicker').data("DateTimePicker").FUNCTION() 
+
+document.onload = frog();
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip;  
+   
+});
+/*$(document).ready(function(){
+$("#mainform").validate({
+  rules: {
+  	gridPasswordCode: {
+  	minlength: 6
+ }
+},*/
+   /* password: {	
+    required: true,
+    minlength: 5
+},
+    password2: {
+      equalTo: "#password1"
+    }
+  
+},*/
+ /* messages: {
+ 	gridPasswordCode: {
+ 	required: "this field required",
+ 	minlength: "please make password at least six characters"
+ 	},*/
+  	/*password2: {
+  	 equalTo: "password doesn't match"
+  	}*/
+ /* }
+
+});
+})*/
+// jQuery('#datetimepicker').datetimepicker();
+
+/*jQuery('#datetimepicker').datetimepicker({
+  format:'Y m d  H:i',
+  inline:false,
+  lang:'eng',
+  step:15, 
+});*/
+
+
+// <script type="text/javascript">
+/*$(function(){
+		$('#date_manual').click(function(){
+				$('#date_manual').appendDtpicker({
+				"inline": true,
+				"autodateOnStart": false,
+				
+				});	
+				
+
+		})
+		
+		
+
+
+		$('#date_manual').appendDtpicker({
+			"autodateOnStart": false,	
+			"onHide": (function(handler){
+			$('#btn_manual_hide').destroy;
+			})	
+		});
+});*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*function Dog() {
+	var d = document.getElementById("tit")
+	if (d == null) {
+		var s = document.getElementById("dash");
+		var w = document.getElementById("zoom")
+
+			s.innerHTML = "DASHBOARD"
+		}
+		/*if(s.innerHTML == "DASHBOARD") {
+			w.innerHTML = "";
+		}*/
+	// }	
+
+
+
+// document.onload = Dog();*/
+// document.onload = textParagraphs();
+
+
+// window.addEventListener("load", textParagraphs.bind(null, instrOne, instrTwo, instrThree, instrFour), false);
+
+
+/*function textParagraphs(One, Two, Three, Four) {
+	document.getElementById("t63b").innerHTML = One;
+	document.getElementById("t67c").innerHTML = Two; 
+	document.getElementById("t75").innerHTML = Three;
+	document.getElementById("t78").innerHTML = Four;
+}*/
+
+   
+	// var evt = new Event("click", {"bubbles":true, "cancelable":false});
+
+
+    var t0 = document.getElementById("Z0");
+	var o1 = document.getElementById("Z1");
+	var o2 = document.getElementById("Z2");
+	var o3 = document.getElementById("Z3");
+	var o4 = document.getElementById("Z4");
+	var o5 = document.getElementById("Z5");
+	var o6 = document.getElementById("Z6");
+	var o7 = document.getElementById("Z7");
+	var o8 = document.getElementById("Z8");
+	var o9 = document.getElementById("Z9");
+	
+	
+	
+
+
+	/*if(tad.addEventListener) {tad.addEventListener("click", hedge, false);
+
+			 }  
+			 else if(tad.attachEvent) { 
+			  tad.attachEvent("onclick", hedge);  
+			 } */
+
+
+		t0.addEventListener("click", hedge.bind(null,"Z0"), false);
+		o1.addEventListener("click", hedge.bind(null, "Z1"), false);
+		o2.addEventListener("click", hedge.bind(null, "Z2"), false);
+		o3.addEventListener("click", hedge.bind(null, "Z3"), false);
+		o4.addEventListener("click", hedge.bind(null, "Z4"), false);
+		o5.addEventListener("click", hedge.bind(null, "Z5"), false);
+		o6.addEventListener("click", hedge.bind(null, "Z6"), false);
+		o7.addEventListener("click", hedge.bind(null, "Z7"), false);
+		o8.addEventListener("click", hedge.bind(null, "Z8"), false);
+		o9.addEventListener("click", hedge.bind(null, "Z9"), false);
+
+
+
+
+
+
+	/*if(o1.addEventListener) {o1.addEventListener("click", hedge, false);
+				
+			 }  
+			  else if(o1.attachEvent) { 
+			  o1.attachEvent("onclick", hedge);  
+			 } 		 */
+	
+
+	/*if(o2.addEventListener) {o2.addEventListener("click", hedge, false);
+			 }  
+			 else if(o2.attachEvent) { 
+			  o2.attachEvent("onclick", hedge);  
+			 } 		 
+	if(o3.addEventListener) {o3.addEventListener("click", hedge, false);
+			 }  
+			 else if(o3.attachEvent) { 
+			  o3.attachEvent("onclick", hedge);  
+			 } 		 		 
+	if(o4.addEventListener) {o4.addEventListener("click", hedge, false);
+			 }  
+			 else if(o4.attachEvent) { 
+			  o4.attachEvent("onclick", hedge);  
+			 } 		 		 
+
+	if(o5.addEventListener) {o5.addEventListener("click", hedge, false);
+			 }  
+			 else if(o5.attachEvent) { 
+			  o5.attachEvent("onclick", hedge);  
+			 } 		 		 
+
+	if(o6.addEventListener) {o6.addEventListener("click", hedge, false);
+			 }  
+			 else if(o6.attachEvent) { 
+			  o6.attachEvent("onclick", hedge);  
+			 } 		 		 
+
+	if(o7.addEventListener) {o7.addEventListener("click", hedge, false);
+			 }  
+			 else if(o7.attachEvent) { 
+			  o7.attachEvent("onclick", hedge);  
+			 } 		 		 
+
+
+	if(o8.addEventListener) {o8.addEventListener("click", hedge, false);
+			 }  
+			 else if(o8.attachEvent) { 
+			  o8.attachEvent("onclick", hedge);  
+			 } 		 		 
+
+
+
+	if(o9.addEventListener) {o9.addEventListener("click", hedge, false);
+			 }  
+			 else if(o9.attachEvent) { 
+			  o9.attachEvent("onclick", hedge);  
+			 } 		 		 */
+
+
+	// var franken = document.getElementById("stein")
+
+	/*if(franken.addEventListener) {franken.addEventListener("click", hammer,  false);
+			 }  
+			 else if(franken.attachEvent) { 
+			  franken.attachEvent("onclick", hammer);  
+			 } */
+	
+
+
+	var steer =  document.getElementById("subteams510e");
+
+
+	
+
+        
+	if(steer.addEventListener) {steer.addEventListener("click", ling,  false);
+			 }  
+			 else if(steer.attachEvent) { 
+			  steer.attachEvent("onclick", ling );  
+			 } 
+			 
+
+
+
+
+
+	/*if(steer.addEventListener) {steer.addEventListener("click", showAlert, false);
+			 }  
+			 else if(steer.attachEvent) { 
+			  steer.attachEvent("onclick", showAlert );  
+			 }*/
+			 
+/*	if(steer.addEventListener) {steer.addEventListener("click", bull,  false);
+		 }  
+			 else if(steer.attachEvent) { 
+			  steer.attachEvent("onclick", bull);  
+			 } */
+
+	// var beetle =  document.getElementById("sgbutt");
+
+
+
+	/*if(beetle.addEventListener) {
+		beetle.addEventListener("click", frog,  false);
+		}  
+		else if(beetle.attachEvent) { 
+			beetle.attachEvent("onclick", frog);  
+				 } */
+
+//FROM DASHBOARD TO GRID. SETS VALUES FOR GO 
+//FUNCTION BY SORTING TEAM LISTS BETWEEN
+//PRO, COLLEGE, HOME, VISITOR, AND GAME TYPE	
+//VALUES TO SESSION STORAGE VARIABLES. 
+			
+function ling() { 
+	// window.alert("ling")
+
+  sessionStorage.homes = "HOME";
+  sessionStorage.vises = "VISITOR";
+  sessionStorage.category = "";
+  var a = document.getElementById("proList1");
+  var a1 = a.value;
+  var b = document.getElementById("proList2");
+  var b1 = b.value;
+  var c = document.getElementById("colSel1");
+  var c1 = c.value;
+  var d = document.getElementById("colSel2");
+  var d1 = d.value;
+  var e = document.getElementById("otherList1");
+  var e1 = e.value;
+  var f = document.getElementById("otherList2");
+  var f1 = f.value;
+ // window.alert(a1.value);
+  if( a1 !=  0 ) {
+	  sessionStorage.homes = a1; 
+	  sessionStorage.vises = b1; 
+	  sessionStorage.category = "p"
+  }
+  else if ( c1 != 0 ) {
+      sessionStorage.homes = c1; 
+	  
+	  if ( d1 != 0 ) { 
+			sessionStorage.vises = d1;
+		}
+	  else {
+			sessionStorage.vises = f1;
+			}
+		sessionStorage.category = "c"	
+	  }
+  
+  
+  else if ( e1 != 0)  {
+	   sessionStorage.homes = e1; 
+	   
+	   if ( f1 != 0) { 
+	   sessionStorage.vises = f1;
+	   }
+	   else { 
+			sessionStorage.vises = d1;
+			}
+			
+	sessionStorage.category = "c"		
+		}
+	   
+	
+	   
+  else {
+	    sessionStorage.homes = "HOME";
+		sessionStorage.vises = "VISITOR";
+		sessionStorage.category = "";
+  }
+ document.getElementById("homeTeam").defaultValue =  sessionStorage.homes 
+ document.getElementById("visitingTeam").defaultValue =  sessionStorage.vises 
+ cell = document.getElementById("gType") 
+ cell.value = sessionStorage.category
+
+
+}
+
+
+
+
+
+
+/*var C = cappa;
+var E1 = ext
+var D = cappa2;
+var E2 = ext2*/
+
+
+
+
+/* function showAlert(){
+  $("#myAlert").addClass("in")
+  .delay(3000)
+  .fadeOut(function() {
+   $(this).remove(); 
+});
+
+}*/
+
+
+
+
+
+function bull()   {
+//DEPRECATED
+var x = document.getElementById("proList1");
+var y = document.getElementById("colSel1");
+var z = document.getElementById("otherList1");
+var x1 = x.value
+var y1 = y.value
+var z1 = z.value
+if( x1 != 0 ){ var h = x1;}
+else if( y1 != 0) { var h = y1;}
+else { var h = z1;}
+
+var r = document.getElementById("proList2");
+var s = document.getElementById("colSel2");
+var t = document.getElementById("otherList2");
+var r1 = r.value;
+var s1 = s.value;
+var t1 = t.value; 
+if( r1 != 0) { var v = r1;}
+else if( s1 != 0) { var v = s1;}
+else { var v = t1;}
+
+var teamP = document.getElementsByClassName("pro");
+var teamC = document.getElementsByClassName("col");
+
+for (var p = 0; p < teamP.length / 2; p ++) { 
+	if (teamP[p].value == h) {
+	h = teamP[p].textContent;
+	}
+}
+for (var c = 0; c < teamC.length / 2; c ++) { 
+	if (teamC[c].value == h) {
+	h = teamC[c].textContent;
+	}	
+}	
+for (var p = 0; p < teamP.length / 2; p ++) { 
+	if (teamP[p].value == v) {
+	v = teamP[p].textContent;
+	}	
+}
+for (var c = 0; c < teamC.length / 2; c ++) { 
+	if (teamC[c].value == v) {
+	v = teamC[c].textContent;
+	}	
+}
+	
+var ht = document.getElementById("homeTeam");
+var vt = document.getElementById("visitingTeam");
+
+ht.defaultValue = h;
+vt.defaultValue = v;
+
+}
+
+
+
+
+
+
+
+/*function hedge() {
+	
+	  // window.alert("burn");
+	 var pig = event.target.name;
+	 // window.alert(pig);
+	var hog = document.getElementById("zerot")
+	hog.value = pig
+	document.getElementById('mongo').click();  
+	// document.getElementById('stein').click()
+	var h = document.getElementById("homT").text.Content;
+	 var v = document.getElementById("visT").textContent;
+	 var t = document.getElementById("gType").textContent
+
+
+	 alert(h)
+	 alert(v)
+	 .alert(t)
+	 
+     sessionStorage.hat = h.value; 
+     sessionStorage.vat =  v.value;
+     sessionStorage.tap = t.value;
+     // window.location.assign('GridEx.html')
+	 }*/
+
+
+function hedge(name) {
+	// window.alert(t0);
+// var pig = event.srcElement.name;
+	var pig = name;
+	var hog = document.getElementById("zerot")
+	hog.value = pig
+	document.getElementById('mongo').click();  
+	// document.getElementById('stein').click()
+	 var h = document.getElementById("homT").text.Content;
+	 var v = document.getElementById("visT").textContent;
+	 var t = document.getElementById("gType").textContent;
+
+
+	 alert(h)
+	 alert(v)
+	 window.alert(t)
+	 
+     sessionStorage.hat = h.value; 
+     sessionStorage.vat =  v.value;
+     sessionStorage.tap = t.value;
+     
+	 };
+
+
+function frog() {
+	var frog = document.getElementById("tripper");
+	var frogger = tripper.value
+	if (frogger == 'nope') {
+		$("#NoGame").modal();
+	}
+	if (frogger == 'awthcode') {
+		$("#awthcode").modal();
+	}
+	if (frogger == 'unique') {
+		$("#unique").modal();
+	}
+
+
+}
+
+
+
+
+
+</script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+</html>
+
+
+
+
+
+
+
+
+
+
+

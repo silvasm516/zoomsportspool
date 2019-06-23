@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+
+ <head>
+ {% extends "__base.html" %}
+
+</head>
+
+{% block title %}<title>{{tit}}</title>{% endblock %}
+
+
+<BODY>
+
+
+
+
+
+
+{% block form %}
+
+<strong><div id = "address" style="margin-left: 10%;">
+<p>ZOOMSPORTSPOOL: 
+<p>505 South Norfolk St. Ste. 4</p> 
+<p>San Mateo, Ca. 94401</p>
+</div></strong>
+
+<footer>
+<div class="panel panel-default" style= "height: 700px; width: 100%; margin-top: 95%; background-color: black">
+  <div class="panel-body" style= "color: white;"><p>ZOOMSPORTSPOOL  all rights reserved</p></div>
+</div>
+</footer>
+
+
+
+<script>
+
+
+
+function Dog() {
+	var d = document.getElementById("tit")
+	if (d == null) {
+		var s = document.getElementById("contact");
+		s.innerHTML = "CONTACT US"}
+		
+}
+window.onload = Dog();
+</script>	
+
+{% endblock %}
+
+
+
+
+
+
+
+
+</BODY>
+</html>

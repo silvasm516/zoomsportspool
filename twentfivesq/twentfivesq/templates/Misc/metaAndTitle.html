@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html  style= "background-color: #5F4C0B">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"/>
+	<link rel="shortcut icon" href="../static/Zfav.ico" />
+	 <title>{{title}}</title>
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
+
+
+<style>
+	
+
+
+
+{% block stylesheets %}
+
+#p100  {
+	width:65%;
+    margin: auto;
+    border: 3px solid #73AD21;
+	background-color: black;
+	height: 50px;
+
+}
+
+
+
+
+#p101   {
+	width:65%;
+    margin: auto;
+    border: 3px solid #73AD21;
+	background-color: white;
+	height: 1000px;
+
+}
+
+  nav  {
+   margin-left: 10%;
+
+}
+
+#zoom {
+	float: left;
+	margin-left: 1%;
+	margin-top: 3%;
+	
+	
+	padding: 0px;
+}			  
+		
+aside header h2 {
+
+	height: 60px;
+	font-family: arial;
+	/*font-size:  48px;*/
+	margin-right: 23%;
+	color: red;
+	text-align: center;
+	margin-top: 2%;
+	padding: 0px;
+	
+	}
+
+
+/*#rectangle    {
+		border: solid 1pt black;
+		height: 12%;
+		background: black;
+		padding: 0px;
+		
+		}*/
+
+
+
+
+
+nav ul  li {
+	 color: black;
+	 display: inline-block;
+	 text-align: center;
+	 margin-left: 1.5%;
+	 padding: 1.5%;
+	 font-family: arial;
+	 font-size:  125%;
+	 padding-top: 0%;
+	 padding-bottom: 3%;
+	 font-weight: bold;	 
+		}
+
+
+nav ul li a:hover {
+	font-weight: bold;
+    color: white;
+    cursor: pointer;  
+}
+
+#p99 {
+	background-color:  #585858;
+	height: 50px;
+	}
+
+
+#boxcenter {
+    width:65%;
+    margin: auto;
+    border: 3px solid #73AD21;
+	background-color: white;
+	height: 1000px;	
+}
+
+{ % end block }
+
+
+
+
+</style>
+</head>
+
+
+
+
+<body>
+<Script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 	<script src = "squares.js"></script>
+	<script src = "test99.js"></script>
+	<script src="../static/jquery-migrate-3.0.0.js"></script>
+	<script src="../static/jquery-migrate-1.4.1.js"></script>
+	
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</Script>
+
+
+
+{ % block %}
+
+ <div class = "row">
+	
+	<div class = "col-sm-12" >
+	</div>
+</div>
+<div class = "row">
+<div col-sm-2 id = "p1">
+</div>
+	
+	<div class = col-sm-8>	
+
+	<div  id = "p100">
+		<figure id = "zoom">
+			<img src="../static/zoomLogoGold.JPG" alt="../static/zoomLogoGold.JPG" height="30" width="175" />
+		</figure>
+		<aside>	
+			<header>
+				<h2>25 SQUARES FOOTBALL</h2>
+			</header>
+		</aside>
+	</div>
+	</div>
+	</div>
+<div col-sm-2>
+</div>	
+<div class = "row" id ="p2">
+<div class = col-sm-2>
+</div>
+
+<div class = col-sm-8
+
+
+	<div class="panel panel-default">
+    <div class="panel-body"  id = "p101">
+   <nav id= "menu">
+
+
+	<ul >
+		<li ><a href="/A" id = "m">MORE</a></li>	
+		<li ><a href= "twentyFiveSqPlayerLogin.html" id = "p">PLAYER LOG-IN</a></li>
+		<li ><a href ="twentyFiveSqContact" id = "c">CONTACT US</a></li>
+	</ul>
+	</nav>
+	</div>
+	</div>
+   <div class = col-sm-2>
+    </div>	
+</div>
+<div class = "row">
+<div col-sm-2>
+
+</div>
+ <div col-sm -8 id = "boxcenter">
+ </div> 
+ <div col-sm-2>
+ </div> 
+</div>
+
+
+
+{% end  block}  
+</body>
+</html>
