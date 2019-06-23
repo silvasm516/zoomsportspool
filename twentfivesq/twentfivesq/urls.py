@@ -22,7 +22,7 @@ Including another URLconf
 ##]
 from django.conf.urls import include, url
 from django.contrib import admin
-from squares import views
+from twentfivesq import views
 from manager import views as manager_views
 from grid2 import views as grid2_views
 from player import views as player_views

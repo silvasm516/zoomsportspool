@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions.backends.file', 
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'squares',
+    'twentfivesq',
     'manager',
     'player',
     'grid2',     
@@ -60,7 +60,7 @@ ROOT_URLCONF = 'twentfivesq.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS':[ os.path.join(PROJECT_ROOT, 'templates')],
+        'DIRS':[ os.path.join('zoomsportspool', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -82,11 +82,11 @@ WSGI_APPLICATION = 'twentfivesq.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.path.join(BASE_DIR, 'postgres'),
+        'NAME': os.environ.get(BASE_DIR, 'postgres'),
     'USER': os.environ.get('DB_USER', 'steves'),
     'PASSWORD': os.environ.get('DB_PASS', 'Fl52877#$'),
     'HOST':'localhost',
-    'PORT': '5460',         
+    'PORT': '5432',         
     }
 }
 
@@ -126,8 +126,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+STATIC_ROOT = os.path.join('zoomsportspool', 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT, 'static'),
+    os.path.join('zoomsportspool', 'static'),
 )
