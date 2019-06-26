@@ -321,7 +321,7 @@ def output(dList):
 def IndexR(request):
     from grid2.models import Grid
     from player.models import Players
-    from squares.views import gmeList
+    from twentfivesq.views import gmeList
     import collections
     ta = []
     name = request.session['UsrName']

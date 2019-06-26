@@ -1160,7 +1160,7 @@ def TRex(request):
         ge = int(gridnum)
         fe = g.filter(id = ge)
         if fe.exists() == False:
-            from squares.views import archiveGameList
+            from twentfivesq.views import archiveGameList
             games = archiveGameList(request)
             c ={'rsn':'num', 'msg': 'The Game Number Is Invalid', 'games': games,
                    'tit': 'Archive' }
@@ -1176,7 +1176,7 @@ def TRex(request):
         
         
         if ztest != "expired":
-            from squares.views import archiveGameList
+            from twentfivesq.views import archiveGameList
             games = archiveGameList(request)
             
             c ={'rsn':'num', 'msg': 'The Game Number Is Invalid', 'games': games,
@@ -1185,7 +1185,7 @@ def TRex(request):
             return HttpResponse(temp.render(c,request))
         
         if le == 0:
-            from squares.views import archiveGameList
+            from twentfivesq.views import archiveGameList
             games = archiveGameList(request)
             
             reason = 'code'
@@ -1200,7 +1200,7 @@ def TRex(request):
             return HttpResponse(temp.render(c, request))
         
         if lf == 0:
-            from squares.views import archiveGameList
+            from twentfivesq.views import archiveGameList
             games = archiveGameList(request)
             
             reason = 'gridNo'
@@ -1319,7 +1319,7 @@ def Triceritops(request):
             e = d.filter(id = gridnum)
             z = e
         else:
-            from squares.views import archiveGameList
+            from twentfivesq.views import archiveGameList
             games = archiveGameList(request)
             c ={'rsn':'num', 'msg': 'The Game Number Is Invalid', 'games': games,
                'tit': 'Games Archive' }
@@ -1331,7 +1331,7 @@ def Triceritops(request):
         
         
         if le == 0:
-            from squares.views import archiveGameList
+            from twentfivesq.views import archiveGameList
             games = archiveGameList(request)
             reason = 'code'
             msg = 'Sorry, But That Code Does Not Exist'
@@ -1345,7 +1345,7 @@ def Triceritops(request):
             return HttpResponse(temp.render(c, request))
         
         if lf == 0:
-            from squares.views import archiveGameList
+            from twentfivesq.views import archiveGameList
             games = archiveGameList(request) 
             reason = 'gridNo'
             msg = 'Sorry, But That Grid Number Is Invalid'
@@ -1361,7 +1361,7 @@ def Triceritops(request):
         from grid2.views import expdaytest
         lg = expdaytest(e, 2)
         if lg != "expired":
-            from squares.views import archiveGameList
+            from twentfivesq.views import archiveGameList
             games = archiveGameList(request) 
             reason = 'gridNo'
             msg = 'Sorry, But That Grid Number Is Invalid'
