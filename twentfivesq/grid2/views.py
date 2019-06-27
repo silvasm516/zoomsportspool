@@ -1151,7 +1151,7 @@ def TRex(request):
         digtest = gridnum.isdigit()
         
         if digtest == False:
-            from squares.views import archiveGameList
+            from twentfivesq.views import archiveGameList
             games = archiveGameList(request)
             c ={'rsn':'num', 'msg': 'The Game Number Is Invalid', 'games': games,
                'tit': 'Archive' }
