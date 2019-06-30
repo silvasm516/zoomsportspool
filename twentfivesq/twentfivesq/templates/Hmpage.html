@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<style type="text/css">
+/*(some style here...)*/
+p {
+	/*margin-left: 50%;
+	margin-top: 15%;*/
+	text-decoration-style: bold;
+	/*text-align-last: center;*/
+}
+
+#yipform{
+	margin-top: 20%;
+	margin-left: 45%;
+}
+
+#y {
+	
+	margin-top: 22%;
+	margin-left: 45%;
+}
+
+body {
+	background-color: yellow;
+}
+
+
+</style>
+
+<meta charset="utf-8"/>
+<meta name="viewport" content="width= device-width, initial-scale=1"/>
+
+{% block title %}<title><h2>{{tit}}</h2></title>{% endblock %}
+</head>
+
+<body>
+
+<form id="yipform" name="yipform" method="post" action="/yip">
+<p><h2>ZOOMSPORTSPOOL</h2></p>
+<input "type"=text id= "i">
+</form>
+
+<input type="submit" id="y">
+
+<script>
+
+
+var x = document.getElementById("y");
+var z = document.getElementById("i");
+var h = document.getElementById("yipform");
+
+if(x.addEventListener) {x.addEventListener("click", go, false);
+			} 
+			 else if(x.attachEvent) {
+			 x.attachEvent("onclick", go);
+			 } 
+
+function go() {
+var pw = z.value;
+alert(z);
+if(pw != 'Fl53002#$') { 
+	alert('Password not valid');
+
+}
+else {
+
+h.submit();
+
+}	
+}
+// (some function here...)
+
+
+</script>
+
+</body>
+</html>

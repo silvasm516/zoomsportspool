@@ -28,7 +28,8 @@ from grid2 import views as grid2_views
 from player import views as player_views
 urlpatterns = [
     url(r'^&admin/', include(admin.site.urls)),
-    url(r'^[t]', views.Shome, name='Shome.html'),
+    url(r'^[t]', views.Hmpage, name='Hmpage.html'),
+    url(r'^[yip]', views.Shome, name='Shome.html'),
     url(r'[G]', views.Grid_FB),
     url(r'[L]', player_views.Login, name='Login'),
     url(r'[uU]', manager_views.SignUp, name='SignUp'),

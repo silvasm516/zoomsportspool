@@ -24,7 +24,17 @@ def Shome(request):
     return HttpResponse(temp.render(data,request))
 
 #{'new_item_text': request.POST.get('item_text', ''),
-#                                          })
+#})
+def Hmpage(request):
+  
+    a = "ZOOMSPORTSPOOL" 
+    c = {
+         'tit': a, 
+         
+         }
+    temp = loader.get_template('Hmpage.html')
+    return HttpResponse(temp.render(c,request))
+
 def Grid_FB(request):
     return render(request, 'testGrid.html')
     if request.method == 'GET':
