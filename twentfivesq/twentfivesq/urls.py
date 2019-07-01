@@ -26,6 +26,9 @@ from twentfivesq import views
 from manager import views as manager_views
 from grid2 import views as grid2_views
 from player import views as player_views
+
+from django.conf import settings
+from django.conf.urls.static import static
 urlpatterns = [
     url(r'^&admin/', include(admin.site.urls)),
     url(r'^[t]', views.Hmpage, name='Hmpage.html'),
@@ -63,4 +66,4 @@ urlpatterns = [
     url(r'[e]', views.Tomenus, name = 'e'),
     url(r'[p]', manager_views.Purchase, name = 'p'),
     url(r'[v]', grid2_views.Triceritops, name = 'v'),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

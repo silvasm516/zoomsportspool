@@ -25,11 +25,12 @@ def Shome(request):
 
 #{'new_item_text': request.POST.get('item_text', ''),
 #})
+
 def Hmpage(request):
   
     a = "ZOOMSPORTSPOOL" 
     c = {
-         'tit': a, 
+         'tit': a 
          
          }
     temp = loader.get_template('Hmpage.html')
