@@ -1,0 +1,15 @@
+<h2>ZOOMSPORTSPOOL<H2>
+<h3><strong>Early History And Beginnings</strong></h3>
+<h4><p id = "mz" style= "font-family: arial, font-size: 16px;">Zoomsportspool began in 2011, when someone asked me if I could suggest a spreadsheet 
+solution to a football pool that they were putting together for the Superbowl. I was known 
+to my friends as something of a "spreadsheet-geek", having constructed a Sudoku-Solver spreadsheet
+utilizing Knuth's algorithym, and written almost entirely in visual basic code, the previous 
+summer. So, I suppose I was "volunteered" to tackle the project based on those credentials. 
+It wouldn't have to be anything too complicated. Something that, could operate as a normal Excel
+spreadsheet. Be shared by office workers, who after submitting their choice of squares, would 
+then in turn, pass along the file to another worker's computer, who would also select squares, 
+and so on. Finally, the office worker charged with running the pool, would have some automated 
+means of randomly assigning row/column numbers, and then everyone could be furnished a print-out 
+before the game. And that would be that. The result of this task, was Football Squares Pool Manager 
+-Office Edition.</p></h4>
+

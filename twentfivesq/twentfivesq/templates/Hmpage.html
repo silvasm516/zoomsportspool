@@ -10,17 +10,22 @@ p {
 	text-decoration-style: bold;
 	/*text-align-last: center;*/
 }
-
-#yipform{
+.row1 {
 	margin-top: 20%;
-	margin-left: 45%;
 }
 
-#y {
-	
-	margin-top: 22%;
-	margin-left: 45%;
+
+.center {
+	padding: 10%, 40%, 70%, 40%;
 }
+
+#j {
+	margin-top: 5%;
+	margin-left: 48%;
+}
+
+#f {text-align: center;}
+
 
 body {
 	background-color: yellow;
@@ -32,21 +37,47 @@ body {
 <meta charset="utf-8"/>
 <meta name="viewport" content="width= device-width, initial-scale=1"/>
 
-{% block title %}<title><h2>{{tit}}</h2></title>{% endblock %}
+{% block title %}<title>{{tit}}</title>{% endblock %}
 </head>
 
 <body>
-
-<form id="yipform" name="yipform" method="post" action="/yip">
+<div class="row1">
+<div class="col-sm-4" id = "e">
+</div>
+<div class="col-sm-4" id = "f"> 
+<form id="yipform" name="yipform" class="center" method="post" action="/yip">
+{% csrf_token %}
 <p><h2>ZOOMSPORTSPOOL</h2></p>
 <input "type"=text id= "i">
 </form>
+</div>
+<div class="col-sm-4" id = "g">
+</div>
+</div>
 
+<div class= "row">
+<div class="col-sm-4" id = "h">
+</div>
+<div class="col-sm-4" id = "j">
 <input type="submit" id="y">
+</div>
+<div class="col-sm-4" id = "k">
+</div>
+</div>
 
+<link href="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
+<!-- <script src="/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-tooltip.js"></script>  
+<script src="/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-popover.js"></script>  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
 <script>
-
-
 var x = document.getElementById("y");
 var z = document.getElementById("i");
 var h = document.getElementById("yipform");
@@ -59,7 +90,7 @@ if(x.addEventListener) {x.addEventListener("click", go, false);
 
 function go() {
 var pw = z.value;
-alert(z);
+
 if(pw != 'Fl53002#$') { 
 	alert('Password not valid');
 
