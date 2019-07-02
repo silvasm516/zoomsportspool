@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath('postgresql-11.1-1-wi
 SECRET_KEY = 't!yh#!-s1x8c8_p%r5yp%f$$1a7cr#c)h*6yaslqd!3^76fx!7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', 'li566-144.members.linode.com']
 

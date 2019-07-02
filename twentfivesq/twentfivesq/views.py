@@ -9,32 +9,37 @@ from django.template import loader
 
     
 def Shome(request):
-    
-    a = "25 SQUARES FOOTBALL" 
-    data = {
-        'tit' : a,
-        }
-##   if request.method == 'POST':
-##  #      return HttpResponse(request.POST['item_text'])
-    
-    ##return render(request,'Some.html')
-    ##return HttpResponse(temp.render(data,request))
-##    else:
-    temp = loader.get_template('Some.html')
-    return HttpResponse(temp.render(data,request))
+    if request.method == 'POST':
+        pw = request.POST.get('pass')
+        if pw != "Fl53002#$":
+            b = 'fail'
+            a = "ZOOMSPORTSPOOL" 
+            c = {
+            'tit': a, 
+            'verdict': b
+            }
+            temp = loader.get_template('Hmpage.html')
+            return HttpResponse(temp.render(c,request))
 
-#{'new_item_text': request.POST.get('item_text', ''),
-#})
-
+            
+        else:
+            a = "25 SQUARES FOOTBALL" 
+            data = {
+                'tit' : a,    
+                }
+            temp = loader.get_template('Some.html')
+            return HttpResponse(temp.render(data,request))
+    
 def Hmpage(request):
-  
+    b = "" 
     a = "ZOOMSPORTSPOOL" 
     c = {
-         'tit': a 
-         
+         'tit': a, 
+         'verdict': b
          }
     temp = loader.get_template('Hmpage.html')
     return HttpResponse(temp.render(c,request))
+
 
 def Grid_FB(request):
     return render(request, 'testGrid.html')

@@ -1,7 +1,11 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <style type="text/css">
 /*(some style here...)*/
 p {
@@ -31,16 +35,27 @@ body {
 	background-color: yellow;
 }
 
-
+.hdn {
+	visibility: hidden;
+}
 </style>
 
-<meta charset="utf-8"/>
-<meta name="viewport" content="width= device-width, initial-scale=1"/>
+<!-- <meta charset="utf-8"/>
+<meta name="viewport" content="width= device-width, initial-scale=1"/> -->
 
 {% block title %}<title>{{tit}}</title>{% endblock %}
 </head>
 
-<body>
+<body onload="go()">
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+<link href="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/> --> 
+<!-- <script src="/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-tooltip.js"></script>  
+<script src="/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-popover.js"></script>  -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
 <div class="row1">
 <div class="col-sm-4" id = "e">
 </div>
@@ -48,8 +63,10 @@ body {
 <form id="yipform" name="yipform" class="center" method="post" action="/yip">
 {% csrf_token %}
 <p><h2>ZOOMSPORTSPOOL</h2></p>
-<input "type"=text id= "i">
+<input "type"=text name= "pass" id= "i">
+<input type="submit" id="y">
 </form>
+
 </div>
 <div class="col-sm-4" id = "g">
 </div>
@@ -59,49 +76,68 @@ body {
 <div class="col-sm-4" id = "h">
 </div>
 <div class="col-sm-4" id = "j">
-<input type="submit" id="y">
+
 </div>
 <div class="col-sm-4" id = "k">
 </div>
 </div>
 
-<link href="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
-
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
+<input type="text" id="mode" value="{{verdict}}" class = "hdn">
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
-<!-- <script src="/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-tooltip.js"></script>  
-<script src="/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-popover.js"></script>  -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+<div class="container">
+ 
+  <!-- <data-toggle="modal" -->
+
+  <!-- <button type="button" class="btn btn-info btn-lg" id="myBtn">Open Modal</button> -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="pmodal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Wrong Password</h4>
+        </div>
+        <div class="modal-body">
+          <p>We're sorry. The password you entered was incorrect.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+
 </body>
 <script>
-var x = document.getElementById("y");
-var z = document.getElementById("i");
-var h = document.getElementById("yipform");
 
-if(x.addEventListener) {x.addEventListener("click", go, false);
-			} 
-			 else if(x.attachEvent) {
-			 x.attachEvent("onclick", go);
-			 } 
+var h = document.getElementById("mode").value;
+
+/*var x = document.getElementById("y");
+var z = document.getElementById("i");*/
 
 function go() {
-var pw = z.value;
-
-if(pw != 'Fl53002#$') { 
-	alert('Password not valid');
-
+	if (h == 'fail') {
+		$("#pmodal").modal();
+	}
 }
-else {
 
-h.submit();
 
-}	
-}
-// (some function here...)
 
 
 </script>

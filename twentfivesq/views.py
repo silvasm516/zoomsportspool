@@ -15,30 +15,51 @@ from django.template import loader
 ##                                          })
     
 def Shome(request):
+    if request.method == 'POST':
+        pw = request.POST.get('pass')
+        if pw != "Fl53002#$":
+            b = 'fail'
+            a = "ZOOMSPORTSPOOL" 
+            c = {
+            'tit': a, 
+            'verdict': b
+            }
+            temp = loader.get_template('Hmpage.html')
+            return HttpResponse(temp.render(c, request))
+
+            
+        else:
+            a = "25 SQUARES FOOTBALL" 
+            data = {
+                'tit' : a,    
+                }
+            temp = loader.get_template('Some.html')
+            return HttpResponse(temp.render(data,request))
     
-    a = "25 SQUARES FOOTBALL" 
-    data = {
-        'tit' : a,
-        }
-
-    temp = loader.get_template('Some.html')
-    return HttpResponse(temp.render(data,request))
-
 
 def Hmpage(request):
-  
+    b = "" 
     a = "ZOOMSPORTSPOOL" 
     c = {
          'tit': a, 
-         
+         'verdict': b
          }
     temp = loader.get_template('Hmpage.html')
     return HttpResponse(temp.render(c,request))
 
+
+
+
+
+
+                                
 def Grid_FB(request):
     return render(request, 'testGrid.html')
     if request.method == 'GET':
         return HttpResponse(request.GET ['item_text'])
+
+
+
 
 def Contact(request):
   
