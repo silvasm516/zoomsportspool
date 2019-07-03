@@ -7,12 +7,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <style type="text/css">
-/*(some style here...)*/
+
 p {
-	/*margin-left: 50%;
-	margin-top: 15%;*/
+	
 	text-decoration-style: bold;
-	/*text-align-last: center;*/
+	
 }
 .row1 {
 	margin-top: 20%;
@@ -38,23 +37,24 @@ body {
 .hdn {
 	visibility: hidden;
 }
+
+.modal-body {
+	background-color: blue;
+}
+#one {
+	color: white
+}
 </style>
 
-<!-- <meta charset="utf-8"/>
-<meta name="viewport" content="width= device-width, initial-scale=1"/> -->
+
+<meta name="viewport" content="width= device-width, initial-scale=1"/> 
 
 {% block title %}<title>{{tit}}</title>{% endblock %}
 </head>
 
 <body onload="go()">
 
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
-<link href="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/> --> 
-<!-- <script src="/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-tooltip.js"></script>  
-<script src="/twitter-bootstrap/twitter-bootstrap-v2/js/bootstrap-popover.js"></script>  -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
 
 <div class="row1">
 <div class="col-sm-4" id = "e">
@@ -94,11 +94,6 @@ body {
 
 
 <div class="container">
- 
-  <!-- <data-toggle="modal" -->
-
-  <!-- <button type="button" class="btn btn-info btn-lg" id="myBtn">Open Modal</button> -->
-
   <!-- Modal -->
   <div class="modal fade" id="pmodal" role="dialog">
     <div class="modal-dialog">
@@ -110,7 +105,7 @@ body {
           <h4 class="modal-title">Wrong Password</h4>
         </div>
         <div class="modal-body">
-          <p>We're sorry. The password you entered was incorrect.</p>
+          <p id = 'one'>We're sorry. The password you entered was incorrect.</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -118,8 +113,7 @@ body {
       </div>
       
     </div>
-  </div>
-  
+  </div>  
 </div>
 
 
@@ -128,8 +122,7 @@ body {
 
 var h = document.getElementById("mode").value;
 
-/*var x = document.getElementById("y");
-var z = document.getElementById("i");*/
+
 
 function go() {
 	if (h == 'fail') {

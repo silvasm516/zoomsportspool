@@ -29,6 +29,8 @@ def Shome(request):
                 }
             temp = loader.get_template('Some.html')
             return HttpResponse(temp.render(data,request))
+        
+
     
 def Hmpage(request):
     b = "" 
@@ -39,6 +41,20 @@ def Hmpage(request):
          }
     temp = loader.get_template('Hmpage.html')
     return HttpResponse(temp.render(c,request))
+
+
+
+
+def Ghome(request):
+    a = "25 SQUARES FOOTBALL" 
+    data = {
+        'tit' : a,    
+                }
+    temp = loader.get_template('Some.html')
+    return HttpResponse(temp.render(data,request))
+
+
+
 
 
 def Grid_FB(request):
