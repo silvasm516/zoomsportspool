@@ -20,12 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath('postgresql-11.1-1-wi
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 't!yh#!-s1x8c8_p%r5yp%f$$1a7cr#c)h*6yaslqd!3^76fx!7'
+SECRET_KEY ='REMOVED SECRET KEY!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'li566-144.members.linode.com']
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
