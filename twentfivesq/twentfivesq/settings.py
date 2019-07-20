@@ -130,7 +130,6 @@ STATIC_ROOT = os.path.join('zoomsportspool/twentfivesq/twentfivesq/', 'staticfil
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join('zoomsportspool/twentfivesq/twentfivesq/', 'static'),
-
 )
 
 ##STATIC_ROOT = os.path.join(PROJECT_ROOT,'twentfivesq/twentfivesq/', 'staticfiles')
