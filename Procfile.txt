@@ -1,1 +1,1 @@
-web: gunicorn app: twenty-fivesquaresfootball.wsgi 
+web: gunicorn app: twentfivesq.wsgi 
