@@ -25,7 +25,8 @@ SECRET_KEY ='REMOVED SECRET KEY!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = [os.environ['zoomsportspool'] + '.azurewebsites.net',
+                 '127.0.0.1'] if 'zoomsportspool' in os.environ else []
 
 
 # Application definition
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -131,7 +133,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join('zoomsportspool/twentfivesq/twentfivesq/', 'static'),
 )
-
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 ##STATIC_ROOT = os.path.join(PROJECT_ROOT,'twentfivesq/twentfivesq/', 'staticfiles')
 ##STATIC_URL = '/static/'
 ##STATICFILES_DIRS = (
