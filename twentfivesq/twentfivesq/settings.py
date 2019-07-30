@@ -57,6 +57,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    )
+
+
+
 ROOT_URLCONF = 'twentfivesq.urls'
 
 TEMPLATES = [
@@ -125,6 +131,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+print ("base dir path", BASE_DIR)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/

@@ -15,6 +15,8 @@ def Mbox(title, text, style):
 #from Home Page Sign-In to Grid Set-Up
 def Cat(request):
     if request.method == 'POST':
+        from django.contrib.auth.models import User
+        from django.contrib.auth import authenticate, login 
         from manager.models import Managers
         import datetime
         from grid2.views import maxLimitExpiration
@@ -22,20 +24,26 @@ def Cat(request):
         n = ""
         u = ""
         m = Managers.objects.all()
-        name = request.POST.get('username')
-        password = request.POST.get('password')
-        n = m.filter(UsrName= str(name))
-        if is_empty(n):
+#       name = request.POST.get('username')
+#       password = request.POST.get('password')
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        n = m.filter(UsrName= str(username))
+        if not n:
             reason = 'un'
             rat = logfail(reason)
         u = n.filter(Password= password)     
-        if is_empty(u):
+        if not u:
             reason = 'pw'
             #logfail(reason)
             rat = logfail(reason) 
-          
         else:
-            n = Managers.objects.get(UsrName = str(name))
+            em = n[0].Email
+            login(request, user)
+            request.session['UsrName'] = username
+            request.session['UsrType'] = 'm'
+            n = Managers.objects.get(UsrName = str(username))
             exp = maxLimitExpiration(datetime.date(2019, 2, 3))
             if n.GridsOut == 999 and exp == 0:
                 gr = 'U'
@@ -56,7 +64,7 @@ def Cat(request):
             ident = justLastName
             first = ident.FirstName            
             mgrId = ident.id
-            msg = loginM(request, name, password)
+#           msg = loginM(name, password)
             update(mgrId)
             j = 'Buy Games'
             k = ferret(mgrId)
@@ -75,9 +83,8 @@ def Cat(request):
             'welcome':'welcome',   
             'tit': i,
             'firstname':first,
-            'userName' :name,
-            'mgrId' :mgrId,
-            'msg' : msg,
+            'userName' :username,
+            'mgrId'   :mgrId,
             'result0' : b[0],
             'result1' : b[1],
             'result2' : b[2],
@@ -96,13 +103,36 @@ def Cat(request):
             c = {'data':data}
             #moron = dumb
             
-            temp = loader.get_template('Dashboard2.html')
+            temp = loader.get_template('DashBoard2.html')
             
             return HttpResponse(temp.render(c, request))
         
         
         temp = loader.get_template('Some.html')
         return HttpResponse(temp.render(rat, request))
+
+
+
+
+
+
+
+def login(request):
+    username = request.POST['username']
+    password = request.POST['password']
+    user = authenticate(request, username=username, password=password)
+
+
+    
+   
+
+
+
+
+
+
+
+
                
 
     
@@ -181,6 +211,7 @@ def SignUp(request):
 #from Sign-Up Form to home page
 def Dog(request):
     if request.method == 'POST':
+        from django.contrib.auth.models import User 
         from manager.models import Managers
         firstname = request.POST.get('firstName')
         lastname = request.POST.get('lastName')
@@ -190,14 +221,31 @@ def Dog(request):
         state = request.POST.get('state')
         country = request.POST.get('country')
         username = request.POST.get('userName')
+        email = request.POST.get('email')
+        m = Managers.objects.all()
+        for z in m:
+            a = z[0].UsrName
+            if a == username:
+                    break
+                    c = {
+                        'tit' : '25 SQUARES FOOTBALL',
+                        'pw2' : 'new',
+                        'name': username
+                        }    
+                    temp = loader.get_template('Some.html')
+                    return HttpResponse(temp.render(c, request))
+            rat = logfail('un')
+            temp = loader.get_template('Some.html')
+            return HttpResponse(temp.render(rat, request))
+        
+        user = User.objects.create_user(username, email, password)
+        user.save() 
         password1 = request.POST.get('password1')
         password2 = request.POST.get('password2')
-        email = request.POST.get('email')
         p = Managers.objects.create(FirstName = firstname, LastName = lastname, Street = street,\
         City = city, ZipCode = zipcode, State = state, Country = country, UsrName = username, Password = password2, \
         Email = email)
-        p.save()
-        
+        p.save() 
     c = {
             'tit' : '25 SQUARES FOOTBALL',
             'pw2' : 'new',
@@ -467,17 +515,17 @@ def IndexR(request):
     return HttpResponse(temp.render(c, request)) 
     
 
-def loginM(request, manager, auth):
+def loginM(manager, auth):
     from manager.models import Managers
     from grid2.models import Grid
-    u = manager		
+    u = manager
     request.session['UsrName'] = u
     request.session['UsrType'] = 'm'
     msg = "You are logged in as " + u
-    
+    return msg
         
           
-    return msg
+    
 
 def preKit(UsrName):
     mgrName = UsrName
@@ -613,6 +661,8 @@ def Purchase(request):
         u.GridsOut = 999
         u.save
         g = 0
+    elif g == 0:
+        g = 0
     else:
         g = int(g)
     d = request.POST.get('amt')
@@ -646,7 +696,7 @@ def Purchase(request):
         ident = justLastName
         first = ident.FirstName            
         mgrId = ident.id
-        msg = loginM(request, name, pw)
+       # msg = loginM(request, name, pw)
         j = 'Buy Games'
         k = ferret(mgrId)
         j = len(k)     
@@ -682,12 +732,12 @@ def Purchase(request):
 
               
         c = {'data':data}
-        temp = loader.get_template('Dashboard2.html')
+        temp = loader.get_template('DashBoard2.html')
         return HttpResponse(temp.render(c, request))  
-    else:
-        m = 'modal'
-        t = OverLimit(request, m)
-        return t
+##    else:
+##        m = 'modal'
+##        t = OverLimit(request, m)
+##        return t
         
 def logfail(reason):
     # Redirect to a success page.

@@ -30,7 +30,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
     url(r'^&admin/', include(admin.site.urls)),
-    url(r'^t/', views.Hmpage, name='Hmpage.html'),
+    url(r'[t]', views.Hmpage, name='Hmpage.html'),
     url(r'^[yip]', views.Shome, name='Shome.html'),
     url(r'[G]', views.Grid_FB),
     url(r'[L]', player_views.Login, name='Login'),
@@ -63,6 +63,6 @@ urlpatterns = [
     url(r'[sz]', manager_views.Enroll, name = 'sz'),
     url(r'[r]', manager_views.BuyGames, name = 'r'),
     url(r'[e]', views.Tomenus, name = 'e'),
-    url(r'[p]', manager_views.Purchase, name = 'p'),
+    url(r'[h]', manager_views.Purchase, name = 'h'),
     url(r'[v]', grid2_views.Triceritops, name = 'v'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
