@@ -224,35 +224,28 @@ def Dog(request):
         email = request.POST.get('email')
         m = Managers.objects.all()
         for z in m:
-            a = z[0].UsrName
-            if a == username:
+            x = z.UsrName
+            if username == x:
                     break
-                    c = {
-                        'tit' : '25 SQUARES FOOTBALL',
-                        'pw2' : 'new',
-                        'name': username
-                        }    
+                    rat = logfail('un')
                     temp = loader.get_template('Some.html')
-                    return HttpResponse(temp.render(c, request))
-            rat = logfail('un')
-            temp = loader.get_template('Some.html')
-            return HttpResponse(temp.render(rat, request))
-        
-        user = User.objects.create_user(username, email, password)
-        user.save() 
+                    return HttpResponse(temp.render(rat, request))
+
+
         password1 = request.POST.get('password1')
-        password2 = request.POST.get('password2')
+        password2 = request.POST.get('password2')        
+        user = User.objects.create_user(username, email, password2)
+        user.save() 
         p = Managers.objects.create(FirstName = firstname, LastName = lastname, Street = street,\
         City = city, ZipCode = zipcode, State = state, Country = country, UsrName = username, Password = password2, \
         Email = email)
-        p.save() 
+        p.save()
+        rat = logfail('pw') 
     c = {
             'tit' : '25 SQUARES FOOTBALL',
             'pw2' : 'new',
             'name': username}    
     temp = loader.get_template('Some.html')
-    
-    
     return HttpResponse(temp.render(c, request))
 
 
@@ -521,8 +514,7 @@ def loginM(manager, auth):
     u = manager
     request.session['UsrName'] = u
     request.session['UsrType'] = 'm'
-    msg = "You are logged in as " + u
-    return msg
+    
         
           
     

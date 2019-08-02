@@ -307,7 +307,7 @@ html  {
 
 
 		<div id = "box2">
-		
+		    
 			<!-- <br> -->
 			<strong><p id = 'welcome'>{{welcome}}    {{playername}}</p></SPAN></strong>
 			<strong><p id = "dash" {{ data.title }}></p></strong>
@@ -321,9 +321,9 @@ html  {
 			<figure id = "zoom">
 	 		<img src="../static/zoomLogoGold.JPG" alt="../static/zoomLogoGold.JPG" height="30" width="175"/>
 	 		</figure>
-	 		{% if 'playername' in request.session %}
-         		<a href="/o" id = "logout">logout</a>
-         	{% endif %}	 
+	 		{% if 'UsrName' in request.session %}
+                 <a href="/o" id = "logout">logout</a>
+            {% endif %}	 
 		    
 	    </div> 
 		     

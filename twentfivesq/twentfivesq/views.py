@@ -257,6 +257,8 @@ def Fish(request):
     from django.template import RequestContext 
     from player.models import Players
     from grid2.views import openStatusTest
+    from player.models import Players
+    from grid2.models import Grid
     c ={}
     c.update(csrf(request))
     authcode = request.GET.get('authorization9') 
@@ -326,6 +328,10 @@ def Fish(request):
                         plaer = p.filter(Email = b1 )
                         first = plaer[0].UsrName
                         d = login(request, first, authcode)
+                        u = first
+                        request.session['UserName'] = u
+                        request.session['UsrType'] = 'p'
+
                         
                 break
         for t in ii:
@@ -737,9 +743,10 @@ def Lemur(request):
     p = Players.objects.all()
     from grid2.views import expdaytest
     from grid2.views import openStatusTest
-    
+    if 'UserName' not in request.session:
+        return
+    player = request.session['UserName']
     gamnum = request.POST.get('gameNum1')
-    player = request.session['UsrName']
     person = p.filter(UsrName = player)
     game = g.filter(id = gamnum)
     auth = game[0].accessNumber
@@ -770,7 +777,7 @@ def Lemur(request):
         from grid2.models import Grid
         from manager.models import Managers
         from grid2.views import Catclone, ferret, weasel
-##        r = Catclone(request)
+
        
 
 ##       OBTAIN MANAGER ID
@@ -915,7 +922,7 @@ def Lemur(request):
                     t[xx] = gg
                     vv[xx] = gg
         klattu = 'WELCOME'        
-        ne = request.session['UsrName']
+        ne = request.session['UserName']
             
         data = {   
         'result0' : b[0],
@@ -1080,7 +1087,7 @@ def Tomenus(request):
     m = Managers.objects.all()
     p = Players.objects.all()
     g = Grid.objects.all()
-    name = request.session['UsrName']
+    name = request.session['UserName']
     n = p.filter(UsrName = name)
     eml = n[0].Email
     pw = request.session['Ackcode']
