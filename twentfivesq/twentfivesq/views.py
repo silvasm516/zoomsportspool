@@ -1,3 +1,5 @@
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login
 from django.views.decorators.http import require_http_methods
 from django.views.decorators.csrf import csrf_protect
 from django.http import HttpResponse
@@ -9,6 +11,7 @@ from django.template import loader
 
     
 def Shome(request):
+##This is the function that runs after the password is entered
     if request.method == 'POST':
         pw = request.POST.get('pass')
         if pw != "Fl53002#$":
@@ -33,6 +36,7 @@ def Shome(request):
 
     
 def Hmpage(request):
+##This is the function called by the homepage link
     b = "" 
     a = "ZOOMSPORTSPOOL" 
     c = {
@@ -103,38 +107,44 @@ def Some(request):
 
 
 
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def Archive(request):
-   # if request.method == 'POST':
-  #  return HttpResponse(request.POST['item_text'])
-    if request.method == 'GET':
-        #return HttpResponse(request.GET ['item_text'])    
-        #return HttpResponse(request.GET ['item_text'])
-        from manager.models import Managers
-   # if request.method == 'POST':
-   #if request.method == 'GET':
-        play = request.GET.get('player')
-        a = 'Games Archive' 
+    if 'UsrName' in request.session:
+        if request.method == 'GET':
+            
+            from manager.models import Managers
+       
+            play = request.GET.get('player')
+            a = 'Games Archive' 
+            c = {
+            'tit': a,
+            'play' : play,
+            }
+            temp = loader.get_template('Archive.html')
+            return HttpResponse(temp.render(c,request))
+    else:
+        b = "" 
+        a = "ZOOMSPORTSPOOL" 
         c = {
-        'tit': a,
-        'play' : play,
-        }
-        temp = loader.get_template('Archive.html')
+         'tit': a, 
+         'verdict': b
+         }
+        temp = loader.get_template('Hmpage.html')
         return HttpResponse(temp.render(c,request))
 
 
+        
+        
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def ArchiveM(request):
-  #  if request.method == 'POST':
-  #  return HttpResponse(request.POST['item_text'])
     games = archiveGameList(request)
     #agnumbers = archiveGameNumber(request)
     if request.method == 'GET':
-        #return HttpResponse(request.GET ['item_text'])    
-        #return HttpResponse(request.GET ['item_text'])
         from manager.models import Managers
-   # if request.method == 'POST':
-   #if request.method == 'GET':
         play = request.GET.get('player')
         a = "Archive"
 
@@ -145,17 +155,21 @@ def ArchiveM(request):
         
         }
         temp = loader.get_template('ArchiveM.html')
-        return HttpResponse(temp.render(c,request))       
+        return HttpResponse(temp.render(c,request))
 
+
+
+
+
+    
 def archiveGameList(request):
     import time 
     from grid2.models import Grid
     from manager.models import Managers
     m = Managers.objects.all()
     g = Grid.objects.all()
-    ##name = request.session['UsrName']
-    name = request.session['UsrName']
-    u = g.filter(managerName = name)
+    namet = request.session['UsrName']
+    u = g.filter(managerName = namet)
     s = []
     j = []
     r = {}
@@ -170,6 +184,30 @@ def archiveGameList(request):
             s.append(str(r).strip("{}"))
     return s
 
+
+def archiveGameListP(authcode):
+    import time 
+    from grid2.models import Grid
+    from manager.models import Managers
+    m = Managers.objects.all()
+    g = Grid.objects.all()
+    auth = authcode
+    u = g.filter(accessNumber = auth)
+    s = []
+    j = []
+    r = {}
+    for t in u:
+        i = t.id
+        j.append(i)
+        d = t.gameDate
+        e = d.strftime('%d %b %Y')
+        r = {'Name': t.managerName, 'Auth': t.accessNumber, 'Number': t.id, 'Date': e}
+        h = t.active
+        if h != '10':
+            s.append(str(r).strip("{}"))
+    return s
+
+
 def gmeList(username):
     ##Validates input to Index form
     import time 
@@ -177,8 +215,8 @@ def gmeList(username):
     from manager.models import Managers
     m = Managers.objects.all()
     g = Grid.objects.all()
-    name = username
-    u = g.filter(managerName = name)
+    namet = username
+    u = g.filter(managerName = namet)
     s = []
     j = []
     z = []
@@ -194,8 +232,17 @@ def gmeList(username):
         h = t.active
         if h != '10':
             s.append(str(r).strip("{}"))
-    return j   
+    return j
 
+
+
+
+
+
+
+from django.contrib.auth.decorators import login_required
+
+@login_required
 def Index(request):
   #  if request.method == 'POST':
   #  return HttpResponse(request.POST['item_text'])
@@ -223,30 +270,22 @@ def Index(request):
 
 
     
-def TABLE_LIST_TEST_DRAFT_3(request):
-    return render(request, 'twentyFiveSquaresDashboard.html')
-    if request.method == 'GET':
-        return HttpResponse(request.GET ['item_text']) 
 
-##def Login(request):
-##    a = "Player Login" 
-##    c = Context({
-##         'title': a
-##         })
-    
-##    temp = loader.get_template('login.html')
-##    return HttpResponse(temp.render(c,request)) 
-##    if request.method == 'GET':
-##        return HttpResponse(request.GET ['item_text']) 
+
+
 
 def SignUp(request):
     return render(request, 'SignUp.html')
     if request.method == 'GET':
         return HttpResponse(request.GET ['item_text'])
+
+
+
      
 
-
 def Fish(request):
+    from django.contrib.auth import authenticate, login
+    from django.contrib.auth.models import User
     from django.views.decorators.csrf import csrf_protect 
     from django.shortcuts import render
     from django.template import Template
@@ -258,6 +297,7 @@ def Fish(request):
     from player.models import Players
     from grid2.views import openStatusTest
     from player.models import Players
+    from player.views import logP
     from grid2.models import Grid
     c ={}
     c.update(csrf(request))
@@ -307,12 +347,6 @@ def Fish(request):
         mgrid = mgr[0].id
         from grid2.views import expdaytest
         update(mgrid)
-##       OBTAIN PLAYER NAME 
-##        u = []
-##        for j in range(0, len(p)):
-##            o = p[j].Email
-##            u.append(o)
-##        i =[]
         v = email.lower()
         
         for t in i:
@@ -324,16 +358,13 @@ def Fish(request):
                     b1 = a1
                     c1 = b1.lower()
                     if v == c1: 
-            
                         plaer = p.filter(Email = b1 )
                         first = plaer[0].UsrName
-                        d = login(request, first, authcode)
                         u = first
-                        request.session['UserName'] = u
-                        request.session['UsrType'] = 'p'
-
+                        logP(request, first, v, authcode)
                         
-                break
+                        
+#                break
         for t in ii:
             if v == t:
                 firstname = name
@@ -443,7 +474,7 @@ def Fish(request):
                     
         z = 'Your Available Games'
         klattu = 'WELCOME'        
-        ne = request.session['UsrName']    
+        #ne = request.session['UsrName']    
         data = {
         'result0' : b[0],
         'result1' : b[1],
@@ -536,7 +567,7 @@ def Fish(request):
             'playername' : first,
             'mgrId' :mgrid,
             'data' : data,
-            'name': ne,
+            'name': mgr,
             'welcome': klattu,
             'tit': z
             }
@@ -582,15 +613,19 @@ def Ram(request):
         username = request.POST.get('userName')
         email = request.POST.get('email')
         p = Players.objects.create(FirstName = firstname, LastName = lastname, Street = street,\
-        City = city, ZipCode = zipcode, State = state, Country = country, UsrName = username, \
-        Email = email)
+        City = city, ZipCode = zipcode, State = state, Country = country, UsrName = username, Email = email)
         p.save()
+        user = User.objects.create_user(username, email, email)
+        user.save()
         a = ''
         c = {
              'title' : a
              }
     temp = loader.get_template('login.html')
     return HttpResponse(temp.render(c, request))        
+
+
+
                            
 def Gull(request):
     if request.method == 'POST':
@@ -624,6 +659,8 @@ def Gull(request):
         name11 = eleven, name12 = twelve, name13 = thirteen, name14 = fourteen, name15 = fifteen, name16 = sixteen, name17 = seventeen, name18 = eighteen, name19 = nineteen, \
         name20 = twenty, name21 = twentyOne, name22 = twentyTwo, name23 = twentyThree, name24 = twentyFour, name25 = twentyFive)
         p.save() 
+
+
 
 def ferret2(i, ac):
     #ACCEPTS MGR # AND AUTH CODE filters Grid db to instances of that manager's active grids.CALLS SKUNK.RETURNS ACTIVE GRIDS('10' GRIDS)AND GRIDNOS TUPLES(ACTIVE COLLEGE AND PRO GRIDS)
@@ -691,6 +728,8 @@ def update(mgrid):
             if gox >= 20:
                return
 
+
+
 #EVALUATES MGR EMAIL LIST FOR PLAYER SIGN IN WHEN MGR SIGNS IN AS PLAYER TO ACCESS ARCHIVE
 def getMgrMail():
     from manager.models import Managers 
@@ -706,6 +745,11 @@ def getMgrMail():
         ii.append(ee)
     return ii
 
+
+
+from django.contrib.auth.decorators import login_required
+
+@login_required
 def Dash(request):
     from grid2.models import Grid
     from grid2.models import Terms
@@ -723,6 +767,10 @@ def Dash(request):
 
     temp = loader.get_template('Dashboard2.html')
     return HttpResponse(temp.render(c,request))  
+
+
+
+
 
 
 def Lemur(request):
@@ -743,9 +791,9 @@ def Lemur(request):
     p = Players.objects.all()
     from grid2.views import expdaytest
     from grid2.views import openStatusTest
-    if 'UserName' not in request.session:
+    if 'UsrName' not in request.session:
         return
-    player = request.session['UserName']
+    player = request.session['UsrName']
     gamnum = request.POST.get('gameNum1')
     person = p.filter(UsrName = player)
     game = g.filter(id = gamnum)
@@ -1019,7 +1067,7 @@ def Lemur(request):
             'Pstatus': Pstatus,
             'Cstatus': Cstatus
             }
-        #dipshit = asshole
+        
         return HttpResponse(temp.render(c, request)) 
         
             
@@ -1036,19 +1084,20 @@ def Lemur(request):
 
 
     
-def login(request, player, auth):
-    from player.models import Players
-    from grid2.models import Grid
-    u = player
-    a = auth
-    request.session['UsrName'] = u
-    request.session['Ackcode'] = a
-    request.session['UsrType'] = 'p'
-    msg = "You are logged in as " + u
-    
-        
-          
-    return msg
+##def login(request, player, auth):
+##    from player.models import Players
+##    from grid2.models import Grid
+##    u = player
+##    a = auth
+##    request.session['UserName'] = u
+##    request.session['Ackcode'] = a
+##    request.session['UsrType'] = 'p'
+##    
+##    msg = "You are logged in as " + u
+##    
+##        
+##          
+##    return msg
 
 
 
@@ -1067,10 +1116,13 @@ def logout_view(request):
 
 
 
-          
+
+
+ 
 def Tomenus(request):
-    import time 
+    import time
     from grid2.models import Grid
+    from django.shortcuts import redirect 
     from manager.models import Managers
     from player.models import Players
     from django.views.decorators.csrf import csrf_protect 
@@ -1084,10 +1136,11 @@ def Tomenus(request):
     from player.models import Players
     from grid2.views import expdaytest
     from grid2.views import openStatusTest
+    
     m = Managers.objects.all()
     p = Players.objects.all()
     g = Grid.objects.all()
-    name = request.session['UserName']
+    name = request.session['UsrName']
     n = p.filter(UsrName = name)
     eml = n[0].Email
     pw = request.session['Ackcode']
@@ -1157,7 +1210,7 @@ def Tomenus(request):
             
                         plaer = p.filter(Email = b1 )
                         first = plaer[0].UsrName
-                        d = login(request, first, authcode)
+                        
                         
                 break
         for t in ii:

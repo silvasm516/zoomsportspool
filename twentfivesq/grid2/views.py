@@ -66,7 +66,6 @@ def Trout(request):
             j = len(k)
             i = "Dashboard"
             hh = "awthcode"
-            #turkey = bacon
             b = []
             for s in range(0, 10):
                 if s >= j:
@@ -189,7 +188,9 @@ def Trout(request):
             
 
 
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def Elephant(request):
     #from grid display panel view buttons to game grid
     if request.method == 'POST':
@@ -221,7 +222,6 @@ def Elephant(request):
         popovr = collections.OrderedDict(sorted(de.items()))
         temp = loader.get_template('popover.html') 
         temp.render(popovr)
-        #bombout = taco
         request.session['mgrterms'] = {}
         s = g.filter(id = gameNumP) 
         hs = gridnum.homeTeam
@@ -294,8 +294,12 @@ def Elephant(request):
    
     temp = loader.get_template('testGrid.html')
     return HttpResponse(temp.render(ct, request))        
+
+
     
-         
+from django.contrib.auth.decorators import login_required
+
+@login_required         
 def Mammoth(request):
     #FROM PLAYER'S GAMES AVAILABLE(MENUS page)PAGE TO GAME GRID 
     from grid2.models import Grid
@@ -380,7 +384,11 @@ def Mammoth(request):
         
         temp = loader.get_template('testGrid.html')    
         return HttpResponse(temp.render(ct, request))
-    
+
+
+from django.contrib.auth.decorators import login_required
+
+@login_required    
 def Mastedon(request):
     #CREATES 'TERMS' MODAL FROM MENUS PAGE
     import datetime
@@ -680,7 +688,7 @@ def deadline(gridno, gameDate):
     g = Grid.objects.all()
     d = g.filter(id = gridno)
     e = d[0].gameDate
-    deadlineDay =  e + timedelta(days = -1.5) 
+    deadlineDay =  e + timedelta(days = -1.125) 
     t = time(23, 59, 59)
     deadline = datetime.combine(deadlineDay, t)
     return deadline	
@@ -766,9 +774,14 @@ def update(mgrid):
                go.active = str(gox)
                go.save() 
             if gox >= 20:
+
+
                return 
 
-#FROM GRID PAGE TO GRID PAGE AFTER SAVE BUTTON CLICKED.    
+#FROM GRID PAGE TO GRID PAGE AFTER SAVE BUTTON CLICKED.
+from django.contrib.auth.decorators import login_required
+
+@login_required            
 def Badger(request):
     import collections
     from grid2.models import Grid
@@ -1023,7 +1036,10 @@ def showRandom(gridnum, hs, vs, t, play, request):
 
 
 #renders random numbers on grid
-def showRandomArchiveP(gridnum, hs, vs, t, play, request):
+from django.contrib.auth.decorators import login_required
+
+@login_required
+def showRandomArchiveP(request, gridnum, hs, vs, t, play):
     import collections
     from grid2.models import Grid
     from django.template.context_processors import csrf
@@ -1137,10 +1153,11 @@ def showRandomArchiveP(gridnum, hs, vs, t, play, request):
     return HttpResponse(temp.render(ct, request))
 
 
-    
+from django.contrib.auth.decorators import login_required
+
+@login_required    
 def TRex(request):
     # from archive to grid
-
     from grid2.models import Grid
     g = Grid.objects.all()
     d = []
@@ -1149,7 +1166,6 @@ def TRex(request):
         gridnum = request.POST.get('game No')
         code = request.POST.get('auth code')
         digtest = gridnum.isdigit()
-        
         if digtest == False:
             from twentfivesq.views import archiveGameList
             games = archiveGameList(request)
@@ -1165,7 +1181,22 @@ def TRex(request):
             c ={'rsn':'num', 'msg': 'The Game Number Is Invalid', 'games': games,
                    'tit': 'Archive' }
             temp = loader.get_template('ArchiveM.html')
-            return HttpResponse(temp.render(c,request)) 
+            return HttpResponse(temp.render(c,request))
+        
+        from manager.models import Managers
+        m = Managers.objects.all()
+        name = request.session['UsrName']
+        nm = m.filter(UsrName = name)
+        ln = nm[0].LastName
+        maname = fe[0].managerName
+        if maname != name:
+            cat = dog
+            from twentfivesq.views import archiveGameList
+            games = archiveGameList(request)
+            c ={'rsn':'num', 'msg': 'The Game Number Is Invalid', 'games': games,
+                   'tit': 'Archive' }
+            temp = loader.get_template('ArchiveM.html')
+            return HttpResponse(temp.render(c,request))
         
         d = g.filter(accessNumber = code)
         e = d.filter(id = gridnum)
@@ -1173,7 +1204,6 @@ def TRex(request):
         le = len(d)
         lf = len(e)
         ztest = expdaytest(gridnum, 2)
-        
         
         if ztest != "expired":
             from twentfivesq.views import archiveGameList
@@ -1203,6 +1233,7 @@ def TRex(request):
             from twentfivesq.views import archiveGameList
             games = archiveGameList(request)
             
+                
             reason = 'gridNo'
             msg = 'Sorry, But That Grid Number Is Invalid'
             c = {
@@ -1219,7 +1250,6 @@ def TRex(request):
 
         
             import datetime
-            #import expdaytest
             from manager.models import Managers
             from manager.views import Cat
             from django.template.context_processors import csrf
@@ -1301,16 +1331,17 @@ def TRex(request):
 
                 temp = loader.get_template('testGrid.html')    
                 return HttpResponse(temp.render(ct, request))       
+
+
     
+from django.contrib.auth.decorators import login_required
 
-
+@login_required
 def Triceritops(request):
     # from archive to grid
-
     from grid2.models import Grid
     g = Grid.objects.all()
-    d = []
-    
+    d = []    
     if request.method == 'POST':
         gridnum = request.POST.get('game No')
         code = request.POST.get('auth code')
@@ -1320,7 +1351,8 @@ def Triceritops(request):
             z = e
         else:
             from twentfivesq.views import archiveGameList
-            games = archiveGameList(request)
+            from twentfivesq.views import archiveGameListP
+            games = archiveGameListP(code)
             c ={'rsn':'num', 'msg': 'The Game Number Is Invalid', 'games': games,
                'tit': 'Games Archive' }
             temp = loader.get_template('Archive.html')
@@ -1332,7 +1364,8 @@ def Triceritops(request):
         
         if le == 0:
             from twentfivesq.views import archiveGameList
-            games = archiveGameList(request)
+            from twentfivesq.views import archiveGameListP
+            games = archiveGameListP(code)
             reason = 'code'
             msg = 'Sorry, But That Code Does Not Exist'
             c = {
@@ -1346,7 +1379,8 @@ def Triceritops(request):
         
         if lf == 0:
             from twentfivesq.views import archiveGameList
-            games = archiveGameList(request) 
+            from twentfivesq.views import archiveGameListP
+            games = archiveGameListP(code) 
             reason = 'gridNo'
             msg = 'Sorry, But That Grid Number Is Invalid'
             c = {
@@ -1362,7 +1396,8 @@ def Triceritops(request):
         lg = expdaytest(e, 2)
         if lg != "expired":
             from twentfivesq.views import archiveGameList
-            games = archiveGameList(request) 
+            from twentfivesq.views import archiveGameListP 
+            games = archiveGameListP(code) 
             reason = 'gridNo'
             msg = 'Sorry, But That Grid Number Is Invalid'
             c = {
@@ -1385,24 +1420,18 @@ def Triceritops(request):
             from manager.views import Cat
             from django.template.context_processors import csrf
             from django.template import RequestContext
-            ##g = Grid.objects.all()
-            ## gridnum = request.POST.get('gameNumP')
-            ## s = g.filter(id = gridnum)
-            play = request.POST.get('player')
-            ##hs = g.filter(id = z)[0].homeTeam
+##            play = request.POST.get('player')
+            play = request.session['UsrName']
             hs = z[0].homeTeam 
-            ##vs = g.filter(id = z)[0].visitingTeam
             vs = z[0].visitingTeam 
-            ##t = g.filter(id = z)[0].gameType
             t = z[0].gameType
             x = z[0].id
             status = expdaytest(x, 2)
-            #rt = request.session['UsrType']
             nt = 'a'
             num = gridnum 
             de = Giraffe(num)
             if status == 'expired':
-                return showRandomArchiveP(gridnum, hs, vs, t, play, request)
+                return showRandomArchiveP(request, gridnum, hs, vs, t, play)
             else:
                 nam1 =  s[0].name1
                 nam2 =  s[0].name2
@@ -1534,9 +1563,10 @@ def Giraffe(gameNo):
     return ordpop
 
 
+from django.contrib.auth.decorators import login_required
 
-def Petrodyl(request, gridnum):
-    
+@login_required
+def Petrodyl(request, gridnum):   
     import datetime
     from manager.models import Managers
     from manager.views import Cat

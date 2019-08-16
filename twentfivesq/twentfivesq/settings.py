@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath('postgresql-11.1-1-wi
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY ='REMOVED SECRET KEY!'
+SECRET_KEY ='Fl53290#$6503484818#$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -36,7 +36,6 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.sessions.backends.file', 
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'twentfivesq',
@@ -59,9 +58,10 @@ MIDDLEWARE = [
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
+    'django.contrib.sessions.models.Session',
     )
 
-
+#SESSION_ENGINE = 'django.contrib.sessions.models.Session'
 
 ROOT_URLCONF = 'twentfivesq.urls'
 
@@ -83,6 +83,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'twentfivesq.wsgi.application'
 
+LOGIN_URL = '/t'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases

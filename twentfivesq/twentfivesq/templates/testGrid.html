@@ -893,10 +893,15 @@ background-color: white;
 
 
 
+
+
+
+
+
+
+
+
 <input type="text" id ='flapp' class="hide" value ="{{rsn}}"/>
-
-
-
 
 
 <link href="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"/>
@@ -914,8 +919,32 @@ background-color: white;
 
 <!--  <input type="submit" name="save6" id="save6" style= "background-color:blue">DownD.</button>  -->
 	<script>
-	
-	
+ 
+
+ 
+/*if ( document.addEventListener ) { 
+     document.addEventListener( "load", mutebut, false );
+  }
+  else 
+     if ( document.attachEvent ) { 
+        document.attachEvent( "onload", mutebut);
+  } else 
+        if ( document.onLoad ) {
+           document.onLoad = mutebut;
+  }	*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 	var h = 0;
 	
 	var tracker = [];
@@ -1114,11 +1143,7 @@ function go(xx, yy, zz) {
 			 }  
          }
 
-
-
-	
-
-   
+ 
   
   if ( window.addEventListener ) { 
      window.addEventListener( "load", doLoad, false );
@@ -1133,6 +1158,18 @@ function go(xx, yy, zz) {
          
 
 
+
+
+ if ( window.addEventListener ) { 
+     window.addEventListener( "load", mutebut, false );
+  }
+  else 
+     if ( window.attachEvent ) { 
+        window.attachEvent( "onload", mutebut);
+  } else 
+        if ( window.onLoad ) {
+           window.onload = mutebut;
+  }	
 
 
 
@@ -1503,8 +1540,22 @@ $(document).ready(function(){
 
 // $('popover').popover();
 
+// Disables grid buttons for manager grids 
+function mutebut(){
+	zinc = document.getElementById('clientype');
+	// window.alert(zinc.innerHTML)
+	if(zinc.innerHTML == 'm'){
+		for( var r =1; r<26; r++){
+			var i = "a" + r;
+			var kt = document.getElementById(i);
+			if(kt.disabled != true){
+				kt.disabled = true;
+			}
 
+	}
+}
 
+}
 
 </script>
 

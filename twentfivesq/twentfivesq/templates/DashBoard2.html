@@ -190,8 +190,16 @@ height: 1.75em;
 }
 
 
+#play {
+  	float: bottom;
+  	margin-left: 200px;
 
 
+  }
+#subteams510e {
+  	float: bottom;
+  	margin-left: 10%;
+  }
 /*#tooltip1 { position: relative; }
 #tooltip1 span { display: none; color: #FFFFFF; }
 #tooltip1 a:hover span { display: block; position: absolute; width: 200px; height: 50px; left: 100px; top: -10px; color: #FFFFFF; padding: 0 5px; }
@@ -206,6 +214,11 @@ height: 1.75em;
   #subteams510e {
   	float: bottom;
   }
+  
+
+
+
+
 
 #labels {
 	display: none;
@@ -325,13 +338,21 @@ height: 1.75em;
  <div class = "row0">
 
 
-<div class = "col-sm-10">
+<div class = "col-sm-8">
 <p id = "t75"  class = "parag3" style= "padding: 0px;">FIRST, CHOOSE TEAMS FROM DROPDOWN MENU (PRO, COLLEGE, OR CUSTOM) THEN PRESS GREEN SUBMIT TEAMS BUTTON.<br> SECOND, FILL OUT FORM BELOW THEN PRESS BLUE SUBMIT GRID BUTTON</p>
 </div>
 <div class="col-sm-2">
-<button type="button" name= "teams" class="btn btn-primary btn-sm" id = "subteams510e" style= "background-color: green;">SUBMIT TEAMS</button>
+<button type="button" id="vid" class="btn btn-primary btn-sm" style= "background-color:grey;" name="Instructional Video">How-To Video</button>
+</div class="col-sm-1"> 
+
+ <div class="col-sm-1">
+ <button type="button" name= "teams" class="btn btn-primary btn-sm" id = "subteams510e" style= "background-color: green;">SUBMIT TEAMS</button>
+</div class="col-sm-1">
+
+<div class="col-sm-1">
 </div>
 </div>
+
 {% endblock %}
 {% block Nav %}
 <div class = "row1">
@@ -645,6 +666,41 @@ height: 1.75em;
     </div>
   </div>
 
+
+
+
+ <div class="modal fade" id="Vid100" name = "Vid100" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">How To Set Up Grids</h4>
+        </div>
+        <div class="modal-body" style= "width: 30% height: 60%">
+         <video controls id ="vid" height="45%" width="90%"> 
+		<source src="../static/Vid100.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+		</video> 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
 {% endblock %}
 
 
@@ -686,6 +742,24 @@ $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip;  
    
 });
+
+
+var play = document.getElementById('vid')
+
+
+      
+		if(play.addEventListener){play.addEventListener("click",goVid, false);
+				} 
+				 else if(play.attachEvent) {
+				 play.attachEvent("onclick", goVid); 
+				 }				 
+	
+
+
+
+
+
+
 /*$(document).ready(function(){
 $("#mainform").validate({
   rules: {
@@ -1167,7 +1241,9 @@ function frog() {
 
 }
 
-
+function goVid() {
+	$("#Vid100").modal();
+}
 
 
 

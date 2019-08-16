@@ -22,6 +22,7 @@ Including another URLconf
 ##]
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.contrib.auth.views import login, logout
 from twentfivesq import views
 from manager import views as manager_views
 from grid2 import views as grid2_views
@@ -29,11 +30,13 @@ from player import views as player_views
 from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
+    #url(r'^accounts/login/$', login, {'template_name': 'admin/login.html'}),
+    #url(r'^accounts/logout/$', logout),
     url(r'^&admin/', include(admin.site.urls)),
     url(r'[t]', views.Hmpage, name='Hmpage.html'),
     url(r'^[yip]', views.Shome, name='Shome.html'),
     url(r'[G]', views.Grid_FB),
-    url(r'[L]', player_views.Login, name='Login'),
+    url(r'[L]', player_views.enter, name = 'enter.html'),
     url(r'[uU]', manager_views.SignUp, name='SignUp'),
     url(r'[SO]', manager_views.Cat, name= 'SignOn'),
     url(r'[M]', manager_views.Dog, name='M'),

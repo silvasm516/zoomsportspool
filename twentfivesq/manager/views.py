@@ -358,7 +358,9 @@ def output(dList):
 
 
 
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def IndexR(request):
     from grid2.models import Grid
     from player.models import Players
@@ -527,8 +529,12 @@ def preKit(UsrName):
     pw = name[0].Password
 
     return pw
-	
 
+
+
+from django.contrib.auth.decorators import login_required
+
+@login_required	
 def Kit(request):
     from manager.models import Managers
     m = Managers.objects.all()
@@ -589,7 +595,12 @@ def Enroll(request):
     c = { "tit" : a }
     temp = loader.get_template('managerSignUp.html')
     return HttpResponse(temp.render(c, request))
-    
+
+
+
+from django.contrib.auth.decorators import login_required
+
+@login_required   
 def BuyGames(request):
     k = 'Buy Games'
     c = { "tit" : k}      

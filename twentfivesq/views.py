@@ -113,7 +113,9 @@ def Some(request):
 
 
 
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def Archive(request):
   
     if request.method == 'GET':
@@ -130,7 +132,9 @@ def Archive(request):
         return HttpResponse(temp.render(c,request))
 
 
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def ArchiveM(request):
  
     games = archiveGameList()
@@ -265,7 +269,8 @@ def Fish(request):
             
                         plaer = p.filter(Email = b1 )
                         first = plaer[0].UsrName
-                        d = login(request, first, aa)
+                        u = first 
+                        logP(request, first, v)
                         
                 break
         for t in ii:
@@ -362,7 +367,7 @@ def Fish(request):
                     
         z = 'Your Available Games'
         klattu = 'WELCOME'        
-        ne = request.session['UsrName']    
+        ne = request.session['UserName']    
         data = {
         'result0' : b[0],
         'result1' : b[1],
@@ -609,6 +614,12 @@ def getMgrMail():
         ii.append(ee)
     return ii
 
+
+
+
+from django.contrib.auth.decorators import login_required
+
+@login_required
 def Dash(request):
     from grid2.models import Grid
     from grid2.models import Terms
@@ -627,7 +638,9 @@ def Dash(request):
     temp = loader.get_template('Dashboard2.html')
     return HttpResponse(temp.render(c,request))  
 
+from django.contrib.auth.decorators import login_required
 
+@login_required
 def Lemur(request):
    ## From Grid page to Games Available page  
     from django.shortcuts import render
