@@ -13,7 +13,7 @@ from django.template import loader
 def Shome(request):
 ##This is the function that runs after the password is entered
     if request.method == 'POST':
-        pw = request.POST.get('pass')
+        pw = request.POST.get('passw')
         if pw != "Fl53002#$":
             b = 'fail'
             a = "ZOOMSPORTSPOOL" 
@@ -29,7 +29,8 @@ def Shome(request):
             a = "25 SQUARES FOOTBALL" 
             data = {
                 'tit' : a,    
-                }
+                 }
+            
             temp = loader.get_template('Some.html')
             return HttpResponse(temp.render(data,request))
         
@@ -361,8 +362,7 @@ def Fish(request):
                         plaer = p.filter(Email = b1 )
                         first = plaer[0].UsrName
                         u = first
-                        logP(request, first, v, authcode)
-                        
+                        logP(request, first, v, authcode)                     
                         
 #                break
         for t in ii:
@@ -1118,7 +1118,9 @@ def logout_view(request):
 
 
 
- 
+from django.contrib.auth.decorators import login_required
+
+@login_required 
 def Tomenus(request):
     import time
     from grid2.models import Grid

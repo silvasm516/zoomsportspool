@@ -83,7 +83,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'twentfivesq.wsgi.application'
 
-LOGIN_URL = '/t'
+LOGIN_URL = '/i'
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases

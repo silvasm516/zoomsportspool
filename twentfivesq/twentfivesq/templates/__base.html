@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
  
 <html  lang="en">
-{% load staticfiles %}
+{% load static %}
 <head>
 <meta charset="utf-8"/>
 <title id = "fish">{% block title %}{% endblock %}</title>
@@ -310,7 +310,7 @@ html  {
 		    
 			<!-- <br> -->
 			<strong><p id = 'welcome'>{{welcome}}    {{playername}}</p></SPAN></strong>
-			<strong><p id = "dash" {{ data.title }}></p></strong>
+			<strong><p id = "dash" {{ tit }}></p></strong>
 			{% if data.title is "" %}
 			    data.title = 'TWENTYFIVE SQUARES FOOTBALL'
 			{% endif %}

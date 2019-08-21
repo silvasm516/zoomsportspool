@@ -921,13 +921,13 @@ def Lemur(request):
 
 
     
-def login(request, player, auth):
-    from player.models import Players
-    from grid2.models import Grid
-    u = player		
-    request.session['UsrName'] = u
-    request.session['UsrType'] = 'p'
-    msg = "You are logged in as " + u
+##def login(request, player, auth):
+##    from player.models import Players
+##    from grid2.models import Grid
+##    u = player		
+##    request.session['UsrName'] = u
+##    request.session['UsrType'] = 'p'
+##    msg = "You are logged in as " + u
     
         
           

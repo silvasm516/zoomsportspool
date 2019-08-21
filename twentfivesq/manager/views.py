@@ -28,7 +28,6 @@ def Cat(request):
 #       password = request.POST.get('password')
         username = request.POST['username']
         password = request.POST['password']
-        user = authenticate(request, username=username, password=password)
         n = m.filter(UsrName= str(username))
         if not n:
             reason = 'un'
@@ -39,6 +38,7 @@ def Cat(request):
             #logfail(reason)
             rat = logfail(reason) 
         else:
+            user = authenticate(request, username=username, password=password)
             em = n[0].Email
             login(request, user)
             request.session['UsrName'] = username

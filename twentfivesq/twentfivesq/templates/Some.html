@@ -53,7 +53,7 @@
 <BODY>
 
 <div>
-	 <h2>{{tit}}</h2>
+	 <h2>{{data.tit}}</h2>
 	 
 </div>
 
@@ -129,7 +129,10 @@ background-color:yellow;
 	padding: 0%;
 }
 
-
+#pwemail  {
+	color:white;
+	text-decoration: underline;
+}
 
 @media only screen and (max-width:70em) {
 
@@ -280,12 +283,12 @@ img {
 <div class="col-sm-5" id = "nzj">
 <div id= "figs" >
 	<figure id="f2" style= "float:left";>
-		<a href ="../static/gridSh(3).jpg"><img src = "../static/gridSh(3).jpg" height= "100" width= "100";></a>
+		<a href ="../static/gridSh(3).jpg"><img src = "../static/gridSh(3).jpg" alt="../static/gridSh(3).jpg" height= "100" width= "100";></a>
 		<figcaption>Game Grid</figcaption>
 	</figure>
 
 	<figure id="f3"  style="margin-left: 65%;">
-		<a href ="../static/GridPhoto2.jpg"><img src = "../static/aGame.jpg" height= "100" width= "100"; ></a>
+		<a href ="../static/GridPhoto2.jpg"><img src = "../static/aGame.jpg" alt= "../static/aGame.jpg" height= "100" width= "100"; ></a>
 		<figcaption>Completed Grid</figcaption>
 	</figure>
 </div>
@@ -312,6 +315,7 @@ img {
 				</div>
 				<button name="button" id= "signIn" >Sign In</button>
 			</form>
+			<a href= "#bottom" id ="pwemail" style= "margin-left: 60%;">Forgot Password?</a>
 		 </div>
 	</div>
 
@@ -407,6 +411,25 @@ img {
   </div>	
 
 
+<div class="modal fade" id="sendemail" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">CHANGE PASSWORD</h4>
+        </div>
+        <div class="modal-body">
+          <p><strong>Send An Email With a Link To Reset Your Password?<button style= "margin-left: 20%;" id="snd" data-dismiss="modal">SEND</button></strong></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>	
 </body>
 
 
@@ -466,19 +489,19 @@ var newto = newt.value;
 // window.alert(newto)
 var effect = document.getElementById('butt');
 
+var sen = document.getElementById('pwemail');
 
 
 
 
 
 
-
-/*if(rsn.addEventListener) {rsn.addEventListener("load",TestCat, false);
+if(sen.addEventListener) {sen.addEventListener("click", ChangePW);
 			} 
-			 else if(rsn.attachEvent) {
-			 rsn.attachEvent("load", TestCat); 
+			 else if(sen.attachEvent) {
+			 sen.attachEvent("click", ChangePW); 
 			 }
-*/
+
 
 
 
@@ -511,7 +534,9 @@ function TestCat(bad) {
 	}
 }
 
-
+function ChangePW() {
+		$("#sendemail").modal();	
+}
 
 
 

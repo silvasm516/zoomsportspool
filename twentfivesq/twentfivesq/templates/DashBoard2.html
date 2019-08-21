@@ -6,19 +6,7 @@
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- <script src = "http://benalman.com/projects/jquery-bbq-plugin/"/>
-<script src = "http://benalman.com/projects/jquery-bbq-plugin/"/>
-<script src = "http://localhost:8080/static/jquery-migrate-3.0.0.js"/>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"
- integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
- crossorigin="anonymous"></script> 
- -->
-<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script> -->  
-<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>  -->
-<!-- <script src="../static/datetimepicker-master (1)/datetimepicker-master/jquery.js"></script>
-<script src="../static/datetimepicker-master (1)/datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script> -->
-<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script> -->
+
 
 <script src="../static/datetimepicker-master (1)/datetimepicker-master/jquery.js"></script> 
  
@@ -213,12 +201,18 @@ height: 1.75em;
 
   #subteams510e {
   	float: bottom;
+  	margin-left: 40%;
   }
   
+#vid {
+	margin-left: 40%;
+    float: center;
+}
 
 
-
-
+#t75 {
+	font-size: 2vh;
+}
 
 #labels {
 	display: none;
@@ -339,10 +333,10 @@ height: 1.75em;
 
 
 <div class = "col-sm-8">
-<p id = "t75"  class = "parag3" style= "padding: 0px;">FIRST, CHOOSE TEAMS FROM DROPDOWN MENU (PRO, COLLEGE, OR CUSTOM) THEN PRESS GREEN SUBMIT TEAMS BUTTON.<br> SECOND, FILL OUT FORM BELOW THEN PRESS BLUE SUBMIT GRID BUTTON</p>
+<p id = "t75"  class = "parag3" style= "padding: 0px;">1.CHOOSE TEAMS FROM DROPDOWN MENUS 2.AUTHORIZATION CODE<BR>3.PRESS GREEN SUBMIT TEAMS BUTTON.<br>4.FILL OUT REST OF FORM 5.PRESS BLUE SUBMIT GRID BUTTON</p>
 </div>
 <div class="col-sm-2">
-<button type="button" id="vid" class="btn btn-primary btn-sm" style= "background-color:grey;" name="Instructional Video">How-To Video</button>
+<button type="button" id="vid" class="btn btn-primary btn-sm" style= "background-color:grey;" name="Instructional Video">HOW-TO-VIDEO</button>
 </div class="col-sm-1"> 
 
  <div class="col-sm-1">
@@ -427,7 +421,7 @@ height: 1.75em;
 					<div>
 						<div>
 							
-             			<input style = "margin-top: -8%;" type="text" class = "ngt" name= "gridPasswordCode" id = "gridPasswordCode"  placeholder = "Enter password" required/>
+             			<input style = "margin-top: -8%;" type="text" class = "ngt" name= "gridPasswordCode" id = "gridPasswordCode"  placeholder = "Enter Auth Code" required/>
              			<!-- <a href="#" data-toggle="tooltip" data-html="true" title="Provide A Unique Pass Code That Your Clients Can Use To Access Your Games Available Page. Warning Passcodes Are Case Sensitive!"><i class="glyphicon glyphicon-question-sign"></i></a> -->
              			<a href="#" data-toggle="tooltip" data-placement="right" data-html="true" title="Provide A Unique Pass Code That Your Clients Can &#013;Use To Access Your Games Available Page &#013; At least six, but at most 12 characters &#013;Warning Passcodes Are Case Sensitive!">
              			<i class="glyphicon glyphicon-question-sign"></i></a>
