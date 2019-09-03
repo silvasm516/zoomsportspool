@@ -25,8 +25,7 @@ SECRET_KEY ='Fl53290#$6503484818#$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ['zoomsportspool'] + '.azurewebsites.net',
-                 '127.0.0.1'] if 'zoomsportspool' in os.environ else []
+ALLOWED_HOSTS = ['localhost', '127.0.0.0', '5640']
 
 
 # Application definition

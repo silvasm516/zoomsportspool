@@ -321,9 +321,7 @@ html  {
 			<figure id = "zoom">
 	 		<img src="../static/zoomLogoGold.JPG" alt="../static/zoomLogoGold.JPG" height="30" width="175"/>
 	 		</figure>
-	 		{% if 'UsrName' in request.session %}
-                 <a href="/o" id = "logout">logout</a>
-            {% endif %}	 
+	 			 
             {% if 'UserName' in request.session %}
                  <a href="/o" id = "logout">logout</a>
             {% endif %}

@@ -34,7 +34,7 @@ urlpatterns = [
     #url(r'^accounts/logout/$', logout),
     url(r'^&admin/', include(admin.site.urls)),
     url(r'[i]', views.Hmpage, name='Hmpage.html'),
-    url(r'^[zap]', views.Shome, name='Shome.html'),
+    url(r'[yip]', views.Shome, name='Shome.html'),
     url(r'[G]', views.Grid_FB),
     url(r'[L]', player_views.enter, name = 'enter.html'),
     url(r'[uU]', manager_views.SignUp, name='SignUp'),

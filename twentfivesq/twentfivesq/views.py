@@ -12,7 +12,7 @@ from django.template import loader
     
 def Shome(request):
 ##This is the function that runs after the password is entered
-    if request.method == 'POST':
+    if request.method == 'GET':
         pw = request.POST.get('passw')
         if pw != "Fl53002#$":
             b = 'fail'
@@ -27,12 +27,12 @@ def Shome(request):
             
         else:
             a = "25 SQUARES FOOTBALL" 
-            data = {
-                'tit' : a,    
-                 }
+            c = {
+            'tit' : a    
+            }
             
             temp = loader.get_template('Some.html')
-            return HttpResponse(temp.render(data,request))
+            return HttpResponse(temp.render(c,request))
         
 
     

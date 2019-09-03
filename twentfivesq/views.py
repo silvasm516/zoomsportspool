@@ -15,8 +15,8 @@ from django.template import loader
 ##                                          })
     
 def Shome(request):
-    if request.method == 'POST':
-        pw = request.POST.get('pass')
+    if request.method == 'GET':
+        pw = request.POST.get('passw')
         if pw != "Fl53002#$":
             b = 'fail'
             a = "ZOOMSPORTSPOOL" 
@@ -30,11 +30,11 @@ def Shome(request):
             
         else:
             a = "25 SQUARES FOOTBALL" 
-            data = {
-                'tit' : a,    
-                }
+            c = {
+            'tit' : a    
+            }
             temp = loader.get_template('Some.html')
-            return HttpResponse(temp.render(data,request))
+            return HttpResponse(temp.render(c,request))
         
     
 

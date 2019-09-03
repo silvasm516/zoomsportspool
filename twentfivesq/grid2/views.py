@@ -3,6 +3,15 @@ from django.template import Template
 from django.template import loader
 from django.http import HttpResponse
 from django.template import Template, Context
+from datetime import datetime, timedelta
+import pytz
+from pytz import timezone
+import time
+import datetime
+import pytz
+from datetime import timedelta
+from datetime import date
+from datetime import datetime, date, time
 # Create your views here.
 def Gull(request):
     if request.method == 'POST':
@@ -150,7 +159,7 @@ def Trout(request):
             
 
             
-            temp = loader.get_template('Dashboard2.html')    
+            temp = loader.get_template('DashBoard2.html')    
             return HttpResponse(temp.render(z, request))
             return 
         hometeam = request.POST.get('homeTeam')
@@ -181,7 +190,7 @@ def Trout(request):
         r = Terms.objects.create(GRID = grid, MIN = minimum, MAX = maximum, PRICE = price, FIRST = first, SECND = secnd, THIRD = third, FINAL = final, FRTH = frth, NOTES = notes)
         r.save()
         t = Catclone(request)
-        temp = loader.get_template('Dashboard2.html')    
+        temp = loader.get_template('DashBoard2.html')    
         return HttpResponse(temp.render(t, request))    
     
         
@@ -426,7 +435,7 @@ def Mastedon(request):
             FINAL_PAYOUT_AT_ = 'End of game score'
             
     modal = {}        
-    closes = deadline(gridnum, gamedate)
+    closes = deadline(gridnum, gamedate) + timedelta(hours = -4.00) 
     data = {
             't0' : gg,
             't1' : gg,
@@ -679,8 +688,12 @@ def is_empty(any_structure):
 
 #DETERMINES A GRID'S DEADLINE BASED ON GAMEDATE
 def deadline(gridno, gameDate):
+    from datetime import datetime, timedelta
+    import pytz
+    from pytz import timezone
     import time
     import datetime
+    import pytz
     from datetime import timedelta
     from datetime import date
     from datetime import datetime, date, time
@@ -688,9 +701,12 @@ def deadline(gridno, gameDate):
     g = Grid.objects.all()
     d = g.filter(id = gridno)
     e = d[0].gameDate
-    deadlineDay =  e + timedelta(days = -1.125) 
+    deadlineDay =  e + timedelta(days = -1.25)
     t = time(23, 59, 59)
-    deadline = datetime.combine(deadlineDay, t)
+    ##UTC midnight time:
+    utcTime = datetime.combine(deadlineDay, t)
+    deadline = utcTime + timedelta(hours = 4.0)
+    
     return deadline	
 
 
@@ -1537,7 +1553,7 @@ def Giraffe(gameNo):
     else: 
             FINAL_PAYOUT_AT_ = 'End of game score'
             
-    closes = deadline(gridnum, gamedate)
+    closes = deadline(gridnum, gamedate) + timedelta(hours = -4.00)
     popvr ={
     '0.grid:': grid,
     '01.price:': price,
@@ -1601,7 +1617,7 @@ def Petrodyl(request, gridnum):
             FINAL_PAYOUT_AT_ = 'End of game score'
             
     modal = {}        
-    closes = deadline(gridnum, gamedate)
+    closes = deadline(gridnum, gamedate) + timedelta(hours = -4.00) + 'Eastern'
     data = {
             'price': price,
             'min': minn,
