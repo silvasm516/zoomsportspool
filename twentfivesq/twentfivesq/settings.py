@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath('postgresql-11.1-1-wi
 SECRET_KEY ='Fl53290#$6503484818#$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.0', '5640']
+ALLOWED_HOSTS = ['localhost', '127.0.0.0', '5640', 'heroku']
 
 
 # Application definition
@@ -93,7 +93,7 @@ DATABASES = {
         'NAME': os.environ.get(BASE_DIR, 'postgres'),
     'USER': os.environ.get('DB_USER', 'steves'),
     'PASSWORD': os.environ.get('DB_PASS', 'Fl52877#$'),
-    'HOST':'localhost',
+    'HOST':'heroku',
     'PORT': '5432',         
     }
 }
