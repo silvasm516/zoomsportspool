@@ -1,1 +1,1 @@
-web: gunicorn twentfivesq.wsgi
+web: gunicorn twentfivesq.wsgi.py
