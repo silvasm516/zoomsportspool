@@ -78,7 +78,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'twentfivesq/twentfivesq.wsgi.application'
+WSGI_APPLICATION = 'twentfivesq.wsgi.application'
 
 LOGIN_URL = '/i'
 
