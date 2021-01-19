@@ -11,4 +11,4 @@ requests==2.21.0
 urllib3==1.24.1
 virtualenv==15.1.0
 whitenoise==4.1.2
-postgresql==12.5
+postgresql==13.1
