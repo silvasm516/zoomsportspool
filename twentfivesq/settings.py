@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 
 import os
-import psycopg2
+'import psycopg2
 
 DATABASE_URL = os.environ['DATABASE_URL']
 
